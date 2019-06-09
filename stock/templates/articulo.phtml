@@ -1,0 +1,95 @@
+<?php
+echo "<form action='articulo.php'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr valign='middle' width='16'>";
+echo "	<td class='tdLista' colspan=4>";
+echo "	<a href='articulo.php' class='v1'><img src='img/nuevo16.png' align='bottom'>Articulo nuevo</a>";
+echo "&nbsp;&nbsp;<a href='articulos.php?icmd=orden&param=fam' class='v1'><img src='img/lista16.png' align='bottom'>Lista</a>";
+echo "	</td>";
+echo "</tr>";
+echo "<tr>";
+echo "	<td class='tdLista'>Identificación";
+echo "  </td>";
+echo "	<td class='tdLista'><input type='text' name='id' value='$id' readonly size=15></td>";
+echo "	<td class='tdLista'>Nombre</td>";
+echo "	<td class='tdLista'><input type='text' name='nombre' value='$nombre' size=40>";
+echo "	</td>";
+echo "</tr>";
+echo "<tr>";
+echo "  <td class='tdLista' colspan=4>";
+echo "     Familia: <select name=familia>";
+$i=0;
+while(!empty($familias[$i]))
+  {
+     if($familias[$i]->id==$familia)
+       $sel="selected";
+     else
+       $sel="";
+     echo "<option value=".$familias[$i]->id." $sel>".$familias[$i]->nombre."</option>";
+     $i++;
+  }
+echo "     </select>";
+echo "  </td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Volumen</td>";
+echo "	<td class='tdLista'><input type='text' name='volumen' value='$volumen' size=6></td>";
+echo "	<td class='tdLista'>Peso</td>";
+echo "	<td class='tdLista'><input type='text' name='peso' value='$peso' size=6></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Unidad compra</td>";
+echo "	<td class='tdLista'><input type='text' name='unidadCompra' value='1' size=6 readonly></td>";
+echo "	<td class='tdLista'>Descripción</td>";
+echo "	<td class='tdLista'><input type='text' name='descUnidadCompra' value='$descUnidadCompra' size=30></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Unidad almacen</td>";
+echo "	<td class='tdLista'><input type='text' name='unidadAlmacen' value='$unidadAlmacen' size=6></td>";
+echo "	<td class='tdLista'>Descripcion</td>";
+echo "	<td class='tdLista'><input type='text' name='descUnidadAlmacen' value='$descUnidadAlmacen' size=30></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Unidad expedición</td>";
+echo "	<td class='tdLista'><input type='text' name='unidadExpedicion' value='$unidadExpedicion' size=6></td>";
+echo "	<td class='tdLista'>Descripción</td>";
+echo "	<td class='tdLista'><input type='text' name='descUnidadExpedicion' value='$descUnidadExpedicion' size=30></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "  <td class='tdLista'>Controlar vencimiento</td>";
+echo "  <td class='tdLista' colspan=3><input type='text' name='vence' value='$vence' size=1></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Código de barras</td>";
+echo "	<td class='tdLista' colspan=3><input type='text' name='barras' value='$barras' size=30></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "  <td class='tdLista'>Impuestos</td>";
+echo "  <td class='tdLista' colspan=3><input type='text' name='impuestos' value='$impuestos' size=5></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Comentarios</td>";
+echo "	<td class='tdLista' colspan=3><textarea name='notas' cols=80 rows=4>$notas</textarea></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista' colspan=4 align='center'><input type='submit' name='cmd' value='Actualizar'></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "  <td class='tdLista' colspan=4 align='center'><input type='submit' name='cmd' value='Borrar'></td>";
+echo "</tr>";
+
+
+
+echo "</table>";
+echo "</form>";
+?>

@@ -1,0 +1,89 @@
+<?php
+
+class Trabajo {
+
+    var $id,
+    	$descripcion,
+	$tiempo,
+	$costo,
+	$etapas,
+	$laboratorio;
+ 
+    var $conn,
+        $nuevo;
+
+    function Trabajo() {
+
+       $this->id=0;
+       $this->descripcion="";
+       $this->costo=0;
+       $this->laboratorio=0;
+       $this->etapas=0;
+
+       $nuevo = TRUE;
+   } 
+
+   function setId($unaId) {
+
+        $this->id=$unaId;
+   }
+
+   function setDescripcion($unaDesc) {
+
+        $this->descripcion=$unaDesc;
+   }
+
+   function setTiempo($unTiempo) {
+
+       $this->tiempo=$unTiempo;
+  }
+
+   function setCosto($unImporte) {
+
+      $this->costo=$unImporte;
+  }
+
+   function setLaboratorio($unLaboratorio) {
+
+      $this->laboratorio=$unLaboratorio;
+   }
+
+   function setEtapas($unNumero) {
+
+      $this->etapas = $unNumero;
+   }
+
+   function setConn($unaConeccion) {
+
+      $this->conn = $unaConeccion;
+   }
+
+  function cargar() {
+
+   $res = $this->conn->query("select * from Trabajos where id=$this->id");
+   $reg = $res->fetchRow();
+
+   $this->setId($reg->id);
+   if(!empty($this->id))
+     {
+   	   $this->setDescripcion($reg->descripcion);
+	   $this->setTiempo($reg->Tiempo);
+	   $this->setCosto($reg->Costo);
+	   $this->setLaboratorio($reg->Laboratorio);
+	   
+	   $this->nuevo = FALSE;
+     }
+       else
+              $this->nuevo = TRUE;
+  }
+
+  function almacenar() {
+
+       if($nuevo)
+          $this->conn->query("insert into Trabajos values($this->id, '$this->descripcion', $this->tiempo, $this->costo, $this->laboratorio)");
+       else
+          $this->conn->query("update Trabajos set descripcion='$this->descripcion', Tiempo=$this->tiempo, Costo=$this->Costo, Laboratorio=$this->laboratorio where id=$this->id");
+  }
+}
+
+?>

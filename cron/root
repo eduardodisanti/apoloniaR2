@@ -1,0 +1,4 @@
+30 01 * * * /srv/www/apoloniaR2/cron/bajarapolonia.sh
+00 02 * * * /srv/www/apoloniaR2/cron/bajarwebsite.sh
+30 03 * * * /srv/www/apoloniaR2/cron/actpadron.sh
+

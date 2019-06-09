@@ -1,0 +1,18 @@
+<?php 
+
+function medico_que_lo_atiende($ci)
+{
+        $hoy = Date("Y-m-d");
+	$po  = mysql_query("select Medico from Horarios where Paciente=$ci and Fecha<='$hoy' order by Fecha desc limit 1");
+
+	$reg = mysql_fetch_object($po);
+
+	$nummed = $reg->Medico;
+
+        $medico = new Medico();
+	$medico->setNumero($nummed);
+	$medico->cargar();
+
+        return($medico);
+}
+?>

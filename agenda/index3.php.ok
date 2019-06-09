@@ -1,0 +1,80 @@
+<?php
+    setcookie("volver","2");
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=iso-8859-1">
+  <title></title>
+
+  <meta name="GENERATOR" content="StarOffice/5.2 (Win32)">
+
+<script src="/script/coolbuttons.js">
+/*
+Depressible DHTML buttons (By Erik Arvidsson at http://webfx.eae.net)
+Permission granted to Dynamicdrive.com to include script in archive
+For this and 100's more DHTML scripts, visit http://dynamicdrive.com
+*/
+</script>
+
+<style type="text/css">
+     A:link  {color:#9A3D3F}
+     A:visited {color:#9A3D3F}
+     A:hover {color: #C44487}
+
+     BODY{font-family: 'Lucida Sans',serif}
+</style>
+
+<?php include("../script/vmsghead.html"); ?>
+</head>
+
+<body bgcolor="#dfffff">
+<center>
+        <SCRIPT language=JavaScript src="menu_array3.js" type=text/javascript></SCRIPT>
+        <SCRIPT language=JavaScript src="mmenu.js" type=text/javascript></SCRIPT>
+</center>
+<br>
+<center>
+    <table class="coolBar" style="width:100%">
+      <td class="coolButton" style="width:300px">
+         <a href="./historias/episodio.html" target="_blank"><img src="/img/mirar.gif" border=0 align=middle>
+	      <font face="Verdana" size="2">Ingresar un episodio</a>
+         </a>
+      </td>
+      <td class="coolButton" style="width:300px">
+         <a href="./historias/revision.html" target="_blank"><img src="/img/revision.gif" border=0 align=middle>
+              <font face="Verdana" size="2">Ingresar revision</a>
+         </a>
+      </td>
+      <td class="coolButton" style="width:300px">
+        <a href="listapac.php"><img src="/img/conspac.gif" border=0 align=middle><font face="Verdana" size="2"> Lista x paciente</a></font>
+      </td>
+      <td class="coolButton" style="width:200px">
+        <a href="listaconf.php"><img src="/img/consmed.gif" border=0 align=middle><font face="Verdana" size="2"> Lista x medico</a></font>
+      </td>
+
+      <td class="coolButton" style="width:200px">
+        <a href="autorizar.php"><img src="/img/consmed.gif" border=0 align=middle><font face="Verdana" size="2"> Autorizaciones</a></font>
+      </td>
+
+      <td class="coolButton" style="width:200px">
+        <a href="desconectar.php"><img src="/img/logout.gif" border=0 align=middle><font face="Verdana" size="2">Salir</a></font>
+      </td>
+
+   </table>
+</center>
+<center>
+<table border="1" width="100%" height="100%" style="background:url(coi.jpg) no-repeat center">
+<tr>
+   <td>
+<a href="manual.pdf"><b>Manual de calidad</b></a>
+       <?php
+                include("../mensaje.html");
+        ?>
+   </td>
+</tr>
+</center>
+<?php include("../script/vmsgbody.html"); ?>
+</body>
+</html>

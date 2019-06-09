@@ -1,0 +1,41 @@
+Content-type: text/html
+X-Powered-By: PHP/4.3.1
+
+Duplicate entry '22-2004-04-01-20:44:00' for key 1
+Duplicate entry '22-2004-04-05-20:27:00' for key 1
+Duplicate entry '41-2004-04-07-13:33:00' for key 1
+Duplicate entry '22-2004-04-20-20:34:00' for key 1
+Duplicate entry '27-2004-04-20-18:58:00' for key 1
+Duplicate entry '27-2004-04-21-18:57:00' for key 1
+Duplicate entry '22-2004-04-22-15:05:00' for key 1
+Duplicate entry '22-2004-04-23-16:22:00' for key 1
+Duplicate entry '27-2004-04-23-18:56:00' for key 1
+Duplicate entry '8888-2004-04-26-18:39:00' for key 1
+Duplicate entry '48-2004-04-27-20:02:00' for key 1
+Duplicate entry '5-2004-04-29-11:14:00' for key 1
+Duplicate entry '4029-2004-05-04-16:30:00' for key 1
+Duplicate entry '27-2004-05-08-11:50:00' for key 1
+Duplicate entry '5-2004-05-13-13:32:00' for key 1
+Duplicate entry '47-2004-05-13-14:04:00' for key 1
+Duplicate entry '37-2004-05-15-13:05:00' for key 1
+Duplicate entry '37-2004-05-24-20:14:00' for key 1
+Duplicate entry '47-2004-05-28-14:11:00' for key 1
+Duplicate entry '22-2004-06-07-20:33:00' for key 1
+Duplicate entry '27-2004-06-14-14:15:00' for key 1
+Duplicate entry '22-2004-06-23-20:36:00' for key 1
+Duplicate entry '48-2004-06-24-16:24:00' for key 1
+Duplicate entry '22-2004-06-25-20:33:00' for key 1
+Duplicate entry '26-2004-06-28-14:07:00' for key 1
+Duplicate entry '37-2004-06-28-13:48:00' for key 1
+Duplicate entry '3843-2004-06-28-14:39:00' for key 1
+Duplicate entry '22-2004-06-29-20:31:00' for key 1
+Duplicate entry '47-2004-07-01-14:01:00' for key 1
+Duplicate entry '47-2004-07-02-14:01:00' for key 1
+Duplicate entry '48-2004-07-02-17:43:00' for key 1
+Duplicate entry '1990-2004-07-05-19:55:00' for key 1
+Duplicate entry '47-2004-07-06-14:04:00' for key 1
+Duplicate entry '80-2004-07-06-13:21:00' for key 1
+Duplicate entry '26-2004-07-09-14:10:00' for key 1
+Duplicate entry '4029-2004-07-09-15:23:00' for key 1
+Duplicate entry '80-2004-07-10-12:09:00' for key 1
+Duplicate entry '1033-2004-07-23-16:20:00' for key 1

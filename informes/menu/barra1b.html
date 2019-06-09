@@ -1,0 +1,43 @@
+    <script type="text/javscript">
+    /* preload images */
+    var arrow1 = new Image(4, 7);
+    arrow1.src = "menu/images/arrow1.gif";
+    var arrow2 = new Image(4, 7);
+    arrow2.src = "menu/images/arrow2.gif";
+    </script>
+
+    <div id="bar">
+        
+        <table cellspacing="0" cellpadding="0" id="menu1" class="XulMenu">
+        <tr>
+            <td>
+                <a class="button" href="index.php?contenido=tarjetas.php"><img src="menu/images/personal.png" border="0" align=middle>Tarjetas</img>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=horas.php"><img src="menu/images/spreadsheet.png" border="0" align=middle>Horas de consulta</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=controlses1.php"><img src="menu/images/core.png" border="0" align=middle>Sesiones excedidas</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=listafech.php"><img src="menu/images/calendario.png" border="0" align=middle>Consultas x fecha</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=horarios.php"><img src="menu/images/document.png" border="0" align=middle>Horarios x especialidad</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=tiempossd.php"><img src="menu/images/tiempos.png" border="0" align=middle>Tiempo espera global</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=tiempos.php"><img src="menu/images/tiempos.png" border="0" align=middle>Tiempo espera x sucursal</a>
+            </td>	    
+	</tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+    var menu1 = new XulMenu("menu1");
+    menu1.arrow1 = "images/arrow1.gif";
+    menu1.arrow2 = "images/arrow2.gif";
+    menu1.init();
+    </script>

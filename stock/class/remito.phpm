@@ -1,0 +1,109 @@
+<?php
+
+	class Remito
+	  {
+		var	$serie,
+			$numero,
+			$proveedor,
+			$fecha,
+			$lineas;
+			
+		var	$lista,
+			$conn,
+			$nuevo;
+		
+		function setConn($unaConeccion) {
+		
+		$this->conn = $unaConeccion;
+		}
+		
+		function Remito() {
+		 	$this->serie=NULL;
+		 }
+
+		function setSerie($unaSerie) {
+			$this->serie = $unaSerie;
+			return $this;
+		 }
+
+		function getSerie() {
+			return $this->serie;
+		 }
+
+		function setNumero($unNumero) {
+			$this->numero = $unNumero;
+			return $this;
+		 }
+
+		function setCantidad($unaCantidad) {
+		 	$this->cantidad = $unaCantidad;
+			return $this;
+		 }		 
+		function getNumero() {
+		 	return $this->numero;
+		 }
+		 
+		function setFecha($unaFecha) {
+			$this->fecha = $unaFecha;
+			return $this;
+		 }
+
+		function getFecha() {
+			return $this->fecha;
+		 }
+		 
+		function setProveedor($unProveedor) {
+			$this->proveedor = $unProveedor;
+			return $this;
+		 }
+
+		function getProveedor() {
+			return $this->proveedor;
+		 }
+
+		function cargar() {
+		     $q = "select * from remitos where serie='$this->serie'  and
+		                                       numero=$this->numero  and
+						       proveedor = $this->proveedor";
+
+			$res = $this->conn->query($q);
+			$reg = $res->fetchRow();
+		        
+			$this->fecha = $reg->fecha;
+			if(empty($this->fecha))
+			   {
+			    $this->nuevo=true;
+		            return(false);
+			   }
+			else
+			   {
+			    $this->nuevo=false;
+		            return(true);
+			   }
+		 }
+		 
+		 function almacenar() {
+	
+		     if($this->nuevo)
+			$q = "insert into remitos values('$this->serie',
+							  $this->numero,
+							  $this->proveedor,
+							 '$this->fecha'
+		                                       )";
+		     else
+		       $q = "update remitos set fecha     = '$this->fecha'
+				where serie = '$this->serie' and 
+				      numero    =  $this->numero and 
+				      proveedor =  $this->proveedor";
+
+		     $res = $this->conn->query($q);
+		    
+		 $x = mysql_error(); 
+		 if(!empty($x))
+			die("$x<br>$q");
+
+		     return(!empty($res));
+		 }
+		 
+	  }
+?>

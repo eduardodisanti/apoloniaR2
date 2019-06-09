@@ -1,0 +1,75 @@
+    <script type="text/javscript">
+    /* preload images */
+    var arrow1 = new Image(4, 7);
+    arrow1.src = "menu/images/arrow1.gif";
+    var arrow2 = new Image(4, 7);
+    arrow2.src = "menu/images/arrow2.gif";
+    </script>
+
+    <div id="bar">
+        
+        <table cellspacing="0" cellpadding="0" id="menu1" class="XulMenu">
+        <tr>
+            <td>
+                <a class="button" href="javascript:void(0)">Sistema</a>
+                <div class="section">
+                    <a class="item" href="index2.php">Inicio</a>
+                    <a class="item" href="desconectar.php">Cerrar</a>
+                </div>
+            </td>
+            <td>
+                <a class="button" href="javascript:void(0)">Citas</a>
+                <div class="section">
+                        <a class="item" href="revision.php">Anotar Revision</a>
+                        <a class="item" href="anotar.php">Anotar Consulta</a>
+                        <a class="item" href="borrar.php">Anular</a>
+                        <a class="item" href="confirmar.php">Confirmar</a>
+                        <a class="item" href="listapac.php">Consutar</a>
+                        <a class="item" href="consbor.php">Historia de borrados</a>
+                </div>
+            </td>
+            <td>
+                <a class="button" href="javascript:void(0)">Pacientes</a>
+                <div class="section">
+                            <a class="item" href="padron.php">Consultar el padron</a>
+                            <a class="item" href="autorizar.php">Autorizaciones</a>
+                </div>
+            </td>
+            <td>
+                <a class="button" href="javascript:void(0)">Ayuda</a>
+                <div class="section">
+                    <a class="item" href="manuales/calidad.php">Manual de Calidad</a>
+                    <a class="item" href="manuales/sistema.php">Manual del sistema</a>
+	            <a class="item" href="http://hermes.kcreativa.com/script/solicitud.php?cliente=111" target="_blank">Pedir soporte tecnico</a>
+                    <a class="item" href="index.php?contenido=../bugdb/reportar.php">Reportar errores</a>
+                </div>
+            </td>
+            <td width=200px>
+                &nbsp;
+            </td>    
+            <td>
+                <a class="button" href="javascript:history.go(-1)"><img src="../img/back.png" border=0 align=middle> Atras</a>
+            </td>
+            <td>
+                <a class="button" href="index1.php"><img src="../img/gohome.png" border=0 align=middle>Inicio</a>
+            </td>	    
+            <td>
+                <a class="button" href="javascript:location.reload()"><img src="/apoloniaR2/img/reload.png" border=0 align=middle>Recargar</a>
+            </td>	    
+
+            <td>
+                <a class="button" href="javascript:window.print()"><img src="../img/fileprint.png" border=0 align=middle>Imprimir</a>
+            </td>
+            <td>
+                <a class="button" href="desconectar.php"><img src="../img/exit.png" border=0 align=middle>Salir</a>
+            </td>	            
+	</tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+    var menu1 = new XulMenu("menu1");
+    menu1.arrow1 = "images/arrow1.gif";
+    menu1.arrow2 = "images/arrow2.gif";
+    menu1.init();
+    </script>

@@ -1,0 +1,105 @@
+<?php
+
+	class Lote
+	  {
+		var	$codigo,
+			$fecha,
+			$articulo,
+			$cantidad;
+			
+		var	$lista,
+			$conn;
+		
+		function setConn($unaConeccion) {
+		
+		$this->conn = $unaConeccion;
+		}
+		
+		function Lote() {
+		 	$this->codigo=NULL;
+		 	$this->articulo=NULL;
+		 }
+
+		function setFecha($unaFecha) {
+		 	$this->fecha = $unaFecha;
+			return $this;
+		 }
+		 
+		function setCantidad($unaCantidad) {
+		 	$this->cantidad = $unaCantidad;
+			return $this;
+		 }
+
+		function setArticulo($unArticulo) {
+		 	$this->articulo = $unArticulo;
+			return $this;
+		 }
+		 		 
+		function getFecha() {
+		 	return $this->fecha;
+		 }
+
+		function getArticulo() {
+		 	return $this->articulo;
+		 }
+		 
+		function setCodigo($unCodigo) {
+		 	$this->codigo = $unCodigo;
+			return $this;
+		 }
+
+		function getCodigo() {
+		 	return $this->codigo;
+		 }
+
+		function getCantidad() {
+		 	return $this->cantidad;
+		 }
+		 
+		function cargar() {
+		 
+		     $q = "select * from lotes where id=$this->codigo and articulo=$this->articulo";
+		     $res = $this->conn->query($q);
+
+		     if(empty($res))
+		       {
+		        $this->id=NULL;
+				return(false);
+		       }
+		     else
+		       {
+		        $reg = $res->fetchRow();
+		        
+				$this->codigo	= $reg->id;
+				$this->fecha	= $reg->fecha;
+				$this->cantidad	= $reg->cantidad;
+		        return(true);
+		      }
+		 }
+		 
+		 function almacenar() {
+		 
+		     if($this->codigo==0 || empty($this->codigo))
+		      {
+		        $this->codigo = Date("U");
+			$q = "insert into lotes values( $this->codigo,
+							'$this->fecha', $this->articulo, $this->cantidad
+		                                       )";
+		      } else
+				{
+				  $q = "update lotes set fecha='$this->fecha', cantidad=$this->cantidad 
+				        where           id=$this->codigo and articulo=$this->articulo";
+				}
+		     $res = $this->conn->query($q);
+		    
+		 $x = mysql_error(); 
+		 if(!empty($x))
+			die("$x<br>$q");
+
+		     return(!empty($res));
+		 }
+		function cargarProveedores() {
+		
+		 }
+	  }
+?>

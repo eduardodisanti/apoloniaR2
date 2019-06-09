@@ -1,0 +1,41 @@
+<?php
+
+include("Usuario.phpm");
+
+class lista_de_usuarios
+  {
+      var $anio, $mes; 
+      var $hora;
+      var $lista;
+      var $db;
+      var $cantidad;
+
+      function lista_de_usuarios() {
+        $lista  = null;
+      }
+
+      function setDB($unaDB) {
+	  $this->db=$unaDB;
+	  // **** esto no puede quedar asi - cambiar
+
+          $link=mysql_connect("127.0.0.1","root","virgen");
+          $this->db=mysql_select_db("apolonia",$link);
+
+      }
+
+      function cargar() {
+         $i = 0;
+         $q = "select * from Usuarios order by usuario";
+	 $query = mysql_query($q);
+
+	 while($reg=mysql_fetch_object($query))
+	   {
+	      $this->lista[$i] = new Usuario($reg->usuario);
+	      $i++;
+	   }
+
+	$this->cantidad = $i;
+      }
+
+  }
+?>

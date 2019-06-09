@@ -1,0 +1,209 @@
+#include <stdio.h>
+#include "pcl.h"
+
+int main()
+{
+   float y;				// Aca se almacenan la posicion del "cabezal"
+   int i;
+   int c;				// Caracter leido del standard input
+   int *s;
+   float factory;
+
+   reset();  
+   saltoHoja();
+   preparoPagina();
+   y = 0;
+   
+   factory = pitch(12);
+   s = (int *)malloc(4096);		// Asigno un cacho de memoria anormal para cada linea
+
+   c=0;  
+   i=0;
+   while((c=getc(stdin))!=EOF)	// Mientras la stdin tenga algo
+     {
+       if(c==10) // Fin de la linea
+           {
+		pclGotoxy(0,y);
+		factory = imprimo_linea(s, i, factory);
+		i=0;
+		//y+=factory;
+                y=factory;
+                s[0]='\0';
+           }
+
+       if(c==12) // Fin de la hoja
+           {
+//            saltoHoja();
+            y=0;
+           }
+
+       s[i++]=c;
+       s[i]='\0';			// No es necesario reventar todo el sistema no ?
+     }
+  
+  free(s);				// Prolijamente libero la memoria
+
+  reset();
+  return(0);
+}
+
+float imprimo_linea(int *s, int l, float fy)
+{
+  int i, c, flag=0, attn_enfasis = 0;
+  float factory = fy;
+
+      for(i=0;i<=l;i++)
+       {
+        c = s[i];
+        if(flag!=0 && c!=27) // Aca se procesan todos los codigos con escape
+            {
+              switch(c)
+                  {
+                      case 14:  // Agrandar
+                                  pitch(10);
+                                  flag = 0;
+                                  attn_enfasis = 0;
+                      break;
+                      case 20:  // Agrandar por una sola linea SE IGNORA en esta version
+                                  flag = 0;
+                                  attn_enfasis = 0;
+                      break;
+
+                      case 69 :  // Bold on
+                                  fontBold(1);
+                                  flag = 0;
+                                  attn_enfasis = 0;
+                      break;
+                      case 70 :  // Bold off
+                                  fontBold(0);
+                                  flag = 0;
+                                  attn_enfasis = 0;
+                      break;
+
+                      case 71 :  // Doble trazo on
+                                  fontBold(2);
+                                  flag = 0;
+                                  attn_enfasis = 0;
+                      break;
+                      case 72 :  // Doble trazo on
+                                  fontBold(0);
+                                  flag = 0;
+                                  attn_enfasis = 0;
+                      break;
+
+                      case 87: // Llego un ESC-W
+                                  flag = 1;
+                                  attn_enfasis = 1;
+                      break;
+                      case 49 : // los attn son positivos 
+                                  flag = 0;
+                                  if(attn_enfasis==1)
+                                     factory = pitch(10);
+                                  attn_enfasis=0;
+                      break;
+                      case 48 : // los attn son negativos
+                                  flag = 0;
+                                  if(attn_enfasis==1)
+                                     factory = pitch(12);
+                                  attn_enfasis = 0;
+                      break;
+                  }
+            }
+        else
+         switch (c)
+           {
+               case 15 :
+                         factory = pitch(18);
+                       break;
+               case 14 : 
+                         factory = pitch(10);
+                       break;
+               case 18 : 
+                         factory = pitch(12);
+                       break;
+               case 20 : factory = pitch(12);
+                       break;
+               case 23 : apaisar(); 
+                         factory = pitch(18);
+                       break;
+               case 27 : flag = 1;
+                       break;
+
+               default:  putc(s[i],stdout);
+                       break;
+           }
+       } 
+   return(factory); 
+}
+
+void reset()
+{
+   printf("%cE",ESC);
+   printf("%c%%-12345X",ESC);
+}
+
+void preparoPagina()
+{
+   printf(A4,ESC);		// Imprimo en A4
+}
+
+void apaisar()
+{
+   printf("%c&l1O",ESC);
+}
+
+void pclGotoxy(int x, int y)
+{
+    printf("%c&a%dC",ESC,x);		// Posicion horizontal
+    //printf("%c&a%dR",ESC,y);		// Posicion vertical
+    printf("%c&a+%dV",ESC,y);
+}
+
+float pitch(int factor)
+{
+    float vmi;
+
+    if(factor==0)
+       factor==1;
+    vmi = 48 / (factor * 0.5889);
+    printf("%c(s%dH",ESC,factor);
+
+    printf("%c&l%fC",ESC,vmi);
+
+    return(factor);
+}
+
+void fontNormal()
+{
+    printf("%c(s0S",ESC);
+}
+
+void fontCondensado()
+{
+    printf("%c(s4S",ESC);
+}
+
+void fontExpandido()
+{
+    printf("%c(s24S",ESC);
+}
+
+void fontBold(int estado)
+{
+  switch (estado)
+    {
+        case 1 : printf("%c(s3B",ESC);
+                break;
+        case 2 : printf("%c(s4B",ESC);
+                break;
+        case 0 : printf("%c(s0B",ESC);
+                break;
+    }
+}
+
+
+void saltoHoja()
+{
+   printf("%c&l026A",ESC);
+}
+

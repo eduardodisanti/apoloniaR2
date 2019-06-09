@@ -1,0 +1,28 @@
+<?php
+
+echo "<form action='listatar.php'>";
+echo "<center>";
+echo "<h3>Tarjetas personales</h3>";
+echo "</center>";
+echo "<table border=0>";
+echo "<tr><td>Anio</td><td><input type='text' size='4' name='anio'></td></tr>";
+echo "<tr><td>Mes </td><td><input type='text' size='2' name='mes'></td></tr>";
+echo "<tr><td>Listar</td>";
+echo "<td>";
+echo "<select name=listar[] size=10 MULTIPLE>";
+$usuarios=$listaU->lista;
+$cantidad=$listaU->cantidad;
+for($i=0;$i<$cantidad;$i++)
+  {
+    $funcionario = $usuarios[$i]->funcionario;
+    $usuario     = $usuarios[$i]->usuario;
+    $medico      = $usuarios[$i]->medico;
+    echo "	<option value='$usuario'>$usuario</option>";
+  }
+echo "</select>";
+echo "</td></tr>";
+echo "<tr><td colspan=2><input type='submit' name='Ok'></td></tr>";
+echo "</table>";
+echo "</form>";
+
+?>

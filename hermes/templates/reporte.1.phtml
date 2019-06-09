@@ -1,0 +1,26 @@
+<?php
+
+   echo "<form action='reportar.php' method='post'>";
+   echo "<table border='0' width=400 height=300 bgcolor='#cccccc'>";
+
+   echo "<tr bgcolor='#fcfcfc' height='18px'><th colspan=2 align='center'>Agente de control de calidad de Apolonia R2/5</th></tr>";
+   echo "<tr>";
+   echo "   <td rowspan=1 valign='middle' align='middle'>";
+   echo "   <img src='../img/bug-buddy.png'>";
+   echo "   </td>";
+   echo "   <td>";
+   echo "   Reportar un Bug, Paso $paso</td>";   
+   echo "</tr>";   
+   echo "<tr valign=top>";
+   echo "<td colspan=2><font size=2>Esta herramienta permite informar sobre fallas repetitivas (llamadas tambien bugs) en el sistema.<br>";
+   echo "Un bug (cucaracha) es un error en el programa que generalmente no causa la caída del sistema, pero que resulta molesta o perjudica la tarea diaria.<br>";
+   echo "Esta herramienta <font color='#FF0000'>no es</font> para reportar problemas de funcionamiento puntuales sino para lograr mejoras de funcionamiento. No olvide que los bugs no críticos no son eliminados inmediatamente. Por favor utilize esta herramienta para lo que realmente esta diseñada.<br>";
+   echo "   </font></td>";
+   echo "</tr>";
+   echo "<tr width='20px' valign='bottom'><td colspan=2 align='right'>";
+   echo "<input type='submit' name='comando' value='Siguiente'> ";
+   echo "<input type='submit' name='comando' value='Cancelar' onclick='window.close()'></tr>";
+   echo "</table>";
+   echo "<input type='hidden' name='paso', value='2'>";
+   echo "</form>";
+?>

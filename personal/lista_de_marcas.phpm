@@ -1,0 +1,21 @@
+<?php
+
+class lista_de_marcas
+  {
+           var $anio, $mes; 
+	   var $hora;
+
+           function agregar($dia, $hora)
+             {
+               $indice = 0;
+               $fila = $dia;
+               $columna = 0;
+             
+               while(!empty($this->hora[$fila][$columna]))
+                {
+                   $columna++;
+                }
+               $this->hora[$fila][$columna]=$hora;
+             }
+  }
+?>

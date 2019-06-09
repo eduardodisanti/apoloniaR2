@@ -1,0 +1,109 @@
+<?php
+
+function tablaT($tarjeta)
+{
+  $usr    = $tarjeta->Funcionario;
+  $nombre = $usr->usuario;
+  $numero = $usr->funcionario;
+  $mes    = $tarjeta->Mes;
+  $anio   = $tarjeta->Anio;
+  
+  echo "<table border=0 bgcolor='#000000' width='500px' cellspacing='1'>";
+  echo "<tr>";
+  echo "	<td><font color='#ffffff'>$numero</td>";
+  echo "	<td><font color='#ffffff' size=+1 align=left>$nombre</font></td>";
+  echo "</tr>";
+  echo "<tr>";
+  echo "	<td><font color='#ffffff'>Fecha</td>";
+  echo "	<td><font color='#ffffff' size=+1>$mes / $anio</font></td>";
+  echo "</tr>";  
+  echo "</table>";
+
+  echo "<table border=0 bgcolor='#000000' width='500px'>";
+  echo "<tr bgcolor='#cccccc'><th>Dia</th><th>Entrada</th><th>Entrada</th><th>Salida</th><th>Salida</th><th>Entrada</th><th>Salida</th></tr>";
+  
+  for($dia=1;$dia<=31;$dia++)
+    {
+      echo "<tr bgcolor='#ffffff'>";
+      echo "<td align='right'>$dia</td>";
+      $color='#ECFFF7';
+      
+      for($idx=0;$idx<=5;$idx++)
+        {
+	  $x=$tarjeta->fetchMarca($dia);
+	  if(!empty($x))
+	    {
+	  	$hh=$x->horas;
+	  	$mm=$x->minutos;
+	  	$hhmm="$hh:$mm";
+	  	
+	    } else
+	         $hhmm="&nbsp;&nbsp;";
+	  echo "<td align='right' bgcolor='$color'>";
+	  if($color=='#ECFFF7')
+	    $color='#ffffff';
+	  else
+	    $color='#ECFFF7';
+	  echo $hhmm;
+	  echo "</td>";	  
+	}
+      echo "</tr>";
+    }
+    
+  echo "</table>";
+  echo "<center><a href='javascript:window.close()'>Cerrar esta ventana</a></center>";
+}
+
+function tablaI($tarjeta)
+{
+  $usr    = $tarjeta->Funcionario;
+  $nombre = $usr->usuario;
+  $numero = $usr->funcionario;
+  $mes    = $tarjeta->Mes;
+  $anio   = $tarjeta->Anio;
+  
+  echo "<table border=1 bgcolor='#000000' width='500px' cellspacing='1'>";
+  echo "<tr>";
+  echo "	<td><font color='#ffffff'>$numero</td>";
+  echo "	<td><font color='#ffffff' size=+1 align=left>$nombre</font></td>";
+  echo "</tr>";
+  echo "<tr>";
+  echo "	<td><font color='#ffffff'>Fecha</td>";
+  echo "	<td><font color='#ffffff' size=+1>$mes / $anio</font></td>";
+  echo "</tr>";  
+  echo "</table>";
+
+  echo "<table border=1 bgcolor='#000000' width='500px'>";
+  echo "<tr bgcolor='#cccccc'><th>Dia</th><th>Entrada</th><th>Entrada</th><th>Salida</th><th>Salida</th><th>Entrada</th><th>Salida</th></tr>";
+  
+  for($dia=1;$dia<=31;$dia++)
+    {
+      echo "<tr bgcolor='#ffffff'>";
+      echo "<td align='right'>$dia</td>";
+      $color='#ECFFF7';
+      
+      for($idx=0;$idx<=5;$idx++)
+        {
+	  $x=$tarjeta->fetchMarca($dia);
+	  if(!empty($x))
+	    {
+	  	$hh=$x->horas;
+	  	$mm=$x->minutos;
+	  	$hhmm="$hh:$mm";
+	  	
+	    } else
+	         $hhmm="&nbsp;&nbsp;";
+	  echo "<td align='right' bgcolor='$color'>";
+	  if($color=='#ECFFF7')
+	    $color='#ffffff';
+	  else
+	    $color='#ECFFF7';
+	  echo $hhmm;
+	  echo "</td>";	  
+	}
+      echo "</tr>";
+    }
+  echo "</table>";
+  echo "<br><br><br><br><br><br><br><br><br><br><br><hr>";
+}
+?>

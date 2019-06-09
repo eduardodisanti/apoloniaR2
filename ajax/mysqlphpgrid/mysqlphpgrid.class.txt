@@ -1,0 +1,67 @@
+HOW TO USE THE MYSQLPHPGRID CLASS, VERSION 0.6.4:
+=================================================
+
+1. Use on a full table:
+<?
+include("mysqlphpgrid.class.php");
+$grid = new mysqlphpgrid("<HOSTNAME>", "<USERNAME>", "<PASSWORD>", "<DATABASENAME>", "<TABLENAME>");
+$grid->add_allowed      = false;    // optional: only if you don't want the user to add records
+$grid->delete_allowed   = false;    // optional: only if you don't want the user to delete records
+$grid->update_allowed   = false;    // optional: only if you don't want the user to update cells
+$grid->pagelength       = <length>; // optional: only if you want another langth than 20 (default)
+$grid->show_id_field    = false;    // optional: only if you don't want to show the id field
+$grid->UpdateData();                // to update data in database as specified by parameters
+echo $grid->ShowTable();            // to generate the html. This is the only function that generates html!!
+?>
+
+2. Use to display parts of a table:
+<?
+include("mysqlphpgrid.class.php");
+class Mytablegrid extends mysqlphpgrid {
+    protected function select(){
+        $res = mysql_query("<PUT YOUR OWN QUERY HERE USING $this->table AS TABLENAME>" . $this->orderbystr, $this->conn) or die(mysql_error());
+        return ($res);
+    }
+    function add(){
+        mysql_query("<PUT YOUR INSERT QUERY HERE USING $this->table AS TABLENAME>)", $this->conn) or die(mysql_error());
+        if (mysql_affected_rows($this->conn) == 1) return(true); else return(false);
+    }
+}
+$grid = new mysqlphpgrid("<HOSTNAME>", "<USERNAME>", "<PASSWORD>", "<DATABASENAME>", "<TABLENAME>");
+<PUT HERE YOUR CHANGES OF THE DEFAULT SETTINGS, AS SPECIFIED ABOVE>
+$grid->UpdateData();                // to update data in database as specified by parameters
+echo $grid->ShowTable();            // to generate the html. This is the only function that generates html!!
+?>
+
+
+3. License:
+MySQLPHPGrid is released under the LGPL open source license.
+A file License.txt is distributed with its release package.
+
+
+4. Changes from earlier versions:
+From version 0.6.3 to 0.6.4:
+- the width of the grid and the individual columns can be controlled in the style sheet
+- tooltips on cells and columns headers
+- several minor improvements in presentation of grid
+- width of input field same as column width
+- several bugfixes:
+  - bug fix: error on adding or deleting a record right on the border of the display page
+  - bug fix: ability to insert commas
+  - bug fix: using the example sql file in MySQL strict mode
+From version 0.6.2 to 0.6.3:
+- using mootools library for ajax update requests
+- some visual effects on update and delete
+- tooltips on add, delete and sort buttons
+- upon add, the grid navigates to the added row
+- style sheets updated
+- several minor bug fixes
+From version 0.6.1 to 0.6.2:
+- bug fix in the update of the presentation of the grid
+From version 0.5.1 to 0.6.1:
+- Update of cells is handled via an AJAX request => no full page load is needed.
+- Support for MySQL ENUM Datatype via drop down lists.
+- The ability to disallow adding, deleting or cell updating (used to be one setting for all).
+- optional arguments removed and implemented as public variables of the class
+- you may specify if the id field will be shown or not; it is no longer allowed to edit the id field.
+- many smaller bug fixes

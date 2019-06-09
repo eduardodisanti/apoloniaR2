@@ -1,0 +1,53 @@
+<html>
+	<title>Easy grid sample</title>
+	<head>
+        <script src = "yahoo.js" ></script>
+        <script src = "connection-min.js" ></script>
+        <script src = "easygrid.js" ></script>
+        <script src = "easygrid_contextmenu.js" ></script>
+	</head>
+	<style>
+	TABLE.grid_table { width: 400px; padding: 0px;  }
+	TABLE.grid_table TH { border: 1px solid silver; background-color: #EEEEEE; padding: 0px 5px 0px 5px; }
+	TABLE.grid_table TABLE TD { border: 0px; font-weight: bold; }
+	TABLE.grid_table TABLE TD A { cursor: pointer;  }
+	TABLE.grid_table TD { border-left: 1px solid silver; border-bottom: 1px solid silver; border-right: 1px solid silver; padding: 0px 5px 0px 5px; }
+	.grid_indication { background: silver; }
+	.grid_nav INPUT.cond { width: 30px; }
+	.grid_nav INPUT.filter { width: 130px; }
+	.grid_nav FORM { padding: 2px 0px 2px 0px; margin: 2px; }
+	.grid_nav FORM A { padding: 2px 5px 2px 5px;  border: 1px silver solid; cursor: pointer; }
+	
+	/* Grid Context Menu */
+	.context_menu { font-size: 12px; font-family: Arial; visibility: hidden; position: absolute; width: 240px; border: outset 2px #FFFFFF; background: #D4D0C8}
+	.context_menu a { width: 240px; padding: 2px 17px; color: black; text-decoration: none; cursor: default}
+	.context_menu a:hover {color: #ffffff; background: #0A246A} 	
+	</style>
+	
+<body>
+<h1>Easy GRID Sample</h1>
+
+<!-- Tool panel -->
+<div class="grid_nav">
+	<form id="FilterForm">
+		Country <input class="filter" type="text" name="filter" value="" onkeypress="makeRequest('filter_field=Name&filter_value='+this.value+	String.fromCharCode(window.event.keyCode));" />
+		<input type="button" name="sfilter" onclick="makeRequest('filter_field=Name&filter_value='+this.form.filter.value);" value="Filter" /> 
+	</form>
+	<form id="RangeForm">
+		Since <input class="cond" type="text" name="offset" value="0" />
+		 to <input class="cond" type="text" name="limit" value="20" /> from <span id="TblLength">0</span>
+		 <input type="button" name="show" onclick="makeRequest('offset='+this.form.offset.value+'&limit='+this.form.limit.value);" value="Show" /> 
+	</form>
+	<form id="PaginationForm">
+	</form>	
+	</div>
+<div id="TblBody">Data is loading...</div>
+
+<script>
+	settings(columns, '{"field":"Code","title":"Code", "width":"15%"}');
+	settings(columns, '{"field":"Name","title":"Country", "width":"80%"}');
+	settings(columns, '{"field":"Abb","title":"Abbreviation", "width":"15%"}');
+	makeRequest('');
+</script>
+</body>
+</html>

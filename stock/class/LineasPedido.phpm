@@ -1,0 +1,126 @@
+<?php
+
+  class LineasPedido{
+  
+	var $almacen,
+	    $articulo,
+	    $cantidad,
+	    $saldo,
+	    $firma;
+	    
+
+	var $lista,
+	    $conn,
+	    $lineas;
+		
+        function LineasPedido() {
+	    $this->lista=NULL;
+	}
+	
+	function init() {
+	   $this->list = NULL;
+	}
+
+	function setConn($unaConeccion) {
+	
+	   $this->conn = $unaConeccion;
+	}
+	
+	function setNumero($unNumero) {
+	
+		$this->numero = $unNumero;
+	}
+	
+	function setSerie($unaSerie) {
+	
+		$this->serie = $unaSerie;
+	}
+	
+	function setProveedor($unProveedor) {
+		$this->proveedor = $unProveedor;
+	}
+
+	function setCantidad($unaCantidad) {
+	
+		$this->cantidad = $unaCantidad;
+	}
+	
+	function setElemento($unElemento) {
+	
+		$this->elemento = $unElemento;
+	}
+	
+	function setLinea($unaLinea) {
+	
+		$this->linea = $unaLinea;
+	}
+	
+	function cargar() {
+	   $query="select articulos.id as articulo, articulos.nombre as nombre, articulos.codigo as codigo, linea, cantidad from articulos, linearemito 
+	   where 
+	   	serie='$this->serie'        and 
+	   	proveedor=$this->proveedor  and 
+	   	numero=$this->numero        and
+		articulos.id = linearemito.elemento
+	   order by proveedor, serie, numero, linea desc";
+
+	   $q = $this->conn->query($query);
+	          
+	   if(DB::isError($q))
+	     die(" ".$q->getMessage().$query."<br> en LineasPedido.phpm");
+	     
+	   $i=0;
+	   while($reg=$q->fetchRow())
+	     {
+	        $this->lista[$i++] = $reg;
+		$this->lineas=$i;
+	     }
+	}
+
+	function almacenar() {
+	
+	   if($this->linea==0)
+	      {
+		$query="select linea from linearemito where 
+				serie='$this->serie' and
+				numero=$this->numero and
+				proveedor=$this->proveedor
+				order by linea desc";
+
+		$q   = $this->conn->query($query);
+		$reg = $q->fetchRow();
+		if(empty($reg))
+		   $this->linea = 1;
+		else
+		   $this->linea = $reg->linea + 1;
+	      }
+	   $query="insert into linearemito values('$this->serie', $this->numero, $this->proveedor, $this->linea, $this->elemento, $this->cantidad)";
+	  
+	   $q = $this->conn->query($query);
+	          
+	   if(DB::isError($q))
+	     die(" ".$q->getMessage()." ".$query."<br> en ListaArticulos.phpm");	    	   
+	}
+	
+	function borrar() {
+	      $query="delete from linearemito
+	        where 
+	   	    serie    ='$this->serie'  	and 
+	   	    proveedor=$this->proveedor  and 
+	   	    numero   =$this->numero	and
+		    linea    =$this->linea
+	        ";
+
+	   $q = $this->conn->query($query);
+	          
+	   if(DB::isError($q))
+	     die(" ".$q->getMessage()." ".$query."<br> en LineasPedido.phpm");	    
+	}
+		
+	function getLista() {
+	
+	   return($this->lista);
+	}
+	
+}
+?>

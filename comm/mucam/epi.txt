@@ -1,0 +1,908 @@
+select Externo from Medicos, Usuarios where funcionario = 1031 and Numero = medico ( N)
+insert into Episodios values(4627780, '2008-04-14', 46, '08:09', 204, 'impresión', 1031, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5017306, '2008-04-14', 16, '08:09', 650, 'sellantes.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5017306, '2008-04-14', 17, '08:09', 650, 'sellantes.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5017306, '2008-04-14', 18, '08:09', 650, 'sellantes.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5017306, '2008-04-14', 19, '08:09', 650, 'sellantes.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5017306, '2008-04-14', 20, '08:09', 650, 'sellantes.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5017306, '2008-04-14', 21, '08:09', 650, 'sellantes.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5017306, '2008-04-14', 22, '08:09', 650, 'sellantes.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5017306, '2008-04-14', 23, '08:09', 650, 'sellantes.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5017306, '2008-04-14', 24, '08:09', 650, 'sellantes.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5017306, '2008-04-14', 25, '08:09', 650, 'sellantes.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5017306, '2008-04-14', 26, '08:09', 650, 'sellantes.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(4794472, '2008-04-14', 35, '08:11', 675, 'paciente embarasada se da pase a gestantes', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(4999046, '2008-04-14', 999, '08:15', 100, '9 años .Respirador mixto. Laterodesv mand fx hacia la derecha con mordida cruzada a nivel de 16. Apiñamiiento ant inf. Falta recambio de Lats sups. 11 retroinclinado.Surco labio mentoniano marcado, degl disfx. ', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(4568690, '2008-04-14', 999, '08:17', 692, 'Pac concurre del Pinar por diagnostico de ortodoncia fija y saber presupuesto,derivo a orodoncia ya que fue dada mal la hora.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 1074 and Numero = medico ( N)
+insert into Episodios values(5392036, '2008-04-14', 999, '08:18', 3, 'ausente', 1074, 1);
+select Externo from Medicos, Usuarios where funcionario = 1074 and Numero = medico ( N)
+insert into Episodios values(5048718, '2008-04-14', 999, '08:20', 3, 'ausente', 1074, 1);
+select Externo from Medicos, Usuarios where funcionario = 1071 and Numero = medico ( N)
+insert into Episodios values(3653501, '2008-04-14', 999, '08:20', 211, 'toma de impresion', 1071, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(3268126, '2008-04-14', 47, '08:21', 204, 'tallado e impresion', 1051, 1);
+select Externo from Medicos, Usuarios where funcionario = 8456 and Numero = medico ( N)
+insert into Episodios values(5520090, '2008-04-14', 64, '08:23', 713, 'se obtura', 8456, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(4764890, '2008-04-14', 46, '08:26', 650, '', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(4879335, '2008-04-14', 999, '08:27', 202, 'Colocacion de reparacion.Abono', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 1031 and Numero = medico ( N)
+insert into Episodios values(1663855, '2008-04-14', 16, '08:27', 675, 'amalgama', 1031, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(4930793, '2008-04-14', 999, '08:29', 209, 'adapto coffin bajo AVS ', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 3215 and Numero = medico ( N)
+insert into Episodios values(2950793, '2008-04-14', 22, '08:29', 220, 'Obturo en medidas establecidas en sesion anterior,a la paciente le robaron las rx anteriores,indico rx de control de obturacion..', 3215, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(2543732, '2008-04-14', 12, '08:30', 693, 'Ionomero y dycal ,pase a Od gral.', 1022, 2);
+select Externo from Medicos, Usuarios where funcionario = 1086 and Numero = medico ( N)
+insert into Episodios values(4629968, '2008-04-14', 999, '08:31', 209, 'alstic de 13 a 25, y de 46 a 33, usara una goma 5/16 de poste derecho a 46, proxima ver de colocar arco sup mas rigido', 1086, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(4895715, '2008-04-14', 999, '08:32', 209, 'adaptacion, adelanto res. inf', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(5017945, '2008-04-14', 999, '08:34', 209, 'Solicito traiga los modelos, explico nuevamente a la mama falta d espacio para 43. Mala higiene. Adapto coffin, separo AVI', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 1043 and Numero = medico ( N)
+insert into Episodios values(4788549, '2008-04-14', 54, '08:35', 620, '', 1043, 1);
+select Externo from Medicos, Usuarios where funcionario = 1031 and Numero = medico ( N)
+insert into Episodios values(2902420, '2008-04-14', 14, '08:35', 400, 'impresión de provisorio
+provisorio', 1031, 1);
+select Externo from Medicos, Usuarios where funcionario = 8456 and Numero = medico ( N)
+insert into Episodios values(5539903, '2008-04-14', 51, '08:37', 7, '', 8456, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(3297145, '2008-04-14', 17, '08:38', 204, 'cementdo', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(4050274, '2008-04-14', 999, '08:38', 610, '', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(3984845, '2008-04-14', 999, '08:39', 3, 'falto', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5326350, '2008-04-14', 999, '08:39', 100, '7 años, perfil recto, angulo naso labial cerrado, deglucion difuncional. Clase II molar bilateral, clase I canina bilateral. Ausencia de 84, mordida cruzada de 11 con 31 y32. Punto estomio alto. Trat AAK.', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(2822702, '2008-04-14', 999, '08:40', 223, 'toma de mordida,el paciente falto la consulta anterior,viaja el dia 16/04 11:30  se lo auroriza para dicha fecha y se la pide al lab que lo termine sin prueba de dientes.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1071 and Numero = medico ( N)
+insert into Episodios values(2812112, '2008-04-14', 999, '08:41', 153, 'rebasado,control en 3 meses', 1071, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(5136423, '2008-04-14', 999, '08:41', 209, 'aDAPTO COFFIN, ADELANTO RFI Y AJUSTO ESPOLONES SUPS', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 1086 and Numero = medico ( N)
+insert into Episodios values(4568690, '2008-04-14', 999, '08:41', 100, '14 a;os,api;amiento anterior, molares y can en clase I, SE DA PRESUPUESTO PARA ORT FIJA', 1086, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(2674391, '2008-04-14', 34, '08:42', 205, 'cementado', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(1259927, '2008-04-14', 43, '08:42', 215, 'rfc', 1051, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(2674391, '2008-04-14', 35, '08:43', 205, 'cementado,prox. rx de 36 y 37', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 8456 and Numero = medico ( N)
+insert into Episodios values(5139497, '2008-04-14', 55, '08:46', 206, 'etc', 8456, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(5174306, '2008-04-14', 999, '08:48', 209, 'Se le rompio resorte sup. Adapto coffin, separo ambos arcos vests y adelanto resortes', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(2536729, '2008-04-14', 14, '08:48', 675, 'cementado', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(5455906, '2008-04-14', 999, '08:49', 684, 'Profilaxis y ens de cepillado.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(4533553, '2008-04-14', 999, '08:51', 610, 'ens cep', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(4985272, '2008-04-14', 999, '08:53', 100, '7 años. Deglusion disfx. 16 rotado, escaso OJ y OB.Protrus. incisiva. Diastema interincisvo sup. 52 cruzado. ', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 8456 and Numero = medico ( N)
+insert into Episodios values(5217574, '2008-04-14', 85, '08:54', 713, 'se obtura', 8456, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4282287, '2008-04-14', 27, '08:54', 206, ' por perdida  parcial de zoe, prox. profilaxis, luego amalgamas', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(2536729, '2008-04-14', 999, '08:54', 681, '', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(4964527, '2008-04-14', 999, '08:56', 10000, '', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(1825085, '2008-04-14', 35, '09:00', 220, 'Lima 50 en 22.5 prox obturar', 1051, 1);
+select Externo from Medicos, Usuarios where funcionario = 1071 and Numero = medico ( N)
+insert into Episodios values(4183487, '2008-04-14', 777, '09:01', 222, 'se ingresa cromo con clave de la Dra Lopez para poder enviarlo a laboratorio ', 1071, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(4856110, '2008-04-14', 16, '09:02', 650, '', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1071 and Numero = medico ( N)
+insert into Episodios values(4183487, '2008-04-14', 888, '09:02', 223, 'se ingresa cromo con clave de dra lopez para poder enviarlo a lab, ', 1071, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(2752302, '2008-04-14', 27, '09:04', 500, 'caries subgingival se manda rx para valorar pieza', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5016480, '2008-04-14', 999, '09:04', 10000, '', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(2989194, '2008-04-14', 777, '09:04', 222, 'terminar', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(1730530, '2008-04-14', 777, '09:05', 103, 'prueba de protesis superior', 1051, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(1730530, '2008-04-14', 888, '09:09', 223, 'se manda a terminar', 1051, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(4634549, '2008-04-14', 25, '09:10', 220, 'se toma nuevamente conografia ya que sacaron la rx equivocada', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(5015597, '2008-04-14', 999, '09:11', 100, '8 años. OPerado de vegetacione shace 2 años, persiste resp. bucal Presenta laterodesv, mand fx hacia la derecha por interferencia a nivel de caninos temps. Clase 1 molara bilateral. OJ aumnetado, diastema interincisivo sup. Degl disfx. Trat AAK con control', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 1086 and Numero = medico ( N)
+insert into Episodios values(4533628, '2008-04-14', 999, '09:12', 100, ' en realidad la paciente quiere extraerse terceros molares , dice que le han movido el resto de las piezas, los inf no erupcionaron completamente  veo rx  no tienen espacio, indico extracciones, presenta api;amiento inf overjet muy aumentado, sin overbite clase I molar bilateral', 1086, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(5015597, '2008-04-14', 999, '09:12', 10000, '', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 1071 and Numero = medico ( N)
+insert into Episodios values(2534055, '2008-04-14', 999, '09:13', 153, 'ajustes.control en 2 meses', 1071, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(4839434, '2008-04-14', 999, '09:13', 209, 'se pasa presupuesto de ortodoncia fija , lo va a pensar', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 3215 and Numero = medico ( N)
+insert into Episodios values(5051771, '2008-04-14', 36, '09:14', 219, 'Etc, reconstruyo vest y distal con rc para poder aislar,apertura, pm, se porta divino!!!.', 3215, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(4197292, '2008-04-14', 888, '09:15', 610, 'ens cep', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1031 and Numero = medico ( N)
+insert into Episodios values(3265093, '2008-04-14', 27, '09:18', 204, 'impresión', 1031, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(4927564, '2008-04-14', 999, '09:19', 209, 'adaptacion, adelanto res. sup. y apenas res. inf', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(4813471, '2008-04-14', 999, '09:20', 209, 'Adapto coffin, retrocedo AVI, AVS rozando 12. Colocar lengua en paladar', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 8456 and Numero = medico ( N)
+insert into Episodios values(5373586, '2008-04-14', 52, '09:21', 206, '52 53 etc. Ir de a poco, se porta bien', 8456, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(4594455, '2008-04-14', 36, '09:23', 675, 'se le dio anaestecia sin problema y se realizo amalgama.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(4993169, '2008-04-14', 999, '09:24', 209, 'adapto coffin, adelanto apenas AVI', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(5191469, '2008-04-14', 999, '09:25', 154, '', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1071 and Numero = medico ( N)
+insert into Episodios values(3577754, '2008-04-14', 999, '09:27', 153, 'ajustes,control en 6 meses', 1071, 1);
+select Externo from Medicos, Usuarios where funcionario = 1043 and Numero = medico ( N)
+insert into Episodios values(1661312, '2008-04-14', 32, '09:28', 15, 'se coloca ionom base, se valora RX , falta condensacion lateral, se realizara RFC', 1043, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(2636354, '2008-04-14', 45, '09:29', 693, 'abceso submucoso, toma atb desde 48 hs. pieza con endodoncia, desobturo,paso el limite cd en 20 mm, caoh2 metil,zoe, pase a revision', 2008, 2);
+select Externo from Medicos, Usuarios where funcionario = 1074 and Numero = medico ( N)
+insert into Episodios values(5455906, '2008-04-14', 84, '09:29', 675, '1 vez , moticvacion use cucharita, la abuela qme comenta que vive la niña vilencia domestica en su casa, trata de  apoco ganar confianza, hoy epc pedi rx evaluar', 1074, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5078252, '2008-04-14', 999, '09:29', 209, 'adapto coffin adelanto AVS y res sup en mesial del 11 y distal del 21', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(3714430, '2008-04-14', 25, '09:30', 215, 'etc resina por distal.prox caries', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(4665147, '2008-04-14', 36, '09:35', 204, 'Tallado.', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(5191469, '2008-04-14', 999, '09:35', 209, 'Adapto coffin, separo AVS y adelanto rfs', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(3211831, '2008-04-14', 999, '09:37', 610, 'ens cep', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(863729, '2008-04-14', 35, '09:39', 693, 'Pac concurre  con dolor,extirpo ,instr y sedo.Derivo a endodoncia.', 1022, 2);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(4146606, '2008-04-14', 47, '09:39', 675, 'tallado amalgama', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 3215 and Numero = medico ( N)
+insert into Episodios values(5010359, '2008-04-14', 999, '09:41', 3, 'Falta.', 3215, 1);
+select Externo from Medicos, Usuarios where funcionario = 1071 and Numero = medico ( N)
+insert into Episodios values(4215231, '2008-04-14', 999, '09:43', 153, 'rebasado,control en un mes', 1071, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(1082572, '2008-04-14', 999, '09:44', 223, 'toma de impresion superir e inferior.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4139552, '2008-04-14', 16, '09:45', 500, 'hay desadaptacion de bordes, se realiza ra que no sale bien pero se ve que tiene pernos , se da pase a profilaxis, y luego alta , control en 6 meses', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1043 and Numero = medico ( N)
+insert into Episodios values(4029603, '2008-04-14', 17, '09:46', 726, '1a sesion, diferida', 1043, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(1846501, '2008-04-14', 999, '09:48', 610, 'ens cep', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4386104, '2008-04-14', 17, '09:50', 675, 'obturada, pase a profilaxis, y alta control en 6 meses', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1074 and Numero = medico ( N)
+insert into Episodios values(5134496, '2008-04-14', 75, '09:50', 713, 'se obtura, la pieza esta con movilidad pido rx evaluar se avisa ala mama que pueda ir a extraccion', 1074, 1);
+select Externo from Medicos, Usuarios where funcionario = 1031 and Numero = medico ( N)
+insert into Episodios values(3056551, '2008-04-14', 22, '09:55', 215, 'ETC ionomero', 1031, 1);
+select Externo from Medicos, Usuarios where funcionario = 1043 and Numero = medico ( N)
+insert into Episodios values(3358125, '2008-04-14', 45, '10:00', 220, 'limado en 20mm desde V hasta 40, PMCF', 1043, 1);
+select Externo from Medicos, Usuarios where funcionario = 1031 and Numero = medico ( N)
+insert into Episodios values(4335497, '2008-04-14', 35, '10:02', 205, 'ajuste  pido rx24 ', 1031, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4588963, '2008-04-14', 46, '10:04', 675, 'obturada', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(4945149, '2008-04-14', 999, '10:04', 209, 'Adapto coffin, separo rfs de lats', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 1043 and Numero = medico ( N)
+insert into Episodios values(5176163, '2008-04-14', 999, '10:04', 3, 'Falta S/A', 1043, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4588963, '2008-04-14', 47, '10:04', 675, 'obturada,alta y control en 6 mese', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1043 and Numero = medico ( N)
+insert into Episodios values(1261713, '2008-04-14', 999, '10:04', 3, 'Falta S/A', 1043, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4588963, '2008-04-14', 999, '10:05', 681, '', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(2956130, '2008-04-14', 26, '10:05', 675, 'etc y amalgama en mesiooclusal se hace etc en vestibulogingival se deja con eugenato ya que esta muy profunda si no presenta sintomatologia prox amalgama', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 3215 and Numero = medico ( N)
+insert into Episodios values(3332297, '2008-04-14', 16, '10:07', 219, 'Concurre sin obturacion temporaria, lavo e instrumento. P dejo en 19mm, L 40,MV en 16mm L 30, y DV en 18mm dejo cono e indico nueva rx solo para el distal, clorexcal. Explico la importancia de la obturacion temporaria. Mantengo referencias.', 3215, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(4949932, '2008-04-14', 999, '10:08', 209, 'Adapto coffin, adelanto RFI', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(4839345, '2008-04-14', 999, '10:08', 693, 'periodontitis aguda gralizada atb c/12hs y buches con clorex ', 1051, 2);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(3794226, '2008-04-14', 999, '10:10', 610, 'ens cep', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 8456 and Numero = medico ( N)
+insert into Episodios values(5214607, '2008-04-14', 75, '10:10', 714, 'se obtura', 8456, 1);
+select Externo from Medicos, Usuarios where funcionario = 1074 and Numero = medico ( N)
+insert into Episodios values(5352595, '2008-04-14', 51, '10:11', 714, 'observo proceso, cambio de color decido realizar pulpotomia , instrumento hasta lima 40 y dejo tor fc.ver evolucion', 1074, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(4700586, '2008-04-14', 999, '10:11', 2, 'fsa', 1051, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(4941811, '2008-04-14', 999, '10:12', 209, 'Erupcionando 37. Presenta pequeño desvio hacia la derecha con AAK. Adelanto AVS y RFS. Luego haremos otro AAK', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(1725817, '2008-04-14', 999, '10:12', 2, 'fsa', 1051, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(4642204, '2008-04-14', 21, '10:12', 215, 'RF.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(1496328, '2008-04-14', 777, '10:16', 222, 'instalacion ', 1051, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(5272650, '2008-04-14', 999, '10:17', 209, 'Buena evolucion, continua activando 1 vez por semana', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5566120, '2008-04-14', 999, '10:17', 209, 'adapto coffin, poco uso se indica usarlo mas adelanto apenas AVS y res para el 21', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(4655785, '2008-04-14', 999, '10:18', 3, 'falto', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 1074 and Numero = medico ( N)
+insert into Episodios values(5143128, '2008-04-14', 74, '10:18', 206, 'realizo nuevo ionomero, mantengo por el momento los tratamientos realizados de igual forma, sigo reforzando la confianza. Alta control en 3 meses, pido rx de 84 evaluar.', 1074, 1);
+select Externo from Medicos, Usuarios where funcionario = 1071 and Numero = medico ( N)
+insert into Episodios values(4570004, '2008-04-14', 999, '10:20', 153, 'toma de impresion', 1071, 1);
+select Externo from Medicos, Usuarios where funcionario = 1043 and Numero = medico ( N)
+insert into Episodios values(4028335, '2008-04-14', 14, '10:21', 11, ' mesial y distal, en mesial coloco dycal e ionom base, prox AG', 1043, 1);
+select Externo from Medicos, Usuarios where funcionario = 8456 and Numero = medico ( N)
+insert into Episodios values(5242280, '2008-04-14', 75, '10:21', 206, 'etc, se realiza munon de cvi, prox coronita', 8456, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(4962597, '2008-04-14', 999, '10:22', 209, 'esta erupcionando 43, pide nuevba fecha con Dra Linares', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4571894, '2008-04-14', 11, '10:23', 693, 'perdida de resina, ionomero,y en 27 tb. supranestol y zoe', 2008, 2);
+select Externo from Medicos, Usuarios where funcionario = 1086 and Numero = medico ( N)
+insert into Episodios values(4308604, '2008-04-14', 999, '10:24', 209, 'activo ambos arcos del lado izquierdo, cemento braq 45 por primera vez, lig en ocho de 47 a 45 para comenzar a girar, lig en ocho de 454 a 42, alastic de 44 a 43 para girar 44, ', 1086, 1);
+select Externo from Medicos, Usuarios where funcionario = 1074 and Numero = medico ( N)
+insert into Episodios values(5143128, '2008-04-14', 999, '10:25', 3, 'ver recuadro annterior por tema tratamientos y controlar oclusion', 1074, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(4013488, '2008-04-14', 999, '10:27', 2, 'abono saldo 2 ordenes de taller', 1051, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(4836500, '2008-04-14', 999, '10:28', 209, 'adapto coffin adelanto AVI y res inf.', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1084 and Numero = medico ( N)
+insert into Episodios values(5291659, '2008-04-14', 999, '10:29', 10003, '', 1084, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(3472998, '2008-04-14', 36, '10:30', 693, 'no pudo venir el dia de autorizado, realizo avulsion para dar por terminada la urgencia de la pieza', 2008, 2);
+select Externo from Medicos, Usuarios where funcionario = 8456 and Numero = medico ( N)
+insert into Episodios values(5499314, '2008-04-14', 54, '10:34', 15, 'etc', 8456, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(3926935, '2008-04-14', 46, '10:36', 204, 'cementado', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5147228, '2008-04-14', 999, '10:37', 209, 'adaptacion', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(3628004, '2008-04-14', 999, '10:39', 610, '', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1071 and Numero = medico ( N)
+insert into Episodios values(4926507, '2008-04-14', 999, '10:39', 211, 'toma de impresion', 1071, 1);
+select Externo from Medicos, Usuarios where funcionario = 8456 and Numero = medico ( N)
+insert into Episodios values(5274111, '2008-04-14', 55, '10:39', 206, 'etc. ALta. Control en 3 meses', 8456, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(4013488, '2008-04-14', 37, '10:42', 204, 'cementado', 1051, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(4929182, '2008-04-14', 999, '10:42', 209, 'adapto coffin, se indica mas uso, adelanto apenas AVS', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(5043974, '2008-04-14', 74, '10:43', 713, 'etc. 1a. sesion de pulpotomia, no tiene coordinada la segunda hora, se autoriza para terminar en 7 dias', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5289573, '2008-04-14', 85, '10:44', 34, '', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5094579, '2008-04-14', 999, '10:48', 209, 'adelanto AVI, activo 3/4 de vuelta', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1071 and Numero = medico ( N)
+insert into Episodios values(2999534, '2008-04-14', 999, '10:48', 153, 'mal dada la hora.tiene que hacerse la protesis primero', 1071, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(1599147, '2008-04-14', 13, '10:48', 215, 'color C2, en vestibulo gingival', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1071 and Numero = medico ( N)
+insert into Episodios values(3139253, '2008-04-14', 999, '10:50', 2, 'no vino', 1071, 1);
+select Externo from Medicos, Usuarios where funcionario = 1043 and Numero = medico ( N)
+insert into Episodios values(1926949, '2008-04-14', 44, '10:52', 220, 'PBM; limado con limaprecurvada y EDTA; llegue a 18mm hasta lima 25, traspaso pasta alcalina, valorar en 1 mes', 1043, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(4042007, '2008-04-14', 999, '10:54', 610, 'toma d impresion.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1031 and Numero = medico ( N)
+insert into Episodios values(621493, '2008-04-14', 11, '10:55', 220, 'pidorx  se deriva para trat de conducto para luego realizar venner a perno', 1031, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(2027908, '2008-04-14', 999, '10:55', 610, '', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5040084, '2008-04-14', 999, '10:56', 209, 'activacion de PAS', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4335500, '2008-04-14', 27, '10:57', 675, 'anestesia, etc, cav. palatina, zoe, prox. obturar', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1043 and Numero = medico ( N)
+insert into Episodios values(4909164, '2008-04-14', 999, '10:57', 3, 'falta S/A', 1043, 1);
+select Externo from Medicos, Usuarios where funcionario = 1031 and Numero = medico ( N)
+insert into Episodios values(1179224, '2008-04-14', 44, '11:01', 205, 'cementado', 1031, 1);
+select Externo from Medicos, Usuarios where funcionario = 1074 and Numero = medico ( N)
+insert into Episodios values(5412023, '2008-04-14', 999, '11:02', 3, 'ausente', 1074, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(3938282, '2008-04-14', 999, '11:02', 610, 'ens cep', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(8831521, '2008-04-14', 999, '11:07', 209, 'adapto coffin , adelanto res. sup. e inf.', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(1972150, '2008-04-14', 46, '11:07', 800, 'ETC.se recontruye frente estetico', 1051, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(4088753, '2008-04-14', 21, '11:08', 215, 'mesio-vestibulo-palatino', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 3215 and Numero = medico ( N)
+insert into Episodios values(4425139, '2008-04-14', 26, '11:08', 219, 'Instrumento: p en 19mm l 35, MV en 18mm L 25 y DV 15mm L25, conos con pasta alcalina  de igual medida, ref:cuspide corresp a cada conducto.', 3215, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(2933183, '2008-04-14', 38, '11:09', 206, 'etc cavidad pequeña.ci', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(2718898, '2008-04-14', 777, '11:13', 105, 'prueba de dtes, correcta', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1071 and Numero = medico ( N)
+insert into Episodios values(4541835, '2008-04-14', 999, '11:13', 211, 'no adapta.nuevas impresiones', 1071, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(2718898, '2008-04-14', 888, '11:13', 672, 'prueba de dtes, correcta,terminar', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(2933183, '2008-04-14', 999, '11:18', 3, 'prox detartraje y alta', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4425745, '2008-04-14', 36, '11:19', 32, '1a.sesion', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1086 and Numero = medico ( N)
+insert into Episodios values(4588228, '2008-04-14', 999, '11:21', 209, ' mas stripping distal de 33 y 43, nuevo 0155 reb tomando todas las aletas, evaluar bandas de 37 y 47', 1086, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(1841534, '2008-04-14', 21, '11:24', 215, 'se le cayo el ionomero,se le realizo na RF', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(4507254, '2008-04-14', 999, '11:31', 610, 'ens cep', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(3640460, '2008-04-14', 16, '11:31', 204, 'Imp.', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1051 and Numero = medico ( N)
+insert into Episodios values(1565432, '2008-04-14', 17, '11:32', 693, 'reposicion de eugenato', 1051, 2);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(3867384, '2008-04-14', 999, '11:43', 610, 'ens cep', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(1841534, '2008-04-14', 21, '11:43', 215, 'resina foto, color A3,5', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(2978084, '2008-04-14', 22, '11:47', 215, '', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5217532, '2008-04-14', 36, '11:48', 10, 'prox. anest. y amalg.', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(4785713, '2008-04-14', 999, '11:51', 610, 'ens cep', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5188172, '2008-04-14', 53, '11:53', 15, 'prox 63', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1074 and Numero = medico ( N)
+insert into Episodios values(5402589, '2008-04-14', 999, '11:55', 3, 'ausente', 1074, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(1858084, '2008-04-14', 11, '12:00', 206, 'ETC', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4711712, '2008-04-14', 15, '12:09', 220, 'inst. hasta lima 35 en vest. 19,5 mm y palatino 15,5 mm,sacamos 2 rx y no salieron bien, dejo cono,paramono', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(3368839, '2008-04-14', 999, '12:09', 610, 'ens cep e hilo', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(2956092, '2008-04-14', 25, '12:11', 205, 'cementado  , prox bruñir y tiene para hacer incrustacion del 15', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(5098096, '2008-04-14', 22, '12:13', 215, 'etc ionomero prox resina', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(3602159, '2008-04-14', 999, '12:14', 2, 'falto', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1126 and Numero = medico ( N)
+insert into Episodios values(2001764, '2008-04-14', 999, '12:15', 2, 'falto', 1126, 1);
+select Externo from Medicos, Usuarios where funcionario = 1074 and Numero = medico ( N)
+insert into Episodios values(5357485, '2008-04-14', 999, '12:19', 3, 'AUSENTE', 1074, 1);
+select Externo from Medicos, Usuarios where funcionario = 1074 and Numero = medico ( N)
+insert into Episodios values(5454493, '2008-04-14', 999, '12:19', 3, 'AUSENTE', 1074, 1);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(1081014, '2008-04-14', 22, '12:21', 215, 'A2', 1045, 1);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(1081014, '2008-04-14', 23, '12:21', 215, 'A2', 1045, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4846054, '2008-04-14', 37, '12:38', 675, 'etc, cav ocusal, zoe', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(2002996, '2008-04-14', 26, '12:39', 693, 'apertura y sedacion dejo formo y supra,se coordina para pulpo.cementado de prov. en 13.', 1045, 2);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(3111662, '2008-04-14', 26, '12:52', 500, '', 1045, 1);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4392015, '2008-04-14', 23, '12:53', 693, 'no pudo ir a trabajar y pide certificado, ayer paso mal, hoy un poco mejor, aparente esponja en el alveolo, esta tomando atb y analgesicos, vuelve en 48 hs a control', 2008, 2);
+select Externo from Medicos, Usuarios where funcionario = 2008 and Numero = medico ( N)
+insert into Episodios values(4846213, '2008-04-14', 46, '12:59', 620, 'prox. 36 amalgama', 2008, 1);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(3111662, '2008-04-14', 26, '12:59', 8, 'se intenta remocion de inc.,se baja la oc.', 1045, 1);
+select Externo from Medicos, Usuarios where funcionario = 1016 and Numero = medico ( N)
+insert into Episodios values(3108783, '2008-04-14', 777, '13:10', 105, 'EL RODETE NO SE ENCONRO  SE TOMA NUEVA IMPRESION PARA RODETE', 1016, 1);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(5145871, '2008-04-14', 999, '13:11', 209, 'Atraso AVS rozando suave M del 12 y 22, separo res sup e inf ', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(3508036, '2008-04-14', 14, '13:13', 205, 'toma de impresion', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 1016 and Numero = medico ( N)
+insert into Episodios values(3108783, '2008-04-14', 888, '13:13', 223, 'IMPRESION', 1016, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(1162258, '2008-04-14', 15, '13:15', 205, 'Bruñido y control oclusal.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(5232095, '2008-04-14', 999, '13:15', 610, 'ens cep', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 70 and Numero = medico ( N)
+insert into Episodios values(5232097, '2008-04-14', 999, '13:16', 610, 'ens cep', 70, 1);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(4239305, '2008-04-14', 17, '13:16', 11, 'proxima Ag', 1045, 1);
+select Externo from Medicos, Usuarios where funcionario = 3888 and Numero = medico ( N)
+insert into Episodios values(5348292, '2008-04-14', 999, '13:19', 693, 'ajuste de provisorio', 3888, 2);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(5122292, '2008-04-14', 999, '13:21', 209, 'Activacion disyuntor ', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(4972589, '2008-04-14', 84, '13:22', 224, 'dif', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(1755326, '2008-04-14', 14, '13:22', 205, 'tallado ', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5130061, '2008-04-14', 54, '13:23', 713, 'obturacion.', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(4436830, '2008-04-14', 16, '13:23', 5011, 'AMALGAMA.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1036 and Numero = medico ( N)
+insert into Episodios values(8847275, '2008-04-14', 999, '13:27', 209, 'Activo 4/4 vel sup. y 2/4 v el inf.', 1036, 1);
+select Externo from Medicos, Usuarios where funcionario = 3215 and Numero = medico ( N)
+insert into Episodios values(3410824, '2008-04-14', 16, '13:28', 726, '1era sesion diferida', 3215, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(2999534, '2008-04-14', 28, '13:28', 675, 'y el pac quiere hacerse primero protesis sup', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 3888 and Numero = medico ( N)
+insert into Episodios values(4576620, '2008-04-14', 13, '13:28', 693, 'provisorio ajuste por traba mecanica ya que espilar de la ppr. y el gancho lo retira del lugar', 3888, 2);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(3847097, '2008-04-14', 15, '13:30', 215, 'resina', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(2786782, '2008-04-14', 11, '13:31', 215, 'Resina en incisal.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5230498, '2008-04-14', 54, '13:32', 224, 'se salio restauracion y obt. de pulpot. de re-difiere', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(2924166, '2008-04-14', 35, '13:34', 204, 'tallo para recub cuspideo por retencion escasa', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 1036 and Numero = medico ( N)
+insert into Episodios values(5278843, '2008-04-14', 999, '13:34', 209, 'Adapto coffin ,adelanto arco sup. y retraso resorte de 11.', 1036, 1);
+select Externo from Medicos, Usuarios where funcionario = 1016 and Numero = medico ( N)
+insert into Episodios values(1923566, '2008-04-14', 888, '13:35', 672, 'CONTROL BIEN  PIDE OTRA FECHA PARA REBASADO DE 32', 1016, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5030691, '2008-04-14', 84, '13:36', 206, '', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(5045397, '2008-04-14', 999, '13:37', 100, '7 añosy 6 me3ses,deglucion disfuncional con interposicion lingual, clase I con mordida abierta anterior,clase II c derecho,  falta de espacio para la erupcion de 32, 42, y 12  Erupcionando el 21, diastema interincisivo Indico OPT   TRAT AAK con control post con res frontales de B imler verticales  ', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(5097058, '2008-04-14', 999, '13:37', 10000, '', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5030691, '2008-04-14', 85, '13:38', 206, '', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1036 and Numero = medico ( N)
+insert into Episodios values(4898442, '2008-04-14', 999, '13:39', 209, 'Cierro 3/4 v porque no lo uso por tos.', 1036, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(1716238, '2008-04-14', 15, '13:42', 205, 'cementado', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(4264623, '2008-04-14', 21, '13:43', 215, 'RF.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5577646, '2008-04-14', 55, '13:43', 713, 'epc con turbina, se debio parar pues no quiso continuar atendiendose. pac temeroso.', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(4954146, '2008-04-14', 999, '13:43', 100, '11 a;os,dent perm inf,y mixta sup,mord cruz de 1` mol perm y del 12,el 22  protruido,t>placa sup con levante,le dije a la madre que el trtam  habara que continuarlo con ortod fija', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 1016 and Numero = medico ( N)
+insert into Episodios values(2917552, '2008-04-14', 777, '13:44', 222, 'impresion ', 1016, 1);
+select Externo from Medicos, Usuarios where funcionario = 1016 and Numero = medico ( N)
+insert into Episodios values(2917552, '2008-04-14', 888, '13:44', 223, 'impresion', 1016, 1);
+select Externo from Medicos, Usuarios where funcionario = 3215 and Numero = medico ( N)
+insert into Episodios values(3608413, '2008-04-14', 23, '13:46', 220, 'vino sin rx', 3215, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(5030642, '2008-04-14', 999, '13:48', 209, 'adapto coffin,en proxima mandar sacar 2 fechas para nuevo aak con mordida mas mesial', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(4314592, '2008-04-14', 999, '13:49', 2, 'FALTO SIN AVISO.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(5183189, '2008-04-14', 999, '13:50', 2, 'FALTO SIN AVISO.', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5380334, '2008-04-14', 54, '13:50', 714, 'estaba todo reblandecidpo por dentro , se limpia bien con cuch. y se deja diferido, se indica rx para controlar piso', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(4762530, '2008-04-14', 999, '13:50', 10003, 'sin control post, espolon en MG del 85 y 36, res inf verticales ', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(1792313, '2008-04-14', 34, '13:51', 215, 'etc,cvi base,resina', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 1016 and Numero = medico ( N)
+insert into Episodios values(3541496, '2008-04-14', 777, '13:53', 105, 'instalacion', 1016, 1);
+select Externo from Medicos, Usuarios where funcionario = 1036 and Numero = medico ( N)
+insert into Episodios values(4974960, '2008-04-14', 999, '13:53', 10000, 'Abono 7 ordenes.', 1036, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(4124341, '2008-04-14', 21, '13:55', 215, 'Resina en D.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 1021 and Numero = medico ( N)
+insert into Episodios values(3101161, '2008-04-14', 44, '13:55', 693, 'reposicion de eugenato', 1021, 2);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(4743607, '2008-04-14', 64, '13:56', 675, 'prox. amalg. 65', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1016 and Numero = medico ( N)
+insert into Episodios values(3541496, '2008-04-14', 888, '13:58', 672, 'instalacion', 1016, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(4240571, '2008-04-14', 26, '13:59', 675, 'pasa a 4to piso', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(5193806, '2008-04-14', 777, '14:00', 10001, '', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5577642, '2008-04-14', 61, '14:00', 206, 'etc y ionomero rest.', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(5529127, '2008-04-14', 36, '14:01', 213, 'cementado provisorio ,se perfora cuerno pulpar,1a de pulpo.', 1045, 1);
+select Externo from Medicos, Usuarios where funcionario = 1036 and Numero = medico ( N)
+insert into Episodios values(5229107, '2008-04-14', 999, '14:05', 209, 'Adapto coffin.', 1036, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5360173, '2008-04-14', 16, '14:05', 650, 'prox. ionom. y sell. en 26', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1036 and Numero = medico ( N)
+insert into Episodios values(5229107, '2008-04-14', 999, '14:06', 209, 'Adapto coffin.', 1036, 1);
+select Externo from Medicos, Usuarios where funcionario = 3888 and Numero = medico ( N)
+insert into Episodios values(4480452, '2008-04-14', 15, '14:07', 220, '', 3888, 1);
+select Externo from Medicos, Usuarios where funcionario = 1016 and Numero = medico ( N)
+insert into Episodios values(1601062, '2008-04-14', 888, '14:07', 223, '  se  modifico oclusion nen boca', 1016, 1);
+select Externo from Medicos, Usuarios where funcionario = 3888 and Numero = medico ( N)
+insert into Episodios values(4480452, '2008-04-14', 999, '14:07', 693, 'repongo eugwenato en pieza 15', 3888, 2);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(5303823, '2008-04-14', 777, '14:10', 10001, '', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(3211207, '2008-04-14', 12, '14:11', 215, '', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 1030 and Numero = medico ( N)
+insert into Episodios values(3211207, '2008-04-14', 22, '14:11', 215, 'lA RESINA FUE EN 22, NO EN 12', 1030, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5530437, '2008-04-14', 84, '14:11', 15, 'etc y ionomero rest.', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(1442327, '2008-04-14', 11, '14:12', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(3888711, '2008-04-14', 12, '14:12', 215, '', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(3310647, '2008-04-14', 12, '14:13', 215, 'Resina en P.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 10027 and Numero = medico ( N)
+insert into Episodios values(5042873, '2008-04-14', 999, '14:13', 100, 'DRA SILBERBERG 14/04/08', 10027, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(4484300, '2008-04-14', 26, '14:13', 675, 'etc amalgama.se pide rx de 15 para evaluar obturacion y comenzar ', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(1992280, '2008-04-14', 24, '14:14', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 3215 and Numero = medico ( N)
+insert into Episodios values(2711515, '2008-04-14', 36, '14:15', 5011, 'se ve en rx perforacion a nivel furcal,indicado avulsion,luego pase a Pr Fija', 3215, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(5088232, '2008-04-14', 12, '14:16', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(4219643, '2008-04-14', 23, '14:18', 500, 'valorar endo', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(5130422, '2008-04-14', 999, '14:19', 10000, 'y mordida constructiva Abono 942 pesos  Mordida dificultosa', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(5577642, '2008-04-14', 84, '14:21', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(5577642, '2008-04-14', 85, '14:21', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(3775943, '2008-04-14', 23, '14:22', 215, 'A3.5', 1045, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(4060058, '2008-04-14', 37, '14:22', 726, 'no trate el 14 porq el paciente tenia un evento y me pidio si la podia evitar.EPC de 37 prox apertura', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 1016 and Numero = medico ( N)
+insert into Episodios values(3026814, '2008-04-14', 777, '14:23', 103, 'impresion definitiva el rodete inferior se guarda', 1016, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5249762, '2008-04-14', 65, '14:24', 693, 'se repone iv.', 5587, 2);
+select Externo from Medicos, Usuarios where funcionario = 1072 and Numero = medico ( N)
+insert into Episodios values(4710207, '2008-04-14', 36, '14:24', 726, 'obturada ', 1072, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5268979, '2008-04-14', 36, '14:24', 15, '', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(5131994, '2008-04-14', 16, '14:25', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(5045007, '2008-04-14', 999, '14:27', 10000, '', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(4659246, '2008-04-14', 14, '14:27', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(4152387, '2008-04-14', 26, '14:29', 204, 'Cementado.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(2804836, '2008-04-14', 46, '14:30', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(4880711, '2008-04-14', 21, '14:30', 500, 'y 22 EPC, exposicion y sedacion. ', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(2804836, '2008-04-14', 17, '14:30', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(2804836, '2008-04-14', 23, '14:30', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(3173365, '2008-04-14', 16, '14:30', 204, 'tomo impresion', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(4910899, '2008-04-14', 999, '14:32', 3, 'Abono 135 pesospor la reparacion', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 1036 and Numero = medico ( N)
+insert into Episodios values(4897564, '2008-04-14', 999, '14:33', 10003, 'REPARADO.', 1036, 1);
+select Externo from Medicos, Usuarios where funcionario = 1016 and Numero = medico ( N)
+insert into Episodios values(2003589, '2008-04-14', 777, '14:33', 222, 'prueba de enfilado', 1016, 1);
+select Externo from Medicos, Usuarios where funcionario = 1072 and Numero = medico ( N)
+insert into Episodios values(5108358, '2008-04-14', 65, '14:35', 10, '', 1072, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(4940684, '2008-04-14', 11, '14:35', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(4940684, '2008-04-14', 21, '14:35', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5543955, '2008-04-14', 74, '14:35', 675, '', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(1360666, '2008-04-14', 777, '14:35', 103, 'Toma de imp. definitiva.', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(1360666, '2008-04-14', 888, '14:36', 672, 'Toma de imp. definitiva', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(3746413, '2008-04-14', 48, '14:37', 22, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(4650549, '2008-04-14', 37, '14:37', 224, 'Etc, 1era de pulpo', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 1072 and Numero = medico ( N)
+insert into Episodios values(5503054, '2008-04-14', 999, '14:37', 692, 'Control sin caries, vuelve en seis meses', 1072, 1);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(1517346, '2008-04-14', 42, '14:39', 220, 'L45 en 18,5,dejo cono ', 1045, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(4663236, '2008-04-14', 44, '14:39', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(4677174, '2008-04-14', 11, '14:39', 215, 'ETc,ionomero.Prox resina.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 1016 and Numero = medico ( N)
+insert into Episodios values(3160084, '2008-04-14', 888, '14:41', 223, 'alta', 1016, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(1654213, '2008-04-14', 12, '14:43', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1072 and Numero = medico ( N)
+insert into Episodios values(5109415, '2008-04-14', 74, '14:44', 206, '', 1072, 1);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(5280202, '2008-04-14', 999, '14:45', 209, 'enseñanza de masticacion unilateral y alternada proximo control comienzo desgaste de caninos temporarios', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(3612881, '2008-04-14', 15, '14:46', 205, 'tomo impresion', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(1688277, '2008-04-14', 12, '14:46', 500, 'Pac no trajo rx.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 1016 and Numero = medico ( N)
+insert into Episodios values(2654702, '2008-04-14', 999, '14:46', 3, 'no concurrio', 1016, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(5297140, '2008-04-14', 64, '14:46', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(5297140, '2008-04-14', 65, '14:46', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(5150449, '2008-04-14', 999, '14:48', 100, 'falto', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(3372029, '2008-04-14', 16, '14:50', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(4999154, '2008-04-14', 999, '14:52', 10003, 'sin control posterior ', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(3617749, '2008-04-14', 15, '14:53', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(2008611, '2008-04-14', 26, '14:53', 675, 'etc amalgama.pido autoriz ginecologo,pac con 3 meses de emb para recibir anestesia tipo.prox caries en 35,unica caries que presenta', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(3562878, '2008-04-14', 999, '14:53', 3, 'falto', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(3172676, '2008-04-14', 999, '14:54', 3, 'falto', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(3351352, '2008-04-14', 25, '14:56', 207, 'Cementado.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5610215, '2008-04-14', 55, '14:57', 224, 'Epc   zoe va para pulpo.', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(1412905, '2008-04-14', 27, '14:58', 11, 'y 28 no llega a pulpa,muy profunda', 1045, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(4541102, '2008-04-14', 26, '14:58', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(3965404, '2008-04-14', 27, '14:59', 675, 'levante amnalgama ya existen sin anestesia. tiene eugenato abajo. prox sacar rx para ver si tiene hecha la pulpo. ', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 6698 and Numero = medico ( N)
+insert into Episodios values(4108703, '2008-04-14', 36, '14:59', 219, 'Etc, acceso  conds. extirpacion de pulpa,ampiacion de tecio sup con largo.Pramono mas eugenato.', 6698, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5468015, '2008-04-14', 75, '15:00', 224, 'primera sesion de pulpotomia dif.', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(3054061, '2008-04-14', 15, '15:00', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(4564730, '2008-04-14', 46, '15:01', 693, 'sedacion,ATB', 1045, 2);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(3346435, '2008-04-14', 34, '15:03', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(3346435, '2008-04-14', 37, '15:03', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(3346435, '2008-04-14', 38, '15:03', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5419946, '2008-04-14', 61, '15:06', 206, 'ionomero', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(1977179, '2008-04-14', 999, '15:06', 105, 'paciente concurrio con protesis fracturada porq se le cayo un vaso arriba. queria realizarse una protesis nueva. le explicamos q es con costo q la solucion es una reparacuion q le lleva una semana. se fue molesta', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5610207, '2008-04-14', 85, '15:06', 15, 'Epc   zoe', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(1661364, '2008-04-14', 24, '15:07', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(1977179, '2008-04-14', 999, '15:07', 3, 'lo anterio fue una urgencia', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(5010822, '2008-04-14', 999, '15:07', 100, '8 a;os,normorelacion,mord ab ant,hipodesarrollo sup e inf,api;am ant sup e inf,t>aak,res fr vert', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(5419946, '2008-04-14', 51, '15:08', 8, 'Llegaron 15 minutos tarde!vino con pieza fracturada por traumatismo , falta pared palatina, se 
+indica rx para vevaluar pero lo mas seguro que sea para extraccion ', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(5110088, '2008-04-14', 999, '15:11', 100, '9años. surco labio mentoniano marcado ,deglucion disfuncional, clase II con overjet aumentado de incisivos superiores,falta de espaco para la erupcion de 12 y 22 .relata la mamà que estan presentes ambas piezas ,no hay agenesia se olvido de traer lasw placas .al realizar adelantamiento presenta mordida cruzadqa bi lateral ..tratamiento primero 1-realizacion de diyuntor ,y luego se continuara con aparatoligia funcional.se le explica a la mama que una vaez que se le coloca el diyuntor lo ire controlando.', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(1688277, '2008-04-14', 12, '15:11', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(4528628, '2008-04-14', 21, '15:14', 210, 'Tooma de impresion.Se pide provi color 42 marche.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(4146606, '2008-04-14', 27, '15:16', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(4146606, '2008-04-14', 36, '15:16', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(4146606, '2008-04-14', 37, '15:16', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(1384718, '2008-04-14', 24, '15:16', 693, 'recementado', 23325, 2);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(3117121, '2008-04-14', 777, '15:18', 103, 'paciente que no quiere sus dientes anteriores y yprefiere extraerlos para la protesis va a ppr por consulta de LA SITUACION', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 1011 and Numero = medico ( N)
+insert into Episodios values(4677922, '2008-04-14', 46, '15:18', 21, 'de amalgama, se indica rx de 36 (tiene amalgama que se realizo particular)para evaluar coronita ', 1011, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(5015429, '2008-04-14', 11, '15:19', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(4976381, '2008-04-14', 999, '15:21', 209, 'adapto coffin, pase a odonto pediatra,  x caries en vestibular del 36 .', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(1517346, '2008-04-14', 42, '15:22', 8, 'sacar nueva RX por que quedo mal', 1045, 1);
+select Externo from Medicos, Usuarios where funcionario = 6568 and Numero = medico ( N)
+insert into Episodios values(4383528, '2008-04-14', 48, '15:24', 675, 'etc,amalgama', 6568, 1);
+select Externo from Medicos, Usuarios where funcionario = 1045 and Numero = medico ( N)
+insert into Episodios values(4999117, '2008-04-14', 37, '15:24', 675, 'ETC y Ag', 1045, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(1708418, '2008-04-14', 13, '15:25', 215, 'Resina en cuello.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(5077624, '2008-04-14', 16, '15:30', 37, 'epc. caries profunda pulpa asintomatica.  dycal y ionomero. control en 3 meses', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(8848194, '2008-04-14', 999, '15:30', 209, 'falto', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(4660363, '2008-04-14', 999, '15:31', 209, 'Adapto coffin, comienza erupcion del 23', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(4922226, '2008-04-14', 999, '15:31', 209, 'falto', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(4722152, '2008-04-14', 999, '15:31', 209, 'falto', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5283018, '2008-04-14', 54, '15:37', 10, 'Prox Rx', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(4866694, '2008-04-14', 999, '15:38', 209, 'Adapto coffin, adelanto AVI, res inf, AVS rozando M del 12 y 22', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(4560902, '2008-04-14', 38, '15:39', 693, 'coloque i de vidrio en esta pieza. la cav es pequeña para amalgama. dejar ionomero o reealizar resinas', 23325, 2);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5140669, '2008-04-14', 999, '15:41', 692, 'Pte sin caries nuevas. se coordina otra hora para ed. para la salud y enseñanza de cepillado, porque no trajo cepillo', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 1069 and Numero = medico ( N)
+insert into Episodios values(3626384, '2008-04-14', 17, '15:42', 500, '', 1069, 1);
+select Externo from Medicos, Usuarios where funcionario = 1033 and Numero = medico ( N)
+insert into Episodios values(5150835, '2008-04-14', 999, '15:47', 209, 'adapto coffin ,adapto resortes frontales inferiores,. rozando M del 72', 1033, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(4976831, '2008-04-14', 53, '15:51', 620, 'por coexistencia', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 6698 and Numero = medico ( N)
+insert into Episodios values(4762253, '2008-04-14', 35, '15:55', 220, 'Ins en 20mm hasta 40.Clorexcal mas eugenato.Repasar y obt.', 6698, 1);
+select Externo from Medicos, Usuarios where funcionario = 1072 and Numero = medico ( N)
+insert into Episodios values(4060608, '2008-04-14', 999, '16:00', 610, '', 1072, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(4006482, '2008-04-14', 47, '16:00', 800, ' ETC resina. prox evaluar para realizar protesis', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 1072 and Numero = medico ( N)
+insert into Episodios values(4060608, '2008-04-14', 999, '16:02', 681, 'por 6 meses', 1072, 1);
+select Externo from Medicos, Usuarios where funcionario = 1072 and Numero = medico ( N)
+insert into Episodios values(4111833, '2008-04-14', 999, '16:03', 3, 'falta sin aviso', 1072, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5379117, '2008-04-14', 85, '16:06', 32, 'Epc  zoe.', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(4471921, '2008-04-14', 11, '16:23', 220, 'escariado lima 25, en 26 mm. prox no dar anestesia porq es gangrena, la pieza presenta un grado de movilidad, controlar en la rx no presenta foco', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5276984, '2008-04-14', 65, '16:30', 15, 'ETC   Ionomero. Se porto divino se uso cucharita y turbina.', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(1945343, '2008-04-14', 17, '16:30', 726, 'Obturacion. Haremos coronita de acero.', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 2007 and Numero = medico ( N)
+insert into Episodios values(4944090, '2008-04-14', 36, '16:34', 675, 'EPC, prox anestesia y caritest.', 2007, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(4954797, '2008-04-14', 54, '16:39', 675, '', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 8998 and Numero = medico ( N)
+insert into Episodios values(2771639, '2008-04-14', 24, '16:40', 3, 'pase a generareposicion de eugenato', 8998, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(4873977, '2008-04-14', 47, '16:41', 800, '', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(4873977, '2008-04-14', 46, '16:42', 650, '', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(4649266, '2008-04-14', 16, '16:43', 693, 'pieza parcialmente destruida, considero q esta para extraccion, coloque pasta y cordinamos extraccion', 23325, 2);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(4954797, '2008-04-14', 999, '16:44', 3, 'Prox. avulsion', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(4171325, '2008-04-14', 25, '16:46', 206, 'oclusal prox resina', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 1072 and Numero = medico ( N)
+insert into Episodios values(4919736, '2008-04-14', 999, '16:46', 3, 'falta sin aviso ', 1072, 1);
+select Externo from Medicos, Usuarios where funcionario = 3888 and Numero = medico ( N)
+insert into Episodios values(5170490, '2008-04-14', 999, '16:46', 684, 'control de placa enseñanza de cepillado y educacion para lasalud proxima control de placa y cepillado', 3888, 1);
+select Externo from Medicos, Usuarios where funcionario = 1072 and Numero = medico ( N)
+insert into Episodios values(1925508, '2008-04-14', 999, '16:47', 3, 'falta sin aviso', 1072, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(5449252, '2008-04-14', 36, '16:49', 693, 'extraccion de una raiz q le quedaba.', 23325, 2);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(4910316, '2008-04-14', 999, '16:52', 209, 'control de las placas que esta usando como contencion solo de noche', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 3888 and Numero = medico ( N)
+insert into Episodios values(5170492, '2008-04-14', 999, '16:52', 684, 'control de placa enseñanza de cepillado educacion salud. proxima nuevo control de pplaca y fluortopicacion', 3888, 1);
+select Externo from Medicos, Usuarios where funcionario = 6549 and Numero = medico ( S)
+insert into Episodios values(2814757, '2008-04-14', 12, '16:59', 215, '', 6549, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(4734050, '2008-04-14', 999, '17:00', 100, '11 años,mord cruzada      de 12 22.24.25.26,cl 1 molar der,linea 1/2 inf desv a iz1q,solo falta recambiar el 63,t.ortod fija,le di costo                                                                                                                                                           ', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(3571687, '2008-04-14', 37, '17:00', 203, 'Elimino restauracion anterior en mal estado e intento realizar un muñon para coronita estampada.Pronostico reservado pero me arriesgo a recuperar la pieza.', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 1049 and Numero = medico ( N)
+insert into Episodios values(4364913, '2008-04-14', 25, '17:00', 212, 'IMp.', 1049, 1);
+select Externo from Medicos, Usuarios where funcionario = 1111 and Numero = medico ( N)
+insert into Episodios values(3385839, '2008-04-14', 23, '17:00', 693, 'pte con dolor , jacket floja , al retirar hay exudado purulento , irrigo , saco rx , aprente sobreobturacion, cemento provisoriamente , pido nueva rx para valorar', 1111, 2);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(4816816, '2008-04-14', 26, '17:01', 650, '', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5252245, '2008-04-14', 64, '17:02', 7, '', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(5015429, '2008-04-14', 11, '17:03', 220, 'obturado cono 55 en 18mm', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5292245, '2008-04-14', 64, '17:03', 7, '', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5180636, '2008-04-14', 999, '17:05', 2, 'no vino', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 2007 and Numero = medico ( N)
+insert into Episodios values(4422934, '2008-04-14', 36, '17:05', 620, '', 2007, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(1968676, '2008-04-14', 16, '17:08', 204, 'tallado de hombro por todo alrededor. para una corona total. porq esta debil esta pieza, tiene un acceso por vest q le realizaron en otro lado. cuidado con la protesis q el gancho esta en esta pieza', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(5012016, '2008-04-14', 999, '17:10', 100, 'rettrusion lab inf,normorelacion molar,sobremrdida severa,retrusion ant inf,con perdida de espacio para los c perm,t:aak,sin control,res fr abanico,mandar telerx por biotipo,', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 6549 and Numero = medico ( S)
+insert into Episodios values(2867365, '2008-04-14', 23, '17:11', 215, '', 6549, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5445338, '2008-04-14', 999, '17:13', 3, 'No hay computadora, no trajo OPT la pte; tiene molares 5 temp. anquilosados; la mamá dice tener indicaciones de ext. se da hora para el sábado prox. para ver OPT   indicaciones en la comp. de la Dra. Hirsz.', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 6698 and Numero = medico ( N)
+insert into Episodios values(4278406, '2008-04-14', 46, '17:13', 219, 'Concurre con rx que muestra una lesion periapical importante.Por una patologia de base indico profilaxis antibiotice para la proxima y asi comenzamos el tratamiento.', 6698, 1);
+select Externo from Medicos, Usuarios where funcionario = 1049 and Numero = medico ( N)
+insert into Episodios values(2662780, '2008-04-14', 13, '17:15', 215, 'Tallado y OBT RFc debido a que hay remanente dent sufuciente', 1049, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(4713494, '2008-04-14', 26, '17:16', 693, 'coloque eugenato', 23325, 2);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(1938633, '2008-04-14', 15, '17:17', 205, 'tallado prox tomo impresion', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5066175, '2008-04-14', 64, '17:20', 224, 'consulta correspondiente al sabado 12/04/08. Apertura, formocresol, eugenato.', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5392086, '2008-04-14', 75, '17:20', 713, 'etc ap y primera de pulpotomia.', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 6549 and Numero = medico ( S)
+insert into Episodios values(1073787, '2008-04-14', 777, '17:20', 103, 'plenitud facial, se reparo placa de ateicular inf y se le pidio que saque dia cuando tenga consulta de protesis', 6549, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(40977639, '2008-04-14', 38, '17:22', 693, 'Consulta correspondiente al 12/04/08. Pericoronaritis. Acido tricloracetico, mas agua oxigenada', 5587, 2);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(3051057, '2008-04-14', 15, '17:23', 220, 'Esc L 50 Long 18,5mmParamono.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5326468, '2008-04-14', 84, '17:23', 206, 'Consulta correspondiente al 12/04/08. ETC mas ionomero', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5329384, '2008-04-14', 999, '17:24', 2, 'consulta correspondiente al 12/04/08. Ed para la salud', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5079866, '2008-04-14', 26, '17:24', 650, '', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5079866, '2008-04-14', 36, '17:24', 650, '', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5079866, '2008-04-14', 46, '17:24', 650, '', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(3243243, '2008-04-14', 11, '17:25', 215, 'y 21', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 1021 and Numero = medico ( N)
+insert into Episodios values(1481198, '2008-04-14', 34, '17:27', 220, 'OBTURACION en 21mm Alta endodontica  Pasa a gral', 1021, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(4699065, '2008-04-14', 27, '17:30', 693, 'alveolitis, anestesia curetaje, gasa iodoformada', 23325, 2);
+select Externo from Medicos, Usuarios where funcionario = 6549 and Numero = medico ( S)
+insert into Episodios values(1757952, '2008-04-14', 21, '17:30', 215, 'etc', 6549, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(3452441, '2008-04-14', 14, '17:32', 693, 'consulta coorespondiente al 12/04/08. Se repone ZOE', 5587, 2);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5509647, '2008-04-14', 999, '17:33', 2, 'consulta correspondiente al 12/04/08. Falta sin aviso
+', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(3439547, '2008-04-14', 17, '17:34', 693, 'consulta coorespondiente al 12/04/08. se repone ZOE', 5587, 2);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(1964846, '2008-04-14', 38, '17:35', 693, 'consulta correspondiente al 12/04/08. Se cementa inc estetica (provisorio) con cemento fosfato', 5587, 2);
+select Externo from Medicos, Usuarios where funcionario = 5587 and Numero = medico ( N)
+insert into Episodios values(5481758, '2008-04-14', 85, '17:36', 500, 'consulta correspondiente al 12/04/08. EPC   ZOE', 5587, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(4144690, '2008-04-14', 46, '17:38', 620, 'extraccion', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(2934571, '2008-04-14', 12, '17:38', 215, '', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 1022 and Numero = medico ( N)
+insert into Episodios values(951250, '2008-04-14', 33, '17:39', 220, 'Pac relata episodios de alergia luego de haber concurrido a urgencias donde se le dio anestesia.Derivo a alergista con anestesicos.', 1022, 1);
+select Externo from Medicos, Usuarios where funcionario = 1111 and Numero = medico ( N)
+insert into Episodios values(3714716, '2008-04-14', 34, '17:39', 693, 'repongo zoe con dical', 1111, 2);
+select Externo from Medicos, Usuarios where funcionario = 2007 and Numero = medico ( N)
+insert into Episodios values(2667819, '2008-04-14', 24, '17:40', 218, 'Impresion', 2007, 1);
+select Externo from Medicos, Usuarios where funcionario = 3888 and Numero = medico ( N)
+insert into Episodios values(5098137, '2008-04-14', 999, '17:43', 3, 'educacion salud  enseñanza teorica de cepilllasdo. no trajo cepillo. proxima control de placa y enseñanza de cepillado practicfa en boca. y fluortopicacion', 3888, 1);
+select Externo from Medicos, Usuarios where funcionario = 8998 and Numero = medico ( N)
+insert into Episodios values(5285363, '2008-04-14', 999, '17:43', 693, 'consulta porque se   le cayo pasta segun relata el paciente , se observa tejido resblandecido , realizo epc , llego a pulpa , escasa vitalidad , dejo formo y eugenato', 8998, 2);
+select Externo from Medicos, Usuarios where funcionario = 1072 and Numero = medico ( N)
+insert into Episodios values(4321500, '2008-04-14', 999, '17:44', 692, 'vino media hora tarde, le hacemos la revision', 1072, 1);
+select Externo from Medicos, Usuarios where funcionario = 1072 and Numero = medico ( N)
+insert into Episodios values(1528759, '2008-04-14', 999, '17:46', 3, 'Falta sin aviso', 1072, 1);
+select Externo from Medicos, Usuarios where funcionario = 6698 and Numero = medico ( N)
+insert into Episodios values(4476823, '2008-04-14', 46, '17:46', 219, 'Inst primaria de los tres conds. .Coloco cono en cond. D 19mm bdl,cond. ML 18mm bml,cond. MV 18mm bmv.Paramono mas eugenato.Pido rx.', 6698, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(4502237, '2008-04-14', 12, '17:49', 215, '', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5156890, '2008-04-14', 63, '17:49', 15, '', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 1049 and Numero = medico ( N)
+insert into Episodios values(3793116, '2008-04-14', 16, '17:51', 204, 'Cementado y pase para realuzacion de cromo inmediati reponiendo 12 y 22', 1049, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5156890, '2008-04-14', 64, '17:52', 713, 'pac concurre con dolor en pieza 64 donde se constata fistula.se hace apertura y se coloca fc.se manda rx para evaluar si se cont con el trat o se hace la extraccion.', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 6549 and Numero = medico ( S)
+insert into Episodios values(4715115, '2008-04-14', 16, '17:56', 204, 'imp', 6549, 1);
+select Externo from Medicos, Usuarios where funcionario = 2007 and Numero = medico ( N)
+insert into Episodios values(1806166, '2008-04-14', 14, '17:56', 204, 'Impresion', 2007, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(4805859, '2008-04-14', 36, '17:58', 650, '', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(4805859, '2008-04-14', 46, '17:58', 650, '', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 3888 and Numero = medico ( N)
+insert into Episodios values(5363431, '2008-04-14', 999, '17:59', 3, 'codntrol de placa practica de cepillaado   y educacionsalud.', 3888, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(4082617, '2008-04-14', 21, '18:00', 206, 'distal prox resina', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(5572022, '2008-04-14', 999, '18:03', 209, 'falto', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 6549 and Numero = medico ( S)
+insert into Episodios values(3579911, '2008-04-14', 11, '18:07', 206, 'etc', 6549, 1);
+select Externo from Medicos, Usuarios where funcionario = 1046 and Numero = medico ( N)
+insert into Episodios values(4346400, '2008-04-14', 22, '18:13', 206, 'prox resina', 1046, 1);
+select Externo from Medicos, Usuarios where funcionario = 5899 and Numero = medico ( N)
+insert into Episodios values(5341121, '2008-04-14', 65, '18:13', 224, 'solo se pudo trabajar con cuch dent pues es muy temeroso, tenia hecha una peq apertura y alli se coloca fc para en prox poder hacer etc y amoliar la apertura. se le explica que en la prox se trabajara con turbina.', 5899, 1);
+select Externo from Medicos, Usuarios where funcionario = 23325 and Numero = medico ( N)
+insert into Episodios values(4914914, '2008-04-14', 46, '18:18', 500, 'rx, salio bien', 23325, 1);
+select Externo from Medicos, Usuarios where funcionario = 1049 and Numero = medico ( N)
+insert into Episodios values(4282832, '2008-04-14', 16, '18:18', 212, 'Cementado', 1049, 1);
+select Externo from Medicos, Usuarios where funcionario = 2007 and Numero = medico ( N)
+insert into Episodios values(4954401, '2008-04-14', 65, '18:19', 15, '', 2007, 1);
+select Externo from Medicos, Usuarios where funcionario = 2007 and Numero = medico ( N)
+insert into Episodios values(5503204, '2008-04-14', 54, '18:23', 693, 'EPC', 2007, 2);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(4191184, '2008-04-14', 777, '18:25', 729, 'no le hice cambios al apto,trajo opt y confirmo lo ant ,el 53 tiene la raiz reabsorvida pero aun esta firme,cuando se le caiga le indico deb hacerse implante,y el 62.63 guardan el espacio para el 23,aunque  si no erupciona debra traccionarlo con ortodoncia  por que se ve inclinado  a la raiz del central.control en 2 meses', 1014, 1);
+select Externo from Medicos, Usuarios where funcionario = 1014 and Numero = medico ( N)
+insert into Episodios values(5050613, '2008-04-14', 999, '18:26', 209, 'falto', 1014, 1);
+

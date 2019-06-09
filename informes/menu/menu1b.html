@@ -1,0 +1,90 @@
+    <script type="text/javscript">
+    /* preload images */
+    var arrow1 = new Image(4, 7);
+    arrow1.src = "menu/images/arrow1.gif";
+    var arrow2 = new Image(4, 7);
+    arrow2.src = "menu/images/arrow2.gif";
+    </script>
+
+    <div id="bar">
+        
+        <table cellspacing="0" cellpadding="0" id="menu1" class="XulMenu">
+        <tr>
+            <td>
+                <a class="button" href="javascript:void(0)">Sistema</a>
+                <div class="section">
+                    <a class="item" href="index.php">Inicio</a>
+                    <a class="item" href="desconectar.php">Cerrar</a>
+                </div>
+            </td>
+            <td>
+                <a class="button" href="javascript:void(0)">Personal</a>
+                <div class="section">
+                        <a class="item" href="index.php?contenido=tarjetas.php">Tarjetas</a>
+                </div>
+            </td>
+            <td>
+                <a class="button" href="javascript:void(0)">Informes de control</a>
+                <div class="section">
+                   <a class="item" href="index.php?contenido=controlch.html">Incongruencias anotaciones y episodios</a>
+                   <a class="item" href="index.php?contenido=controlses1.php">Control de sessiones excedidas</a>
+                </div>
+            </td>
+            <td>
+                <a class="button" href="javascript:void(0)">Horarios</a>
+                <div class="section">
+                   <a class="item" href="index.php?contenido=horarios.html">Resumen de horarios x especialidad</a>
+                </div>
+            </td>            
+	    <td>
+                <a class="button" href="javascript:void(0)">Indicadores</a>
+                <div class="section">
+                   <a class="item" href="index.php?contenido=tiempossd.php">Indicadores de tiempo de espera global</a>
+                   <a class="item" href="index.php?contenido=tiempos.php">Indicadores de tiempo por sucursal</a>
+                </div>
+            </td>
+            <td>
+                <a class="button" href="javascript:void(0)">Consultas</a>
+                <div class="section">
+                   <a class="item" href="index.php?contenido=horas.php">Horas de consulta</a>
+                   <a class="item" href="index.php?contenido=consultasxsuc.php">Consultas entre fecha x sucursal</a>
+                   <a class="item" href="index.php?contenido=listafech.php">Consultas x fecha</a>
+		   <a class="item" href="index.php?contenido=conxsucproc.php">Consultas x fecha x sucursal + desglose de procedimientos</a>
+                </div>
+            </td>
+            <td>
+                <a class="button" href="javascript:void(0)">Ayuda</a>
+                <div class="section">
+                    <a class="item" href="../manuales/calidad.php">Manual de Calidad</a>
+                    <a class="item" href="../manuales/sistema.php">Manual del sistema</a>
+                    <a class="item" href="../hermes/bug.php">Reportar errores</a>
+                </div>
+            </td>
+            <td width=200px>
+                &nbsp;
+            </td>    
+            <td>
+                <a class="button" href="javascript:history.go(-1)"><img src="../img/back.png" border=0 align=middle> Atras</a>
+            </td>
+            <td>
+                <a class="button" href="index.php"><img src="../img/gohome.png" border=0 align=middle>Inicio</a>
+            </td>	    
+            <td>
+                <a class="button" href="javascript:contenido.location.reload()"><img src="../img/reload.png" border=0 align=middle>Recargar</a>
+            </td>	    
+            <td>
+                <a class="button" href="javascript:contenido.window.print()"><img src="../img/fileprint.png" border=0 align=middle>Imprimir</a>
+            </td>
+            <td>
+                <a class="button" href="../logoncentral.php"><img src="../img/exit.png" border=0 align=middle>Salir</a>
+            </td>	                    
+	</tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+    var menu1 = new XulMenu("menu1");
+    menu1.arrow1 = "images/arrow1.gif";
+    menu1.arrow2 = "images/arrow2.gif";
+    menu1.init();
+    </script>

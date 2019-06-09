@@ -1,0 +1,41 @@
+<?php
+echo "<form action='lote.php'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr valign='middle' width='16'>";
+echo "	<td class='tdLista' colspan=4>";
+echo "	<a href='lote.php' class='v1'><img src='img/nuevo16.png' align='bottom'>Lote nuevo</a>";
+echo "&nbsp;&nbsp;<a href='familias.php?icmd=orden&param=nombre' class='v1'><img src='img/lista16.png' align='bottom'>Lista</a>";
+echo "	</td>";
+echo "</tr>";
+echo "<tr>";
+echo "	<td class='tdLista'>Identificación</td>";
+echo "	<td class='tdLista'><input type='text' name='id' value='$id' size=20></td>";
+echo "	<td class='tdLista'>Vencimiento</td>";
+echo "	<td class='tdLista'><input type='text' name='vence' value='$vence' size=10>";
+echo "	</td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Articulo";
+echo "  </td>";
+echo "	<td class='tdLista' colspan=3>";
+echo "	<select name='articulo'>";
+echo "	</select>";
+echo "  </td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Cantidad";
+echo "  </td>";
+echo "	<td class='tdLista'><input type='text' name='cantidad' value='$cantidad' size=5></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista' colspan=4 align='center'><input type='submit' name='cmd' value='Actualizar'></td>";
+echo "</tr>";
+
+
+
+echo "</table>";
+echo "</form>";
+?>

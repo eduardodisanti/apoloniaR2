@@ -1,0 +1,106 @@
+<?php
+    $horas=Date("H");
+    $mins= Date("i");
+    $secs= Date("s");
+?>
+<head>
+<TITLE>Marcar</TITLE>
+<script language="JavaScript">
+
+<!--
+// please keep these lines on when you copy the source
+// made by: Nicolas - http://www.javascript-page.com
+
+var clockID = 0;
+
+function UpdateClock() {
+   if(clockID) {
+      clearTimeout(clockID);
+      clockID  = 0;
+   }
+
+   var tDate = new Date();
+   var hh;
+   var mm;
+   var ss;
+   var xhh;
+   var xmm;
+   var xss;
+   
+   hh=tDate.getHours();
+   mm=tDate.getMinutes();
+   ss=tDate.getSeconds()
+
+   if(hh<10)
+      xhh="0"+ hh;
+   else
+      xhh="" + hh;
+      
+   if(mm<10)
+      xmm="0"+mm;
+   else
+      xmm="" + mm;
+      
+   if(ss<10)
+      xss="0"+ss;
+   else
+      xss="" + ss;
+   document.theClock.theTime.value = "" + xhh + ":" + xmm + ":" + xss;
+   clockID = setTimeout("UpdateClock()", 1000);
+}
+function StartClock() {
+   clockID = setTimeout("UpdateClock()", 500);
+}
+
+function KillClock() {
+   if(clockID) {
+      clearTimeout(clockID);
+      clockID  = 0;
+   }
+}
+
+//-->
+
+</script>
+</head>
+
+<body onload="StartClock()" onunload="KillClock()">
+<form name="theClock" action="marcarahora.php" method="post">
+<table border=0 width=300px bgcolor="#266DA0">
+  <TR>
+	<td><font size="4" color="#FFF2A0">Hora actual:</font></td>
+	<TD align="center">
+	<font size="4" color="#FFF2A0"><input type=text name="theTime" size=8></font>
+	
+	</TD>
+  </TR>
+  <tr bgcolor="#ffffff">
+	<TD>
+	Usuario :
+	</TD>
+	<TD align="center">
+	<input type="text" name="funcionario" width=20>
+	</TD>
+  </tr>
+  <tr bgcolor="#ffffff">
+	<TD>
+	Clave
+	</TD>
+	<TD align="center">
+	<input type="password" name="clave" width=20>
+	</TD>
+  </tr>  
+  <tr>
+	<TD colspan=2 align="center">
+	<input type="submit" name="marcar" value="Marcar">
+	</TD>
+  </tr>  
+<?php
+    if(!empty($PROBLEMA))
+      {
+        echo "<tr><td colspan=2 bgcolor='#ffffff' align='center'><font size=+1 color='#FF0000'>$PROBLEMA</font></td></tr>";
+      }
+?>
+</table>
+</form>
+<center><a href='javascript:window.close()'>Cerrar esta ventana</a></center>

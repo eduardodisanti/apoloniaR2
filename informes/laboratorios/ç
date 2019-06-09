@@ -1,0 +1,115 @@
+<?php
+
+session_start();
+$coisucursal_ses=$_SESSION['coisucursal_ses'];
+
+function date_diff($date2, $date1)
+  {
+      $s = strtotime($date2) - strtotime($date1);
+      $d = intval($s/86400);
+      return($d);
+  }
+if(empty($cmd))
+  $cmd=bajar;
+
+require("../../functions/db.php");
+$link=conectar();
+
+
+echo "<center><h4>Cantidad de trabajos en una misma pieza</h4></center>";
+if(empty($comando))
+ {
+
+     echo "<form action='../informes/laboratorios/repepieza.php' method=post>\n";
+     echo "<center><table border = 0 width='60%'>\n";
+     $hoy=Date("Y-m-d");
+     echo "<tr>";
+     echo "   <td><input type='submit' name='comando' value='Ejecutar'></td>";
+     echo "   <td>&nbsp;&nbsp</td>";
+     echo "</tr>";
+     echo "<tr>";
+     echo "  <td>Fecha desde<input type='text' name='desde' value='$hoy'></td>";
+     echo "  <td>Fecha hasta<input type='text' name='hasta' value='$hoy'></td>";
+     echo "</tr>";
+     echo "</table></center>\n";
+     echo "<input type='hidden' name='comando' value='$cmd'>";
+
+     echo "</form>\n";
+ }
+else
+ {
+
+if(!empty($sucursal))
+  $limit = "and TrabSoc.Sucursal = '$sucursal'";
+else
+  $limit="";
+
+if(!empty($codLabo))
+  {
+    $limit = $limit." and TrabSoc.Laboratorio = $codLabo";
+  }
+
+$limit = $limit." and Fecha>='$desde' and Fecha<='$hasta'";
+$estado1 = $estado+1;
+
+$query = "select Paciente, Trabajo, Fecha, Trabajos.descripcion, tiempo, Nombre, Entregado, EstadosTrabajo.Descripcion as Nest, TrabSoc.Laboratorio as Lab, Laboratorios.descripcion as nLab, TrabSoc.Sucursal as SucursalT, Pieza, Repeticiones, Salida from TrabSoc, Trabajos, Pacientes, EstadosTrabajo, Laboratorios where (Entregado=$estado or Entregado=88) and Trabajo = Trabajos.id and Paciente = Cedula $limit and Entregado = EstadosTrabajo.Codigo and Laboratorios.id = TrabSoc.Laboratorio and Salida >='$desde' and Salida <= '$hasta' order by Paciente, Fecha, descripcion";
+
+echo "<table border=0 width=99% bgcolor='#000000' cellspacing='1'>\n";
+echo "<tr bgcolor='#cccccc'>";
+echo "	<th colspan=2>Paciente</th>";
+echo "	<th>Procedimiento</th>";
+echo "  <th>Pieza</th>";
+echo "	<th>Solicitado</th>";
+echo "	<th>Estado</th>";
+echo "  <th>Vence</th>";
+echo "  <th>Laboratorio</th>";
+echo "</tr>\n";
+
+$q = query($query);
+echo mysql_error();
+while($reg = fetch($q))
+ {
+	$cedula = $reg->Paciente;
+	$nombre = $reg->Nombre;
+	$trabajo= $reg->Trabajo;
+	$desctra= $reg->descripcion;
+	$tiempo = $reg->tiempo;
+	$fecha  = $reg->Fecha;
+	$sucursalTrabajo = $reg->SucursalT;
+	$pieza  = $reg->Pieza;
+	$rep    = $reg->Repeticiones;
+    $estadoActual = $reg->Entregado;
+    $Laboratorio = $reg->Lab;
+    $nest   = $reg->Nest;
+    $nlab   = $reg->nLab;
+    $salida = $reg->Salida;
+
+	$vence = date("Y-m-d", strtotime("+$tiempo day ".$fecha));
+
+               if($estadoActual == $estado)
+                  $color="#ffffff";
+	       else
+	          $color="#cfffff";
+
+               if($rep > 1)
+	        {
+	         $nombre = "<font color='#ff0000'>(Retrabajo)</font> ".$nombre;
+                }
+
+		echo "<tr bgcolor='$color'>";
+		echo "  <td>$nombre</td>";
+		echo "  <td align='center'>$cedula</td>";
+		echo "  <td>$desctra</td>";
+		echo "  <td>$pieza</th>";
+		echo "	<td>$fecha</td>";
+		echo "  <td>";
+		echo           $nest;
+		echo "</td>";
+		echo "<td>$vence</td>";
+		echo "<td>$nlab</td>"; 
+		echo "</tr>\n";
+ }
+ echo "</table>";
+  echo " <center><a href='javascript:window.print()'>Imprimir</a></center>";
+}
+?>

@@ -1,0 +1,35 @@
+<?php
+
+echo "<input type='hidden' name='cmd' value='almacenes'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr valign='middle' width='16'>";
+echo "	<td class='tdLista' colspan=2>";
+echo "	<a href='almacen.php' class='v1'><img src='img/nuevo16.png' align='bottom'>Almacen nuevo</a>";
+echo "&nbsp;&nbsp;<a href='almacenes.php?icmd=orden&param=nom' class='v1'><img src='img/lista16.png' align='bottom'>Lista</a>";
+
+echo "	</td>";
+echo "</tr>";
+echo "<tr valign='top'>";
+echo "	<th class='thLista'><a href='almacenes.php?cmd=orden&param=suc&dir=$dir' class='v2'>Sucursal</a>";
+echo "  <a href='almacen.php?cmd=orden&dir=$dir&param=dir' class='v1'><img src='img/$gifdir1' border=0></a>";
+echo "  </th>";
+echo "	<th class='thLista'><a href='almacenes.php?cmd=orden&param=nom&dir=$dir' class='v2'>Almacen</a>";
+echo "  <a href='almacen.php?cmd=orden&dir=$dir&param=nom' class='v1'><img src='img/$gifdir2' border=0></a>";
+echo "	</th>";
+echo "</tr>";
+$i=0;
+while(!empty($lista[$i]->id))
+{
+    echo "<tr>";
+    echo "	<td class='tdLista'>".$lista[$i]->sucursal."</td>";
+    echo "	<td class='tdLista'>";
+    echo "	<a href='almacen.php?id=".$lista[$i]->id."'>";
+    echo 	$lista[$i]->nombre;
+    echo "	</a>";
+    echo "	</td>";
+    echo "</tr>";
+    $i++;
+}
+echo "</table>";
+
+?>

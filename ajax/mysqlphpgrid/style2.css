@@ -1,0 +1,31 @@
+/* Settings for the grid: */
+.divmysqlphpgrid {width: 700px;}
+table.mysqlphpgrid {
+	font: 13px arial;
+	table-layout: fixed;
+}
+input, select {font: 13px arial}
+.divth {overflow: hidden; white-space: nowrap; text-align: left}
+.divtd {overflow: hidden; white-space: nowrap;}
+
+/* Width of fields: change into appropriate values for your particular fields */
+#th__del {width: 2%}
+#thid {width: 8%}
+#thCode {width: 10%}
+#thName {width: 15%}
+#thContinent {width: 15%}
+#thSurfaceArea {width: 15%}
+#thPopulation {width: 15%}
+#thLocalName {width: 20%}
+
+/* Colors: change as you like */
+th.th 			{background: #009900; cursor: default; font: 14px arial;}
+th.th:hover 	{background: #00CC33; cursor: default;}
+td.tdeven 		{background: #66FF33; cursor: default;}
+td.tdeven:hover {background: #669900; cursor: default;}
+td.tdodd 		{background: #FFFF00; cursor: default;}
+td.tdodd:hover 	{background: #FFCC00; cursor: default;}
+td.tdpp			{font: 14px arial;}
+
+/* Other settings: */
+h3, p {font-family: arial;}

@@ -1,0 +1,60 @@
+    <script type="text/javscript">
+    /* preload images */
+    var arrow1 = new Image(4, 7);
+    arrow1.src = "menu/images/arrow1.gif";
+    var arrow2 = new Image(4, 7);
+    arrow2.src = "menu/images/arrow2.gif";
+    </script>
+
+<script>
+
+function marcar()
+ {
+    var url;
+
+       url="../personal/marcar.php";
+          window.open(url,'Marcar','toolbar=no,directories=no,location=no,status=no,menubar=no,scrollbars=yes,width=550,height=400,top=10,left=10');
+ }
+
+</script>
+
+
+    <div id="bar">
+        
+        <table cellspacing="0" cellpadding="0" id="menu1" class="XulMenu">
+        <tr>
+            <td>
+                <a class="button" href="index.php?contenido=revision.php"><img src="menu/images/filefind.png" border="0" align=middle>Revision</img>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=anotar.php"><img src="menu/images/new.png" border="0" align=middle>Anotar</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=confirmar.php"><img src="menu/images/ok.png" border="0" align=middle>Confirmar</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=borrar.php"><img src="menu/images/cancel.png" border="0" align=middle>Anular</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=listapac.php"><img src="menu/images/personal.png" border="0" align=middle>Consulta x paciente</a>
+            </td>
+
+            <td>
+                <a class="button" href="index.php?contenido=listamedico.php"><img src="menu/images/penguin.png" border="0" align=middle>Consulta x médico</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=../informes/listaconf.php"><img src="menu/images/asistencia.png" border="0" align=middle>Asistencia</a>
+            </td>    
+	    <td>
+	        <a class="button" href="javascript:marcar()"><img src="../img/reloj.png" border="0" align=middle>Reloj de asistencia</a>
+	    </td>
+	</tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+    var menu1 = new XulMenu("menu1");
+    menu1.arrow1 = "images/arrow1.gif";
+    menu1.arrow2 = "images/arrow2.gif";
+    menu1.init();
+    </script>

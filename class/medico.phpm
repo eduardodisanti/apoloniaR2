@@ -1,0 +1,61 @@
+<?php
+
+class Medico {
+
+    var $numero,
+    	$nombre,
+	$especialidad;
+ 
+    var $conn,
+        $nuevo;
+
+    function Medico() {
+
+       $this->numero=0;
+       $this->nombre="";
+       $this->especialidad=0;
+
+       $nuevo = TRUE;
+   } 
+
+   function setNumero($unaId) {
+
+        $this->numero=$unaId;
+   }
+
+   function setNombre($unaId) {
+
+        $this->nombre=$unaId;
+   }
+
+   function setEspecialidad($unaId) {
+
+       $this->especialidad=$unaId;
+  }
+
+  function cargar() {
+
+   $res = query("select * from Medicos where Numero=$this->numero");
+   $reg = fetch($res);
+
+   if(!empty($this->numero))
+     {
+   	   $this->setNombre($reg->Nombre);
+	   $this->setEspecialidad($reg->especialidad);
+	   
+	   $this->nuevo = FALSE;
+     }
+       else
+              $this->nuevo = TRUE;
+  }
+
+  function almacenar() {
+
+       if($nuevo)
+          query("insert into Medicos values($this->numero, '$this->nombre', $this->especialidad)");
+       else
+          query("update Medicos set nombre='$this->nombre', especialidad = $this->especialidad where Numero=$this->Numero");
+  }
+}
+
+?>

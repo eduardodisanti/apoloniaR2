@@ -1,0 +1,123 @@
+<?php
+
+	class Bug
+	  {
+		var	$id,
+			$fecha,
+			$hora,
+			$usuario,
+			$resumen,
+			$descripcion;
+			
+		function setConn($unaConeccion) {
+		
+		$this->conn = $unaConeccion;
+		}
+		
+		function Bug() {
+		 	$this->codigo=NULL;
+		 }
+
+		function setFecha($unaFecha) {
+		 	$this->fecha = $unaFecha;
+			return $this;
+		 }
+
+		function getFecha() {
+		 	return $this->fecha;
+		 }
+
+		function setHora($unaHora) {
+		 	$this->Hora = $unaHora;
+			return $this;
+		 }
+
+		function getHora() {
+		 	return $this->Hora;
+		 }
+
+
+		function setUsuario($unUsuario) {
+		 	$this->usuario = $unUsuario;
+			return $this;
+		 }
+
+		function getUsuario() {
+		 	return $this->usuario;
+		 }
+
+		 
+		function setDescripcion($unaDescripcion) {
+		 	$this->descripcion = $unaDescripcion;
+			return $this;
+		 }
+
+		function getDescripcion() {
+		 	return $this->descripcion;
+		 }
+
+		function setResumen($unResumen) {
+		 	$this->interno = $unResumen;
+			return $this;
+		 }
+
+		function getResumen() {
+		 	return $this->resumen;
+		 }		
+		
+		function cargar() {
+		 
+		     $q = "select * from bugs where id=$this->id";
+		     $res = $this->conn->query($q);
+
+		     if(empty($res))
+		       {
+		        $this->id=NULL;
+			return(false);
+		       }
+		     else
+		       {
+		        $reg = $res->fetchRow();
+		        
+			$this->id		= $reg->id;
+			$this->fecha		= $reg->fecha;
+			$this->hora		= $reg->hora;
+			$this->usuario		= $reg->usuario;
+			$this->resumen 		= $reg->resumen;
+			$this->descripcion	= $reg->descripcion;
+		        return(true);
+		      }
+		 }
+		 
+		 function almacenar() {
+		 
+		     if($this->id==0 || empty($this->id))
+		      {
+		        $this->id = Date("U");
+			$q = "insert into bugs values( $this->id,
+							'$this->fecha',
+							'$this->hora',
+							'$this->usuario',
+							'$this->resumen',
+							'$this->descripcion'
+		                                       )";
+		      } else
+				{
+				  $q = "update bugs set
+						fecha='$this->fecha',
+						hora=$this->hora,
+						usuario=$this->usuario,
+						resumen=$this->resumen,
+						descripcion=$this->descripcion
+					where id=$this->id";
+				}
+		     $res = $this->conn->query($q);
+		    
+		 $x = mysql_error(); 
+		 if(!empty($x))
+			die("$x<br>$q");
+
+		     return(!empty($res));
+		 }
+	  }
+?>

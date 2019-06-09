@@ -1,0 +1,108 @@
+<?php
+
+	class Transferencia
+	  {
+		var	$numero,
+			$almacen,
+			$destino,
+			$fecha,
+			$lineas;
+			
+		var	$lista,
+			$conn,
+			$nuevo;
+		
+		function setConn($unaConeccion) {
+		
+		$this->conn = $unaConeccion;
+		}
+		
+		function Transferenica() {
+		 	$this->serie=NULL;
+		 }
+
+
+		function setNumero($unNumero) {
+			$this->numero = $unNumero;
+			return $this;
+		 }
+
+		function getNumero() {
+		 	return $this->numero;
+		 }
+		 
+		function setFecha($unaFecha) {
+			$this->fecha = $unaFecha;
+			return $this;
+		 }
+
+		function getFecha() {
+			return $this->fecha;
+		 }
+		 
+		function setAlmacen($unAlmacen) {
+			$this->almacen = $unAlmacen;
+			return $this;
+		 }
+
+		function getAlmacen() {
+			return $this->almacen;
+		 }
+		 
+		function setDestino($unAlmacen) {
+			$this->destino = $unAlmacen;
+			return $this;
+		 }
+		 
+		function getDestino() {
+			return $this->destino;
+		 }
+
+		 
+		function cargar() {
+		
+		     $q = "select * from transferencias where numero=$this->numero";
+
+			$res = $this->conn->query($q);
+			$reg = $res->fetchRow();
+		        
+			$this->fecha = $reg->fecha;
+			$this->destino = $reg->destino;
+			$this->almacen = $reg->almacen;
+			if(empty($this->fecha))
+			   {
+			    $this->nuevo=true;
+		            return(false);
+			   }
+			else
+			   {
+			    $this->nuevo=false;
+		            return(true);
+			   }
+		 }
+		 
+		 function almacenar() {
+		     if($this->nuevo)
+			$q = "insert into transferencias values(
+							  $this->numero,
+							  $this->almacen,
+							 '$this->fecha',
+							  $this->destino
+		                                       )";
+		     else
+			$q = "update transferencias set 
+				fecha   = '$this->fecha', 
+				destino = $this->destino, 
+				almacen = $this->almacen 
+			where numero    =  $this->numero";
+		     $res = $this->conn->query($q);
+		    
+		  $x = mysql_error(); 
+		  if(!empty($x))
+			die("$x<br>$q");
+
+		  return(!empty($res));
+		 }
+		 
+	  }
+?>

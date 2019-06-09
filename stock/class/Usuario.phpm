@@ -1,0 +1,36 @@
+<?php
+class Usuario
+ {
+           var $usuario="";
+           var $clave="";
+           var $email="";
+           var $funcionario=0;
+           var $cargo="";
+           var $nivel=0;
+           var $medico=NULL;
+
+   function Usuario($numero,$pass, $conn)
+     {
+       $query="select usuario,clave,email,funcionario,cargo,nivel,medico from Usuarios where usuario='$numero'";
+       
+       $q    =$conn->query($query);
+       $error=DB::isError($conn);
+       if(!empty($error))
+              die("Usuario.phpm: $error link es $link");
+	      
+       $reg=$q->fetchRow();
+       if(!empty($reg) and $reg->clave==$pass)
+         {
+		$this->usuario=$reg->usuario;
+		$this->clave=$reg->clave;
+		$this->email=$reg->email;
+		$this->funcionario=$reg->funcionario;
+		$this->cargo=$reg->cargo;
+		$this->nivel=$reg->nivel;
+		$this->medico=$reg->medico;
+         }
+          /* else
+             $this=NULL; */
+     }
+ }
+?>

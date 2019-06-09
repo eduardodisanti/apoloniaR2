@@ -1,0 +1,32 @@
+    <script type="text/javscript">
+    /* preload images */
+    var arrow1 = new Image(4, 7);
+    arrow1.src = "menu/images/arrow1.gif";
+    var arrow2 = new Image(4, 7);
+    arrow2.src = "menu/images/arrow2.gif";
+    </script>
+
+    <div id="bar">
+        
+        <table cellspacing="0" cellpadding="0" id="menu1" class="XulMenu">
+        <tr>
+            <td>
+                <a class="button" href="index.php?contenido=laboratorios/ajulab.php"><img src="/images/core.png" border="0" align=middle>Ajustes de laboratorio</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=laboratorios/busfact.php"><img src="/images/calendario.png" border="0" align=middle>Busqueda de facturas</a>
+            </td>
+            <td>
+               <a class="button" href="index.php?contenido=/historias/consHist.html"><img src="/images/personal.png" border="0" align=middle>Consulta de historia clinica</a>
+           </td>
+
+	</tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+    var menu1 = new XulMenu("menu1");
+    menu1.arrow1 = "images/arrow1.gif";
+    menu1.arrow2 = "images/arrow2.gif";
+    menu1.init();
+    </script>

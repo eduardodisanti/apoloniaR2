@@ -1,0 +1,159 @@
+<?php
+
+class Tarjeta {
+
+	var $Funcionario;
+	var $Marcas;
+	var $Mes;
+	var $Anio;
+	
+	
+	var $indice;
+	var $dia_ant;
+	var $db;
+	
+	function Tarjeta() {
+		$this->Funcionario=0;
+		$this->indice=0;
+		$this->dia_ant=0;
+	}
+
+	function setDB($unaDB) {
+		$this->db=$unaDB;
+		
+		// **** esto no puede quedar asi - cambiar
+		
+		$link=mysql_connect("127.0.0.1","root","virgen");
+		$this->db=mysql_select_db("apolonia",$link);
+	}
+		
+	function setFuncionario($unFuncionario) {
+		$this->Funcionario= new Usuario($unFuncionario);
+	}
+
+	function getFuncionario() {
+		return($this->Funcionario);
+	}
+	
+	function setAnio($unAnio){
+	
+		$this->Anio=$unAnio;
+		if(!empty($this->Anio) && !empty($this->Mes))
+		   $this->cargarTarjeta();
+
+	}
+	
+	function setMes($unMes){
+	
+		$this->Mes=$unMes;
+		
+		if(!empty($this->Anio) && !empty($this->Mes))
+		   $this->cargarTarjeta();
+	}
+
+	
+	function getMarcas() {
+		return($this->Marcas);
+	}
+  
+        function getMes(){
+                return($this->Mes);
+        }
+
+        function getAnio(){
+                return($this->Anio);
+        }
+	
+	function setMarcas($unaColecciondeMarcas) {
+		$this->Marcas=$unaColecciondeMarcas;
+	}
+	
+	function agregarMarca($unaMarca){
+
+	   $idx_dia = $unaMarca->dia + 0;
+	  
+	   $idx_pos = 0;
+	  
+	   while(!empty($this->Marcas[$idx_dia][$idx_pos]))
+	      {
+	         $idx_pos++;
+	      }
+	   
+	   $this->Marcas[$idx_dia][$idx_pos]=$unaMarca;	
+           $this->indice=0;
+	}
+	
+	function fetchMarca($idx_dia){
+
+	    if($idx_dia!=$this->dia_ant)
+	      {
+	       $this->dia_ant=$idx_dia;
+	       $this->indice=0;
+	      }
+	      
+	    $a = $this->Marcas[$idx_dia][$this->indice];
+	    if(!empty($a))
+	     {
+	    	$this->indice++;
+	    	return($a);
+	     } else
+	          return(NULL);
+	}
+	
+	function cargarTarjeta(){
+
+		$fdesde=$this->Anio."-".$this->Mes."-01";
+		$fhasta=$this->Anio."-".$this->Mes."-31";
+		$ff=$this->Funcionario;
+		$f=$ff->funcionario;
+		
+		$query="select * from Marquitas where Funcionario=$f and Fecha>='$fdesde' and Fecha<='$fhasta' order by Fecha, Hora";
+
+		$q=mysql_query($query); // ** cambiar **
+		
+		while($reg=mysql_fetch_object($q))
+		   {
+		      $fecha=$reg->Fecha;
+		      $hora=$reg->Hora;
+		      
+		      $anio=strtok($fecha,"-")+0;
+		      $mes =strtok("-")+0;
+		      $dia =strtok("-")+0;
+		      
+		      $hh =strtok($hora,":");
+		      $mm =strtok(":");
+		      
+		      $m = new Marca();
+		      $m->dia=$dia;
+		      $m->mes=$mes;
+		      $m->anio=$anio;
+		      $m->horas=$hh;
+		      $m->minutos=$mm;
+		   
+		      $this->agregarMarca($m);
+		   }
+	}
+
+	
+	function nuevaMarca($unaMarca){
+	
+	   $funcionario=$this->Funcionario->funcionario;
+	   $hh=$unaMarca->horas;
+	   $mm=$unaMarca->minutos;
+	   $ss=0;
+	   $hora="$hh:$mm:$ss";
+	   
+	   $dd=$unaMarca->dia+0;
+	   $mm=$unaMarca->mes+0;
+	   $aa=$unaMarca->anio+0;
+	   
+	   $fecha="$aa-$mm-$dd";
+	   $q="insert into Marquitas values($funcionario, '$hora', '$fecha')";
+	   $query=mysql_query($q); // cambiar
+	   if(!empty($query))
+	      $this->agregarMarca($unaMarca);
+           $this->indice=0;
+	}
+}
+
+?>

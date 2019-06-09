@@ -1,0 +1,64 @@
+<?php
+
+echo "<form action='remitos.php'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr valign='middle' width='16'>";
+echo "	<td class='tdLista' colspan=4>";
+echo "	<a href='remito.php' class='v1'><img src='img/nuevo16.png' align='bottom'>Remito nuevo</a>";
+echo "&nbsp;&nbsp;<a href='remitos.php' class='v1'><img src='img/lista16.png' align='bottom'>Consultar</a>";
+echo "	</td>";
+echo "</tr>";
+echo "<tr>";
+echo "	<td class='tdLista'>Serie";
+echo "  </td>";
+echo "	<td class='tdLista'><input type='text' name='serie' value='$serie' size=2></td>";
+echo "	<td class='tdLista'>Numero</td>";
+echo "	<td class='tdLista'><input type='text' name='numero' value='$numero' size=12>";
+echo "	</td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "  <td class='tdLista'>";
+echo "  Proveedor : ";
+echo "  </td>";
+echo "  <td class='tdLista'>";
+echo "     <select name=proveedor>";
+$i=0;
+while(!empty($proveedores[$i]))
+  {
+     if($proveedores[$i]->id==$proveedor)
+       $sel="selected";
+     else
+       $sel="";
+     echo "<option value=".$proveedores[$i]->id." $sel>".$proveedores[$i]->nombre."</option>";
+     $i++;
+  }
+echo "     </select>";
+echo "  </td>";
+echo "  <td class='tdLista'>Fecha </td>";
+echo "  <td class='tdLista'><input type='text' name='fecha' value='$fecha' readonly></td>";
+echo "<tr>";
+echo "  <td class='tdLista' colspan=4>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<th class='thLista'>Codigo</th>";
+echo "<th class='thLista' width=70%>Articulo</th>";
+echo "<th class='thLista'>Cantidad</th>";
+
+$i=0;
+while(!empty($lineas[$i]->linea))
+{
+    echo "<tr>";
+    echo "	<td class='tdLista'>".$lineas[$i]->codigo."</td>";
+    echo "	<td class='tdLista'>".$lineas[$i]->nombre."</td>";
+    echo "	<td class='tdLista' align=right>".$lineas[$i]->cantidad."</td>";
+    echo "</tr>";
+    $i++;
+}
+echo "</table>";
+echo "  </td>";
+echo "</tr>";
+
+echo "	<td class='tdLista' colspan=4 align='center'><input type='submit' name='cmd' value='Consultar'></td>";
+echo "</tr>";
+
+?>

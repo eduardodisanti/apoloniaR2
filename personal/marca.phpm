@@ -1,0 +1,32 @@
+<?php
+
+class Marca {
+
+	var $dia;
+	var $mes;
+	var $anio;
+	
+	var $horas;
+	var $minutos;
+	
+	function Marca() {
+	
+	     $dia=0;
+	     $mes=0;
+	     $anio=0;
+	     $horas=0;
+	     $minutos=0;
+	}
+	
+	function ahora(){
+	
+	    $this->dia=Date("d");
+	    $this->mes=Date("m");
+	    $this->anio=Date("Y");
+	    
+	    $this->horas=Date("H");
+	    $this->minutos=Date("i");
+	}
+}
+
+?>

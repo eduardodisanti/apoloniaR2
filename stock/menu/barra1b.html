@@ -1,0 +1,37 @@
+    <script type="text/javscript">
+    /* preload images */
+    var arrow1 = new Image(4, 7);
+    arrow1.src = "menu/images/arrow1.gif";
+    var arrow2 = new Image(4, 7);
+    arrow2.src = "menu/images/arrow2.gif";
+    </script>
+
+    <div id="bar">
+        
+        <table cellspacing="0" cellpadding="0" id="menu1" class="XulMenu">
+        <tr>
+            <td>
+                <a class="button" href="stock.php?cmd=remitos"><img src="menu/images/package.png" border="0" align=middle>Remitos</img>
+            </td>
+            <td>
+                <a class="button" href="stock.php?cmd=facturas"><img src="menu/images/stock_new-formula.png" border="0" align=middle>Facturas</a>
+            </td>
+            <td>
+                <a class="button" href="stock.php?cmd=ingremman"><img src="menu/images/stock_opensave.png" border="0" align=middle>Transferencias</a>
+            </td>
+            <td>
+                <a class="button" href="stock.php?cmd=ingmanstck"><img src="menu/images/stock_post-message.png" border="0" align=middle>Ordenes de compra</a>
+            </td>
+            <td>
+                <a class="button" href="stock.php?cmd=pedidos"><img src="menu/images/personal.png" border="0" align=middle>Pedidos</a>
+            </td>
+	</tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+    var menu1 = new XulMenu("menu1");
+    menu1.arrow1 = "images/arrow1.gif";
+    menu1.arrow2 = "images/arrow2.gif";
+    menu1.init();
+    </script>

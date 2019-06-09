@@ -1,0 +1,27 @@
+<?php
+echo "<form action='familia.php'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr valign='middle' width='16'>";
+echo "	<td class='tdLista' colspan=4>";
+echo "	<a href='familia.php' class='v1'><img src='img/nuevo16.png' align='bottom'>Familia nueva</a>";
+echo "&nbsp;&nbsp;<a href='familias.php?icmd=orden&param=nombre' class='v1'><img src='img/lista16.png' align='bottom'>Lista</a>";
+echo "	</td>";
+echo "</tr>";
+echo "<tr>";
+echo "	<td class='tdLista'>Identificación";
+echo "  </td>";
+echo "	<td class='tdLista'><input type='text' name='id' value='$id' readonly size=15></td>";
+echo "	<td class='tdLista'>Nombre</td>";
+echo "	<td class='tdLista'><input type='text' name='nombre' value='$nombre' size=40>";
+echo "	</td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista' colspan=4 align='center'><input type='submit' name='cmd' value='Actualizar'></td>";
+echo "</tr>";
+
+
+
+echo "</table>";
+echo "</form>";
+?>

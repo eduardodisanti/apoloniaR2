@@ -1,0 +1,38 @@
+<?php
+echo "<html>\n";
+echo "<head>\n";
+echo "<LINK href=\"/css/$tema.css\" rel=\"stylesheet\" type=\"text/css\">\n";
+echo "<title>Sistema de stock Mateo en $empresa</title>";
+echo "</head>\n";
+echo "<body>";
+echo "<table border=0 width=100% height=80%>";
+echo "<tr>";
+echo "    <td align=\"left\" valign=\"center\"><img src=\"logos/$logo\"></td>";
+echo "    <td align=\"left\" valign=\"center\">";
+echo "	   <table border=0>";
+echo "	    <tr>";
+echo "	      <td>";
+if($HAY_PROBLEMAS)
+ {
+    echo $PROBLEMA."<br>";
+    echo "Pulse <a href='javascript:history.go(-1)'>aquí</a> para volver";
+ } else
+        {
+	   echo "Bienvenido : <b>$u->usuario</b><br>Su nivel de usuario es <b>$u->nivel</b><br>";
+	   echo "<a href='stock.php' class='v1'><img src='img/rayo.png' border=0 align=middle>Ingresar al sistema</a><br>";
+	   echo "<a href='#' class='v1'><img src='img/password.png' border=0 align=middle>Cambiar su clave</a><br>";
+	}
+echo "	      </td>";
+echo "	    </tr>";
+echo "	   </table>";
+echo "    </td>";
+echo "    <td align=\"right\" valign=\"top\"><p class=\"logo\">$empresa</p></td>";
+   echo "</tr>";
+   echo "<tr>";
+   echo "    <td colspan=3 align=\"right\"><font size=1>Sistema de Stock San Mateo, Copywrite (C) Ingenieria kCreativa <a href=\"http://www.kcreativa.com\" class=\"v1\">www.kcreativa.com</a></font></td>";
+   echo "</tr>";
+   echo "</table>";
+    
+   echo "</body>";
+   echo "</html>\n";
+?>

@@ -1,0 +1,173 @@
+<?php
+
+	class Proveedor
+	  {
+		var	$codigo,
+			$descripcion,
+			$telefono,
+			$fax,
+			$mail,
+			$web,
+			$domicilio,
+			$contacto,
+			$formapago;
+			
+		var	$lista,
+			$conn;
+		
+		function setConn($unaConeccion) {
+		
+		$this->conn = $unaConeccion;
+		}
+		
+		function Proveedor() {
+		 	$this->codigo=NULL;
+		 }
+		 
+		function setFormapago($unaFormadePago) {
+		 	$this->formapago = $unaFormadePago;
+			return $this;
+		 }
+
+		function getFormapago()  {
+		 	return $this->formapago;
+		 }
+
+		function setContacto($unContacto) {
+		 	$this->contacto = $unContacto;
+			return $this;
+		 }
+
+		function getContacto() {
+		 	return $this->contacto;
+		 }
+
+
+		function setDomicilio($unDomicilio) {
+		 	$this->domicilio = $unDomicilio;
+			return $this;
+		 }
+
+		function getDomicilio() {
+		 	return $this->domicilio;
+		 }
+
+		 
+		function setWeb($unWeb) {
+		 	$this->web = $unWeb;
+			return $this;
+		 }
+
+		function getWeb() {
+		 	return $this->web;
+		 }
+
+ 		function setMail($unMail) {
+			$this->mail = $unMail;
+			return $this;
+		 }
+
+		function getMail() {
+		 	return $this->mail;
+		 }
+		 
+		function setFax($unFax) {
+			$this->fax = $unFax;
+			return $this;
+		 }
+
+		function getFax() {
+		 	return $this->fax;
+		 }
+		 
+		function setTelefono($unTelefono) {
+		 	$this->telefono = $unTelefono;
+			return $this;
+		 }
+
+		function getTelefono() {
+		 	return $this->telefono;
+		 }
+
+		function setCodigo($unCodigo) {
+		 	$this->codigo = $unCodigo;
+			return $this;
+		 }
+
+		function getCodigo() {
+		 	return $this->codigo;
+		 }
+		 
+		function setDescripcion($unaDescripcion) {
+			$this->descripcion = $unaDescripcion;
+			return $this;
+		 }
+
+		function getDescripcion() {
+		 	return $this->descripcion;
+		 }
+		 
+		function cargar() {
+		 
+		     $q = "select * from proveedores where id=$this->codigo";
+		     $res = $this->conn->query($q);
+
+		     if(empty($res))
+		       {
+		        $this->id=NULL;
+			return(false);
+		       }
+		     else
+		       {
+		        $reg = $res->fetchRow();
+		        
+			$this->codigo		= $reg->id;
+			$this->descripcion	= $reg->nombre;
+			$this->telefono		= $reg->telefono;
+			$this->fax		= $reg->fax;
+			$this->mail		= $reg->mail;
+			$this->web		= $reg->web;
+			$this->domicilio	= $reg->domicilio;
+			$this->contacto		= $reg->contacto;
+			$this->formapago	= $reg->formapago;
+		        return(true);
+		      }
+		 }
+		 
+		 function almacenar() {
+		 
+		     if($this->codigo==0 || empty($this->codigo))
+		      {
+		        $this->codigo = Date("U");
+			$q = "insert into proveedores values( $this->codigo,
+							'$this->descripcion',
+							'$this->telefono',
+							'$this->fax',
+							'$this->mail',
+							'$this->web',
+							'$this->domicilio',
+							'$this->contacto',
+							'$this->formapago'
+		                                       )";
+		      } else
+				{
+				  $q = "update proveedores set nombre='$this->descripcion',
+						telefono='$this->telefono',
+						fax='$this->fax',
+						mail='$this->mail',
+						web='$this->web',
+						domicilio='$this->domicilio',
+						contacto='$this->contacto',
+						formapago='$this->formapago'
+					where id=$this->codigo";
+				}
+		     $res = $this->conn->query($q);
+		    
+		 $x = mysql_error(); 
+		 if(!empty($x))
+			die("$x<br>$q");
+
+		     return(!empty($res));
+		 }
+	  }
+?>

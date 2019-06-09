@@ -1,0 +1,68 @@
+<?php
+
+   session_start();
+
+   $coiusuario = $_SESSION['coiusuario'];
+   $coiclave   = $_SESSION['coiclave'];
+
+function proxy_url($proxy_url)
+{
+   $proxy_name = '10.100.201.2';
+   $proxy_port = 3128;
+   $proxy_cont = '';
+
+   $proxy_fp = fsockopen($proxy_name, $proxy_port);
+   if (!$proxy_fp)    {return("X|0");}
+       fputs($proxy_fp, "GET $proxy_url HTTP/1.0\r\nHost: $proxy_name\r\n\r\n");
+   while(!feof($proxy_fp)) {$proxy_cont .= fread($proxy_fp,4096);}
+   fclose($proxy_fp);
+   $proxy_cont = substr($proxy_cont, strpos($proxy_cont,"\r\n\r\n")+4);
+   return $proxy_cont;
+} 
+
+
+echo "<div id=hal style='position:absolute;top:0;left:0'>";
+
+   $hal = "http://hermes.kcreativa.com/script/hal.php?cliente=111&usuario=".urlencode($coiusuario);
+//    $hand=fopen($hal,"r");
+//    $x = fgets($hand);
+
+   $x="X|0";
+
+//    $x = proxy_url($hal);
+   $sino=strtok($x,"|");
+   $cant=strtok("|");
+
+   switch($sino)
+    {
+      case "X" : $mensaje="No puedo comunicarme con Hermes ($coiusuario)";
+                 $imagen="img/x.png";
+                break;
+      case "N" : $mensaje="Hermes no tiene nada para responderle ($coiusuario)";
+                 $imagen="img/pacing.gif";
+                break;
+      case "S" : $mensaje="Hermes tiene $cant respuestas sobre sus reclamos ($coiusuario)";
+                 $imagen="img/lghtbulb.gif";
+                break;
+    }
+
+   echo "<form action='http://hermes.kcreativa.com/script/hermes.php' target='_blank' method='post'>\n";
+   echo "<input type='hidden' name='cliente' value='111'>";
+   echo "<input type='hidden' name='usuario' value='$coiusuario'>";
+   echo "<input type='hidden' name='clave' value='$coiclave'>";
+   echo "<input type='hidden' name='resolvido' value='N'>";
+   echo "<input type='hidden' name='validado' value='N'>";
+   echo "<input type='hidden' name='accion' value='login'>";
+   echo "<a href='#' title='$mensaje'>";
+   echo "<img src='$imagen' border=0 align=middle height=30>";
+   echo "</a>";
+  
+    
+	echo "<input type='submit' name='cmd' value='$cant'>";
+   echo "</form>\n";
+   
+   fclose($hand);
+   
+echo "</div>";
+?>
+</body>

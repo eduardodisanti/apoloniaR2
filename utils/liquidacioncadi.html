@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>Query select elmedico, Nombre, count(*) as cantidad from (select Distinct actosmedicos.medico as elmedico, Nombre, Paciente, Fecha from actosmedicos, Medicos, Usuarios where Fecha >='2008-04-01' and actosmedicos.medico = Usuarios.funcionario and Medicos.Numero = Usuarios.medico and Medicos.Externo = 'S' group by actosmedicos.medico, Paciente order by Nombre, Paciente, Fecha) as mini group by Nombre, Thu May 08 11:22:30 2008
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body><h1>Query select elmedico, Nombre, count(*) as cantidad from (select Distinct actosmedicos.medico as elmedico, Nombre, Paciente, Fecha from actosmedicos, Medicos, Usuarios where Fecha >='2008-04-01' and actosmedicos.medico = Usuarios.funcionario and Medicos.Numero = Usuarios.medico and Medicos.Externo = 'S' group by actosmedicos.medico, Paciente order by Nombre, Paciente, Fecha) as mini group by Nombre, Thu May 08 11:22:30 2008
+</h1>
+<table border=1 cellspacing=1 cellpadding=0><tr>
+<th>elmedico</th><th>Nombre</th><th>cantidad</th></tr>
+<tr>
+<td>10136</td><td>BARRAL Monica</td><td>188</td></tr>
+<tr>
+<td>3488</td><td>BENTANCUR Patricia</td><td>75</td></tr>
+<tr>
+<td>10029</td><td>DIAZ Cecilia</td><td>125</td></tr>
+<tr>
+<td>10148</td><td>FERNANDEZ Gabriela</td><td>37</td></tr>
+<tr>
+<td>6549</td><td>FERNANDEZ Gustavo </td><td>83</td></tr>
+<tr>
+<td>10026</td><td>GIGENS Marcos</td><td>185</td></tr>
+<tr>
+<td>10140</td><td>GOMEZ Haedo</td><td>148</td></tr>
+<tr>
+<td>10129</td><td>GONZALEZ Rosina</td><td>231</td></tr>
+<tr>
+<td>10142</td><td>KAMAID</td><td>153</td></tr>
+<tr>
+<td>10145</td><td>MARTINEZ Silvana</td><td>57</td></tr>
+<tr>
+<td>10133</td><td>MONTES Heber</td><td>166</td></tr>
+<tr>
+<td>10149</td><td>PEREZ Guzman</td><td>1</td></tr>
+<tr>
+<td>10138</td><td>SANCHEZ Monica</td><td>236</td></tr>
+<tr>
+<td>10137</td><td>SARNIGUET Carlos</td><td>95</td></tr>
+<tr>
+<td>10132</td><td>SCHIFFENBAUER Yael</td><td>185</td></tr>
+<tr>
+<td>10027</td><td>SILBERBERG Laura</td><td>141</td></tr>
+<tr>
+<td>10141</td><td>VIVA Ximena</td><td>47</td></tr>
+</table>
+</body></html>

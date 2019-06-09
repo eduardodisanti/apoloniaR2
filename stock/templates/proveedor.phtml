@@ -1,0 +1,53 @@
+<?php
+echo "<form action='proveedor.php'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr valign='middle' width='16'>";
+echo "	<td class='tdLista' colspan=4>";
+echo "	<a href='proveedor.php' class='v1'><img src='img/nuevo16.png' align='bottom'>Proveedor nuevo</a>";
+echo "&nbsp;&nbsp;<a href='proveedores.php?icmd=orden&param=id' class='v1'><img src='img/lista16.png' align='bottom'>Lista</a>";
+echo "	</td>";
+echo "</tr>";
+echo "<tr>";
+echo "	<td class='tdLista'>Identificación";
+echo "  </td>";
+echo "	<td class='tdLista'><input type='text' name='id' value='$id' readonly size=15></td>";
+echo "	<td class='tdLista'>Nombre</td>";
+echo "	<td class='tdLista'><input type='text' name='nombre' value='$nombre' size=40>";
+echo "	</td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Telefono</td>";
+echo "	<td class='tdLista'><input type='text' name='telefono' value='$telefono' size=20></td>";
+echo "	<td class='tdLista'>Fax</td>";
+echo "	<td class='tdLista'><input type='text' name='fax' value='$fax' size=20></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Correo electronico</td>";
+echo "	<td class='tdLista'><input type='text' name='mail' value='$mail' size=30></td>";
+echo "	<td class='tdLista'>web</td>";
+echo "	<td class='tdLista'><input type='text' name='web' value='$web' size=30></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Domicilio</td>";
+echo "	<td class='tdLista'><input type='text' name='domicilio' value='$domicilio' size=30></td>";
+echo "	<td class='tdLista'>Contacto</td>";
+echo "	<td class='tdLista'><input type='text' name='contacto' value='$contacto' size=30></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Forma de pago</td>";
+echo "	<td class='tdLista' colspan=3><textarea name='formapago' cols=80 rows=4>$formapago</textarea></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista' colspan=4 align='center'><input type='submit' name='cmd' value='Actualizar'></td>";
+echo "</tr>";
+
+
+
+echo "</table>";
+echo "</form>";
+?>

@@ -1,0 +1,186 @@
+<?php
+
+   class Mateo
+   {
+   		var		$institucion,
+   				$logo,
+   				$licencia,
+   				$db,
+   				$servidor,
+   				$nombreDB,
+   				$usuarioDB,
+				$usuario,
+   				$clave,
+   				$tema;
+
+		function Mateo()
+		{
+			$seccion="";
+			
+			$fp = fopen("conf/mateo.conf","r");
+			while($str=fgets($fp,1024))
+			  {
+			  	$str=substr($str,0,strlen($str)-1);
+			  	$tag = substr($str,0,1);
+			  	
+			  	if($tag=="[")
+			  	  {
+			  	  	$seccion=strtoupper($str);
+			  	  	$var="";
+			  	  }
+			  	  else
+			  	    {
+			  	       $var=strtok($str,"=");
+			  	       $val=strtok("=");
+			  	    }
+			  	if($seccion=="[BASE DE DATOS]")
+			  	  {
+						if($var=="db")
+						  {
+						 	$this->setDB($val);
+						  }
+						if($var=="servidor")
+						  {
+						 	$this->setServidor($val);
+						  }
+						if($var=="usuario")
+						  {
+						 	$this->setUsuarioDB($val);
+						  }
+						if($var=="clave")
+						  {
+						 	$this->setClave($val);
+						  }
+						if($var=="nombre")
+						  {
+						 	$this->setNombreDB($val);
+						  }
+			  	  }
+			  	  
+			  	if($seccion=="[LICENCIA]")
+			  	  {
+						if($var=="institucion")
+						  {
+						 	$this->setInstitucion($val);
+						  }
+						if($var=="logo")
+						  {
+						 	$this->setLogo($val);
+						  }
+			  	  }
+			  	if($seccion=="[UI]")
+			  	  {
+						if($var=="tema")
+						  {
+						 	$this->setTema($val);
+						  }
+			  	  }
+
+			  }
+			fclose($fp);
+		}
+		   				
+   		function setInstitucion($unaInstitucion)
+   		{
+			$this->institucion = $unaInstitucion;
+   		}
+   		
+   		function getInstitucion()
+   		{
+			return($this->institucion);
+   		}
+   		
+   		function setLogo($unLogo)
+   		{
+			$this->logo = $unLogo;   			
+   		}
+   		
+   		function getLogo()
+   		{
+			return($this->logo);   			
+   		}
+   		
+   		function setLicencia($unaLicencia)
+   		{
+			$this->licencia = $unaLicencia;   			
+   		}
+   		
+   		function getLicencia()
+   		{
+			return($this->licencia);   			
+   		}
+
+   		function setDB($unaDB)
+   		{
+			$this->db = $unaDB;   			
+   		}
+   		
+   		function getDB()
+   		{
+			return($this->db);   			
+   		}
+   		
+   		function setUsuarioDB($unaString)
+   		{
+			$this->usuarioDB = $unaString;   			
+   		}
+   	
+	        function setUsuario($unaString)
+	        {
+	                     $this->usuario = $unaString;
+	        }
+
+		function getUsuario()
+	        {
+	                return($this->usuario);
+	        }
+
+
+   		function getUsuarioDB()
+   		{
+			return($this->usuarioDB);   			
+   		}
+   		
+   		function setClave($unaString)
+   		{
+			$this->clave = $unaString;   			
+   		}
+   		
+   		function getClave()
+   		{
+			return($this->clave);   			
+   		}
+
+   		function setNombreDB($unaString)
+   		{
+			$this->nombreDB = $unaString;   			
+   		}
+   		
+   		function getNombreDB()
+   		{
+			return($this->nombreDB);   			
+   		}
+
+   		function setServidor($unaString)
+   		{
+			$this->servidor = $unaString;   			
+   		}
+   		
+   		function getServidor()
+   		{
+			return($this->servidor);   			
+   		}
+
+   		function setTema($unTema)
+   		{
+			$this->tema = $unTema;   			
+   		}
+   		
+   		function getTema()
+   		{
+			return($this->tema);   			
+   		}
+
+   }
+
+?>

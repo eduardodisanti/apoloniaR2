@@ -1,0 +1,38 @@
+<?php
+
+   echo "<form action='reportar.php' method='post'>";
+   echo "<table border='0' width=400 height=300 bgcolor='#cccccc'>";
+
+   echo "<tr bgcolor='#fcfcfc' height='18px'><th colspan=2 align='center'>Agente de control de calidad de Apolonia R2/5</th></tr>";
+   echo "<tr>";
+   echo "   <td rowspan=1 valign='middle' align='middle'>";
+   echo "   <img src='../img/bug-buddy.png'>";
+   echo "   </td>";
+   echo "   <td>";
+   echo "   Reportar un Bug, Paso $paso</td>";   
+   echo "</tr>";   
+   echo "<tr valign=top>";
+   echo "<td colspan=2>";
+   echo "	<table border=0 bgcolor='#fcfcfc'>";
+   echo "	  <tr>";
+   echo "	    <td>Su nombre</td><td><input type='text' size=20 name='usuario' value=''></td>";
+   echo "	  </tr>";
+   echo "	  <tr>";
+   echo "	    <td>Problema</td><td><input type='text' size=40 name='resumen' value=''></td>";
+   echo "	  </tr>";
+   echo "	  <tr>";
+   echo "	    <td colspan=2>Descripción del problema, <font size='2'>no olvide escribir que estaba haciendo en el momento del error y si es posible copie el mensaje de error que el sistema reporta.</td>";
+   echo "	  </tr>";
+   echo "	  <tr>";
+   echo "	    <td colspan=2><textarea name='descripcion' cols=40 rows=5></textarea></font></td>";
+
+   echo "	</table>";
+   echo "</td>";
+   echo "</tr>";
+   echo "<tr width='20px' valign='bottom'><td colspan=2 align='right'>";
+   echo "<input type='submit' name='comando' value='Siguiente'> ";
+   echo "<input type='submit' name='comando' value='Cancelar' onclick='window.close()'></tr>";
+   echo "</table>";
+   echo "<input type='hidden' name='paso', value='3'>";
+   echo "</form>";
+?>

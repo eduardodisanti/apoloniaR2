@@ -1,0 +1,478 @@
+<?php
+
+   $db=mysql_connect("elias","root","virgen");
+      mysql_select_db("apolonia");
+  
+   session_start();
+   $coisucursal_ses=$_SESSION['coisucursal_ses'];
+
+   if(empty($LASUCURSAL))
+       $LASUCURSAL=$coisucursal_ses;
+
+   if(empty($LASUCURSAL))
+       $LASUCURSAL="CENTRAL";
+
+   if(empty($pac) || empty($diente))
+     {
+       if(!empty($pac) && empty($diente))
+         {
+	  echo "<font color='#ff0000'>Debe ingresar un diente !!!  </font><br>";
+	 }
+
+       echo "<form name='elpac'>";
+       echo "<table border=0>";
+       echo "<tr>";
+       echo "     <td>";
+       echo "         Paciente";
+       echo "     </td>";
+       echo "     <td>";
+       echo "          <input type='text' size=8 name='pac' value='$pac'>";
+       echo "     </td>";
+       echo "</tr>";
+       echo "<tr>";
+       echo "     <td>";
+       echo "         Diente";
+       echo "     </td>";
+       echo "     <td>";
+       echo "          <input type='text' size=3 name='diente'> (Numero de Pieza, 777=Superior, 888=Inferior, 999=Toda la boca)";
+       echo "     </td>";
+       echo "</tr>";
+
+       if(empty($hoy))
+         $hoy =  date("Y-m-d");
+
+       $vencimiento = calcularVencimiento($hoy);
+       echo "<tr>";
+       echo "     <td>";
+       echo "          Fecha boleta";
+       echo "     </td>";
+       echo "     <td>";
+       echo "          <input type='text' name='fecha' value='$hoy'>";
+       echo "     </td>";
+       echo "</tr>";
+
+       echo "<tr>";
+       echo "     <td>";
+       echo "          Fecha pedido";
+       echo "     </td>";
+       echo "     <td>";
+       echo "          <input type='text' name='fecha' value='$vencimiento'>";
+       echo "     </td>";
+       echo "</tr>";
+
+       echo "<tr>";
+       echo "     <td colspan=2 align='center'>";
+       echo "          <input type='submit' name='Enviar' value='Enviar'>";
+       echo "     </td>";
+       echo "</tr>";
+       echo "</table>";
+
+       $q = "select Sucursal from Consultorios group by Sucursal order by Sucursal";
+       $query = mysql_query($q);
+
+       echo "Sucursal : <select name='LASUCURSAL'>";
+       echo "<option value='NONE'>(Elegir)</option>";
+
+       while($reg=mysql_fetch_object($query)) {
+
+            $suc = $reg->Sucursal;
+	   /* if($suc == $LASUCURSAL)
+	      $sel="selected";
+	    else */
+	      $sel="";
+            echo "<option value='$suc' $sel>$suc</option>";
+       }
+       echo "</select>";
+
+
+
+       echo "</form>";
+
+     } else {
+                 if($LASUCURSAL=="NONE")
+		       echo "Error - debe elegir una sucursal use el boton Atras y elija una sucursal";
+		          else
+              laburo($pac, $cmd, $trab, $diente, $nuevoestado, $idlab, $LASUCURSAL, $fecha, $vencimiento);
+	    }
+
+function calcularVencimiento($fecha) {
+
+   $ven =  date("Y-m-d", strtotime("+14 day ".$fecha));
+
+   return($ven);
+
+}
+
+function laburo($pac, $cmd, $trab, $diente, $nuevoestado, $idlab, $LASUCURSAL, $hoy, $vencimiento)
+{
+   //$db=mysql_connect("elias","root","virgen");
+   //mysql_select_db("apolonia");
+
+echo "LA SUCURSAL ES : $LASUCURSAL";
+   $pacq = "select * from Pacientes where Cedula=$pac";
+   $r  = mysql_query($pacq);
+   $rg = mysql_fetch_object($r);
+   $nombrePac = $rg->Nombre;
+   if(empty($nombrePac))
+      die("\nPaciente no existe");
+
+   $LAB = 0;
+   $NOMBRELAB='ERROR';
+   if(empty($hoy))
+       $hoy=Date("Y-m-d");
+   if(empty($vencimiento))
+       $vence = calcularVencimiento($hoy);
+   else
+       $vence = $vencimiento;
+
+
+   $debeRetrabajar=false;
+
+   if($cmd=="agregar")
+      {
+         if($coisucursal_ses=="CENTRAL")
+	      $elestado=3;
+	 else
+          $elestado=3;
+
+          // ** Hook para ver si tiene colocado un trabajo en ese diente
+
+          $estadoMeta = tieneUnMeta($pac, $trab, $diente);
+          //die("Mirar ".$estadoMeta);
+          if(!empty($estadoMeta) && $estadoMeta < 8)
+	    {
+	       $meta = obtengoMeta($trab);
+	       $ordenTrabajo = ordenMeta($trab, $meta);
+	       $mayorM = mayorMeta($pac, $meta, $diente);
+
+               if($mayorM == 0)
+	          $mayorM = $ordenTrabajo;     // si no hay otra etapa, no es retrabajo
+	       if($ordenTrabajo < $mayorM)
+	         {
+		    	$debeRetrabajar = true;
+	   		retrabajo($pac, $trab, $hoy, $diente, $idlab, true);
+		     }
+	    } else
+	          {
+	             if($estadoMeta == 8)
+	                {
+	                    // ** Es un segundo trabajo 
+	                   echo "<script languaje=''>alert('Atencion, comunicar al paciente $pac que este es su segundo trabajo en la pieza $diente y debe abonar de acuerdo a las condiciones de su seguro, si el paciente no esta de acuerdo NO ENVIAR A LABORATORIO y anular este pedido')</script>"; 
+	                  
+			     generarCtaCte($pac, $trab, $hoy, $diente);
+                  	     $meta = obtengoMeta($trab);
+	       		     $ordenTrabajo = ordenMeta($trab, $meta);
+			     $mayorM = mayorMeta($pac, $meta, $diente);
+
+		             if($mayorM == 0)
+	    		        $mayorM = $ordenTrabajo; // si no hay otra etapa, no es retrabajo
+	       		     if($ordenTrabajo < $mayorM) {
+		    		$debeRetrabajar = true;
+		   		retrabajo($pac, $trab, $hoy, $diente, $idlab, true);
+		     	     }
+	                }
+	          }
+	          
+	          
+	  if(!$debeRetrabajar)
+	    {
+        	$r = mysql_query("select * from TrabSoc where Paciente=$pac and Trabajo=$trab and Pieza=$diente");
+	  	$rg=mysql_fetch_object($r);
+	  	$repeticiones = $rg->Repeticiones;
+	  	$labito = $rg->Laboratorio;
+	  	$pieza  = $rg->Diente;
+	  	$etapa  = $rg->Entregado;
+	  	if(empty($repeticiones))
+	    	{
+             	   include("buscolab.bak.php");
+             	   $r=mysql_query("insert into TrabSoc values($pac,$trab,$diente,'$hoy',$elestado,1,'$LASUCURSAL', $LAB, '$hoy', '$vence','N','N')");
+	           $r=mysql_query("insert into HistTrabSoc values($pac,$trab,'$hoy',$diente, $elestado, $LAB, '$vence')");
+	           $r=mysql_query("insert into MetaTrabSoc values($pac,$MetaTrabajo,$diente,'$hoy',$elestado,$LAB,'$LASUCURSAL')");
+	           echo "<script languaje=''>alert('Trabajo registrado : Laboratorio elegido $LAB - $NOMBRELAB')</script>";
+	           if($estadoMeta >= 8)
+	             {
+	               generarCtaCte($pac, $trab, $hoy, $diente);
+	             }
+	        } else
+	           {
+	             if($etapa!=1)
+		       {
+	            	  $repeticiones = $repeticiones+1;
+			  $r=mysql_query("update TrabSoc set Repeticiones=$repeticiones , Entregado=3, Fecha='$hoy'  where Paciente=$pac and Trabajo=$trab and (Entregado=7 or Entregado=8) and Pieza=$diente");
+
+			  $r=mysql_query("insert into HistTrabSoc values($pac,$trab,'$hoy', $diente, 88, $labito, '$vence')");
+			  generar_auditoria($pac, $trab, $hoy, $diente);
+
+			  $r=mysql_query("select descripcion from Laboratorios where id=$labito");
+			  $nombreLab = $reg->descripcion;
+			  echo "<script languaje='javascript'>alert('Retrabajo registrado $TRABAJO $nombreLab');</script>\n";
+	               }
+	           }
+            }
+      } else
+          if($cmd=="borrar")
+	    {
+		$r=mysql_query("delete from TrabSoc where Paciente=$pac and Trabajo=$trab and Pieza=$diente");
+		$r=mysql_query("insert into HistTrabSoc values($pac,$trab,'$hoy', $diente, 0, $idlab, '$vence')");
+		$r=mysql_query("delete from MetaTrabSoc where Paciente=$pac and Meta=$MetaTrabajo and Pieza =  $diente");
+	    }
+	     else
+                if($cmd=="avanza" && $nuevoestado !=8 )
+	          {
+	              $r=mysql_query("update TrabSoc set Entregado = $nuevoestado where Paciente=$pac and Trabajo=$trab and Pieza=$diente");
+		      $r=mysql_query("insert into HistTrabSoc values($pac,$trab,'$hoy',$diente, $nuevoestado, $idlab, '$vence')");
+   	          }
+	            else
+		        if($cmd=="retrabajo")
+		         {
+			   retrabajo($pac, $trab, $hoy, $diente, $idlab, false);
+                         }
+
+
+   echo "<center>";
+   echo "Trabajos enviados a laboratorio para <b>$nombrePac en pieza $diente</b> $LASUCURSAL";
+   echo "<table border=0 width=99% bgcolor='#000000'>\n";
+   echo "<tr valign=\"top\"  bgcolor='#cccccc'>\n";
+   echo "    <td align=\"center\" colspan=1>\n";
+   echo "    Asignados<br>";
+   $hoy=date("Y-m-d");
+
+   if($LASUCURSAL=="CENTRAL")
+      $estadio=3;
+   else
+      $estadio=1;
+
+   $q="select Trabajo, Trabajos.descripcion as nomTrab, Entregado, Laboratorios.descripcion as nomlab, Laboratorios.id as idlab, EstadosTrabajo.Descripcion as estate, Pieza, Facturable, Zona from TrabSoc,Trabajos, Laboratorios, EstadosTrabajo where paciente=$pac and Trabajo = Trabajos.id and TrabSoc.Laboratorio = Laboratorios.id and Entregado = EstadosTrabajo.Codigo and (Pieza = $diente or Pieza=0) and (Zona=$diente or (Zona = 0 and $diente < 100)) order by Trabajos.descripcion";
+
+   $result=mysql_query($q);
+   echo mysql_error();
+   echo "     <table border=0 bgcolor=\"#000000\" width='100%'>";
+   while($reg=mysql_fetch_object($result))
+     {
+ 	echo "	  <tr bgcolor=\"#ffffff\">\n";
+	echo "	    <td>";
+	$cod=$reg->Trabajo;
+	$trab=$reg->nomTrab;
+	$estado=$reg->Entregado;
+	$nomlab=$reg->nomlab;
+	$idlab =$reg->idlab;
+	$pieza =$reg->Pieza;
+	$estate=$reg->estate;
+	$fact  =$reg->Facturable;
+	$zona  =$reg->Zona;
+
+        if($estate=="Colocado" && $fact=="S")
+	  $estate = "Paso a siguiente etapa";
+
+	if($estado==3)
+	   $estadio=1;
+	else
+	   $estadio=$estado;
+
+	if(!empty($cod))
+	  {
+	   echo "$trab";
+	   if($pieza==0)
+	      echo "<font color='#FF0000'>ojo en pieza: $pieza</fondo>";
+	  }
+	else
+	   echo "&nbsp";
+	echo "	    </td>\n";
+	echo "	    <td width=22px>\n";
+	if($estadio==1)
+	   {
+	     echo "	<a href='asignarTrab.php?pac=$pac&cmd=borrar&trab=$cod&idlab=$idlab&diente=$pieza&LASUCURSAL=$LASUCURSAL' title='Anular este pedido'>";
+	     echo "   	   <img src='../img/basura.png' border=0>";
+	     echo "	</a>";
+	   }
+	echo "	    </td>\n";
+	echo "      <td width=22px>\n";
+	if($estado==7)
+	  {
+/*	     echo "		<a href='asignarTrab.php?pac=$pac&cmd=retrabajo&trab=$cod&idlab=$idlab&diente=$pieza&LASUCURSAL=$LASUCURSAL' title='Retrabajo, tiene problemas no pasa a la siguiente etapa'>";
+	     echo "		<img src='../img/critico.png' border=0>";
+	     echo "		</a>";
+*/
+	  }
+	echo "	    </td>\n";
+	echo "	    <td width=22px>\n";
+	if($estado != 8 && $estado != 9)
+	  {
+	     $nuevoestado = $estado + 1;
+/*	     echo "	<a href='asignarTrab.php?pac=$pac&cmd=avanza&trab=$cod&diente=$pieza&nuevoestado=$nuevoestado&idlab=$idlab' title='Siguiente etapa'>";
+	     echo "		<img src='../img/ok24.png' border=0>";
+	     echo "	</a>";
+*/
+	  }
+	echo "	    </td>\n";
+	echo "	  </tr>\n";
+	echo "   <tr>\n";
+	echo "   <tr>\n";
+        echo "     <td colspan=4 bgcolor='#cccccc' align='center'>";
+        echo "        $estate";
+        echo "     </td\n";
+        echo "   </tr\n";
+	echo "     <td colspan=4 bgcolor='#aaaaaa' align='center'>";
+	echo "        $nomlab";
+	echo "     </td\n";
+	echo "   </tr\n";
+	
+     }
+   echo "	</table>\n";
+   echo "    </td>\n";
+   echo "    <td align=\"center\" colspan=1>\n";
+   echo "    Disponibles<br>";
+   echo "	<table bgcolor=\"#000000\" cellspacing=1  width='100%'>\n";
+   $result=mysql_query("select id, descripcion, Zona from Trabajos where Activo= 'S' and (Zona=$diente or (Zona = 0 and $diente < 100)) order by descripcion");
+   while($reg=mysql_fetch_object($result))
+      {
+	echo "  <tr bgcolor=\"#ffffff\">\n";
+	echo "	    <td>";   
+        $cod=$reg->id;
+	$nom=$reg->descripcion;
+	$tie=$reg->Tiempo;
+	echo "<a href='asignarTrab.php?pac=$pac&cmd=agregar&trab=$cod&diente=$diente&LASUCURSAL=$LASUCURSAL'>$nom</a>";
+      }
+	echo "	    </td>";   
+	echo "	  </tr>\n";
+	echo "    </table>\n";      
+   echo "</td>";   
+   echo "</tr>";
+   echo "</table>";
+   mysql_close();
+}
+
+function tieneUnMeta($pac, $trabajo, $diente)
+{
+
+     $meta = obtengoMeta($trabajo); 
+     $query = "select * from MetaTrabSoc where Paciente=$pac and MetaTrab=$meta and Pieza=$diente";
+
+     $qry=mysql_query($query);
+     $reg = mysql_fetch_object($qry);
+     $err = mysql_error();
+     if(!empty($err))
+       die("Error $err - $query");
+     $etapa = $reg->Estado;
+     return($etapa);
+}
+
+function obtengoMeta($trab)
+{
+      $query = "select * from MetaTrabTrab where Trabajo=$trab";
+
+      $qry=mysql_query($query);
+      $reg = mysql_fetch_object($qry);
+      $err = mysql_error();
+      if(!empty($err))
+           die("Error $err - $query");
+      $meta = $reg->Meta;
+
+  return($meta);
+}
+
+function generar_auditoria($pac, $trab, $fecha, $diente)
+{
+       $r=mysql_query("insert into Auditoria values($pac,'$fecha', 1, $diente, 0, '')");
+}
+
+function generarCtaCte($pac, $trab, $hoy, $diente)
+{
+    // * Para generar la cuenta corriente necesito el valor del trabajo
+    // * y no lo tengo, es bastante grave, pero se arregla con una tabla
+    // * Tampoco conozco el procedimiento
+
+/*    $proc = obtengoProcedimiento($trab);
+    $ahora= Date("H:i:s");
+
+    if(!empty($proc)) {
+    $valor = obtengoValorProc($proc);
+    $q = "insert into CuentaCorriente values($pac, '$hoy', '$ahora', $diente, $proc, 'D', $valor, 'T', 'S')";
+
+     mysql_query($q); 
+     } else
+       echo "<script>alert('Atencion no esta asociado el trabajo $trab a ningun procedimiento')</script>";
+
+ */
+}
+
+function obtengoProcedimiento($trabajo)
+{
+    $r=mysql_query("select * from ProcTrab where Trabajo=$trabajo");
+    $reg = mysql_fetch_object($r);
+
+    $proc = $reg->Procedimiento;
+    if(empty($proc))
+       echo "select * from ProcTrab where Trabajo=$trabajo";
+    return($proc);
+}
+
+function obtengoValorProc($proc)
+{
+
+   if(!empty($proc)) {
+	    $r=mysql_query("select * from Procedimientos where Codigo=$proc");
+    	$reg = mysql_fetch_object($r);
+
+    	$valor = $reg->ImporteTaller;
+    } else
+          $valor = 0;
+
+    return($valor);
+}
+
+function retrabajo($pac, $trab, $hoy, $diente, $idlab, $hacerUpdate)
+{
+
+     $vence = calcularVencimiento($hoy);
+
+     $r=mysql_query("insert into HistTrabSoc values($pac,$trab,'$hoy',$diente, 88, $idlab, '$vence')");
+
+     if($hacerUpdate)
+        $r=mysql_query("update TrabSoc set Entregado = 3 where Paciente=$pac and Trabajo=$trab and Pieza=$diente");
+
+     echo "<script languaje='javascript'>alert('Retrabajo registrado');</script>\n";
+}
+
+function ordenMeta($trab, $meta)
+{
+        $query = "select * from MetaTrabTrab where Trabajo=$trab and Meta = $meta";
+
+        $qry=mysql_query($query);
+        $reg = mysql_fetch_object($qry);
+        $err = mysql_error();
+        if(!empty($err))
+           die("Error $err - $query");
+        $ordinal = $reg->Orden;
+
+  return($ordinal);
+}
+function mayorMeta($pac, $meta, $diente)
+{
+    // Primero tomo todos los trabajos de ese meta trabajo
+
+    $mayor = 0;
+
+    $query = "select * from MetaTrabTrab where Meta = $meta order by Orden";
+    $qry=mysql_query($query);
+
+    while($reg=mysql_fetch_object($qry))
+      {
+       // Por cada trabajo me fijo si el pac se lo hizo
+       $trab = $reg->Trabajo;
+       $orden = $reg->Orden;
+       $nqry = "select * from TrabSoc where Paciente=$pac and Trabajo=$trab and Pieza=$diente";
+
+       $nnqry = mysql_query($nqry);
+       $nnreg = mysql_fetch_object($nnqry);
+       $id = $nnreg->Trabajo;
+       if(!empty($id))  // Se hizo o esta haciendo ese trabajo
+	     {
+	        $mayor = $orden;
+	     }
+
+      }
+   return($mayor);
+}
+
+?>

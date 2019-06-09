@@ -1,0 +1,46 @@
+<?php
+echo "<form action='almacen.php'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr valign='middle' width='16'>";
+echo "	<td class='tdLista' colspan=4>";
+echo "	<a href='almacen.php' class='v1'><img src='img/nuevo16.png' align='bottom'>Almacen nuevo</a>";
+echo "&nbsp;&nbsp;<a href='almacenes.php?icmd=orden&param=nom' class='v1'><img src='img/lista16.png' align='bottom'>Lista</a>";
+echo "	</td>";
+echo "</tr>";
+echo "<tr>";
+echo "	<td class='tdLista'>Identificación";
+echo "  </td>";
+echo "	<td class='tdLista'><input type='text' name='id' value='$id' readonly size=15></td>";
+echo "	<td class='tdLista'>Nombre</td>";
+echo "	<td class='tdLista'><input type='text' name='nombre' value='$nombre' size=40>";
+echo "	</td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Correo electronico</td>";
+echo "	<td class='tdLista'><input type='text' name='mail' value='$mail' size=30></td>";
+echo "	<td class='tdLista'>Interno</td>";
+echo "	<td class='tdLista'><input type='text' name='interno' value='$interno' size=6></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista'>Sucursal</td>";
+echo "	<td class='tdLista'><input type='text' name='sucursal' value='$sucursal' size=50></td>";
+echo "	<td class='tdLista'>Telefono</td>";
+echo "	<td class='tdLista'><input type='text' name='telefono' value='$telefono' size=30></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "   <td class='tdLista' colspan=1>&nbsp;</td>";
+echo "  <td class='tdLista' colspan=2 align=right>Controlado</td>";
+echo "  <td class='tdLista'><input type='text' name='controlado' value='$controlado' size=1></td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "	<td class='tdLista' colspan=4 align='center'><input type='submit' name='cmd' value='Actualizar'></td>";
+echo "</tr>";
+
+echo "</table>";
+echo "</form>";
+?>
+

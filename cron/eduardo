@@ -1,0 +1,4 @@
+00 01 * * * /srv/www/apoloniaR2/cron/subircajas.sh
+00 03 * * * /srv/www/apoloniaR2/cron/replicar.sh
+30 02 * * * /srv/www/apoloniaR2/cron/subirpadron.sh
+

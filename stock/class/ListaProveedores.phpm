@@ -1,0 +1,48 @@
+<?php
+
+  class ListaProveedores {
+  
+	var $lista,
+	    $conn;
+	
+	var $begin;
+	
+        function ListaFamilias() {
+	    $this->lista=NULL;
+	    $this->begin=0;
+	}
+	
+	function init() {
+	
+	   $this->begin = 0;
+	   $this->lista = NULL;
+	}
+
+	function setConn($unaConeccion) {
+	
+	   $this->conn = $unaConeccion;
+	}
+	
+	function cargar($cantidad, $orden, $dir) {
+	   $query="select * from proveedores where id >= $this->begin order by $orden $dir limit $cantidad";
+	   $q = $this->conn->query($query);
+	          
+	   if(DB::isError($q))
+	     die(" ".$q->getMessage().$query."<br> en ListaProveedores.phpm");
+	     
+	   $i=0;
+	   while($reg=$q->fetchRow())
+	     {
+	        $this->lista[$i++] = $reg;
+		if($i==$cantidad)
+		   $this->begin=$reg->$orden;
+	     }
+	}
+	
+	function getLista() {
+	
+	   return($this->lista);
+	}
+	
+}
+?>

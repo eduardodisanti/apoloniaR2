@@ -1,0 +1,70 @@
+<?php
+
+  class ListaArticulos {
+  
+	var $lista,
+	    $conn;
+	
+	var $begin;
+	var $cantidad;
+	
+        function ListaArticulos() {
+	    $this->lista=NULL;
+	    $this->begin=0;
+	    $this->cantidad = 0;
+	}
+	
+	function init() {
+	
+	   $this->begin = 0;
+	   $this->list = NULL;
+	}
+
+	function setConn($unaConeccion) {
+	
+	   $this->conn = $unaConeccion;
+	}
+	
+	function cargar($cantidad, $orden, $dir, $familia, $buscar) {
+	
+	   if($familia!='-1' && !empty($familia))
+	       $filtro = " and familia=$familia";
+	   else
+	        $familia="";
+	        
+	   if(!empty($buscar))
+	      $filtro.=" and articulos.nombre like '%$buscar%' ";
+	      
+	   $query="select articulos.id as articulo, articulos.nombre as nombre, familias.nombre as familia from articulos, familias where  familias.id = articulos.familia $filtro order by $orden $dir limit $cantidad";
+
+
+	   $q = $this->conn->query($query);
+	          
+	   if(DB::isError($q))
+	     die(" ".$q->getMessage().$query."<br> en ListaArticulos.phpm");
+	     
+	   $i=0;
+	   while($reg=$q->fetchRow())
+	     {
+	        $this->lista[$i++] = $reg;
+		/*if($i==$cantidad)
+		   $this->begin=$reg->$orden;*/
+	     }
+	      
+	  /* $query = "select count(*) as cantidad from articulos";
+	   $q = $this->conn->query($query);
+	   
+	   $reg = $q->fetchRow();
+	   $this->cantidad = $reg->cantidad;
+	   */
+	   
+	   $this->cantidad = $i;
+	}
+	
+	function getLista() {
+	
+	   return($this->lista);
+	}
+	
+}
+?>

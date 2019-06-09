@@ -1,0 +1,84 @@
+<?php
+
+class Laboratorio {
+
+    var $id,
+    	$nombre,
+	$telefono,
+	$domicilio,
+	$email,
+	$topeTrabajos;
+ 
+    var $conn,
+        $nuevo;
+
+    function Laboratorio() {
+
+       $this->id=0;
+       $this->telfono="";
+       $this->domicilio="";
+       $this->email="";
+       $this->topeTrabajos=0;
+
+       $nuevo = TRUE;
+   } 
+
+   function setId($unaId) {
+
+        $this->id=$unaId;
+   }
+
+   function setTelefono($unaId) {
+
+        $this->telefono=$unaId;
+   }
+
+   function setDomicilio($unaId) {
+
+       $this->domicilio=$unaId;
+  }
+
+   function setemail($unaId) {
+
+      $this->email=$unaId;
+  }
+
+   function setTopeTrabajos($unTope) {
+
+      $this->topeTrabajos=$unTope;
+   }
+
+   function setConn($unaConeccion) {
+
+      $this->conn = $unaConeccion;
+   }
+
+  function cargar() {
+
+   $res = $this->conn->query("select * from Laboratorios where id=$this->id");
+   $reg = $res->fetchRow();
+
+   $this->setId($reg->id);
+   if(!empty($this->id))
+     {
+   	   $this->setDescripcion($reg->descripcion);
+	   $this->setTelefono($reg->telefono);
+	   $this->setemail($reg->email);
+	   $this->setTopeTrabajos($reg->topeTrabajos);
+	   
+	   $this->nuevo = FALSE;
+     }
+       else
+              $this->nuevo = TRUE;
+  }
+
+  function almacenar() {
+
+       if($nuevo)
+          $this->conn->query("insert into Laboratorios values($this->id, '$this->nombre', '$this->telefono', '$this->domicilio', '$this->email', $this->topeTrabajos)");
+       else
+          $this->conn->query("update Laboratorios set nombre='$this->nombre', telefono='$this->telefono', domicilio='$this->telefono', email='$this->email', topeTrabajos = $this->topeTrabajos where id=$this->id");
+  }
+}
+
+?>

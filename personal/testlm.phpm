@@ -1,0 +1,11 @@
+<?php
+
+       require_once("lista_de_marcas.phpm");
+
+
+       $x = new lista_de_marcas;
+
+       $x->agregar(1,'10:30');
+
+       echo $x->horas[1,1]."\n";
+?>

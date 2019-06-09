@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>
+       Generar el calendario
+    </title>
+  <body>
+     <form action="gencale.php" method=post>
+       <center>
+       <h1>Generar el calendario</h1>
+       <hr>
+       </center>
+       Año a generar         : <input type=text size=4 lenght=4 name="anio"><br><br><br>
+       El primero de enero es: <select name="dia">
+                               <option value="1">Lunes</option>
+                               <option value="2">Martes</option>
+                               <option value="3">Miercoles</option>
+                               <option value="4">Jueves</option>
+                               <option value="5">Viernes</option>
+                               <option value="6">Sabado</option>
+                               <option value="7">Domingo</option>
+                               </select>
+      <center>
+      <hr>
+         <input type="SUBMIT" name="Generar" value="Generar">
+         &nbsp;&nbsp;&nbsp;<input type="SUBMIT" name="Cancelar" Value="Cancelar" onclick="window.close()">
+     </form>
+  </body>
+</html>

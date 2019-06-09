@@ -1,0 +1,77 @@
+<?php
+
+echo "<form action='transferencia.php'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr valign='middle' width='16'>";
+echo "	<td class='tdLista' colspan=4>";
+echo "	<a href='transferencia.php' class='v1'><img src='img/nuevo16.png' align='bottom'>Transferencia nueva</a>";
+echo "&nbsp;&nbsp;<a href='transferencias.php' class='v1'><img src='img/lista16.png' align='bottom'>Consultar</a>";
+echo "	</td>";
+echo "</tr>";
+echo "<tr>";
+echo "  <td class='tdLista'>";
+echo "  Almacen : ";
+echo "  </td>";
+echo "  <td class='tdLista'>";
+echo "     <select name=almacen>";
+$i=0;
+while(!empty($almacenes[$i]))
+  {
+     if($almacenes[$i]->id==$almacen)
+       $sel="selected";
+     else
+       $sel="";
+     echo "<option value=".$almacenes[$i]->id." $sel>".$almacenes[$i]->nombre."</option>";
+     $i++;
+  }
+echo "     </select>";
+echo "  </td>";
+echo "  <td class='tdLista'>Numero </td>";
+echo "  <td class='tdLista'><input type='text' name='numero' value='$numero'></td>";
+echo "</tr>";
+echo "<tr>";
+echo "	<td class='tdLista'>Destino";
+echo "  </td>";
+echo "  <td class='tdLista'>";
+echo "     <select name=almacen>";
+$i=0;
+while(!empty($almacenes[$i]))
+  {
+     if($almacenes[$i]->id==$destino)
+       $sel="selected";
+     else
+       $sel="";
+     echo "<option value=".$almacenes[$i]->id." $sel>".$almacenes[$i]->nombre."</option>";
+     $i++;
+  }
+echo "     </select>";
+echo "  </td>";
+echo "	</td>";
+echo "  <td class='tdLista'>Fecha </td>";
+echo "  <td class='tdLista'><input type='text' name='fecha' value='$fecha' readonly></td>";
+echo "</tr>";
+echo "<tr>";
+echo "  <td class='tdLista' colspan=4>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<th class='thLista'>Codigo</th>";
+echo "<th class='thLista' width=70%>Articulo</th>";
+echo "<th class='thLista'>Cantidad</th>";
+
+$i=0;
+while(!empty($lineas[$i]->linea))
+{
+    echo "<tr>";
+    echo "	<td class='tdLista'>".$lineas[$i]->codigo."</td>";
+    echo "	<td class='tdLista'>".$lineas[$i]->nombre."</td>";
+    echo "	<td class='tdLista' align=right>".$lineas[$i]->cantidad."</td>";
+    echo "</tr>";
+    $i++;
+}
+echo "</table>";
+echo "  </td>";
+echo "</tr>";
+
+echo "	<td class='tdLista' colspan=4 align='center'><input type='submit' name='cmd' value='Consultar'></td>";
+echo "</tr>";
+
+?>

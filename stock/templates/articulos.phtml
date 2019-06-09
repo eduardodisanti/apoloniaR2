@@ -1,0 +1,90 @@
+<?php
+
+echo "<form action='articulos.php' method='post'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr valign='middle' width='16'>";
+echo "	<td class='tdLista'>";
+echo "	<a href='articulo.php' class='v1'><img src='img/nuevo16.png' align='bottom'>Articulo nuevo</a>";
+echo "&nbsp;&nbsp;<a href='articulos.php?icmd=show&param=art&orden=$orden&dir=$dir&begin=$begin&familia=$familia' class='v1'><img src='img/lista16.png' align='bottom'>Lista</a>";
+echo "	</td>";
+echo "  <td class='tdLista' width='60%'>";
+
+$j = 0;
+echo "Pagina : ";
+for($i=0;$i<=$cantidadArticulos;$i+=$cantidadPagina) {
+
+    $j++;
+    $comienzo = $i;
+    echo "[";
+    
+    if($i==$begin)
+         echo "$j";
+    else {
+    		echo "<a href='articulos.php?icmd=show&orden=$orden&dir=$dir&param=$param&begin=$comienzo&familia=$familia' class='v1'>";
+    		echo "$j";
+    		echo "</a>";
+    	 }
+    echo "] ";
+}
+echo "  </td>";
+echo "</tr>";
+
+echo "<tr valign='top'>";
+echo "	<th class='thLista'>";
+echo "<select name='familia'>";
+echo "<option value='-1'>--Todas--</option>";
+
+$i=0;
+while(!empty($familias[$i])) {
+
+  $fid = $familias[$i]->id;
+  $nfam= $familias[$i]->nombre;
+  
+  if($fid==$familia)
+    $sel="selected";
+  else
+    $sel="";
+    
+		echo "<option value=$fid $sel> $nfam</option>";
+		$i++;
+}
+echo "</select>";
+
+echo "<input type='submit' name='filtrar' value='Filtrar'>&nbsp;&nbsp;&nbsp;";
+echo "  <a href='articulos.php?icmd=orden&param=fam&dir=$dir&begin=$begin&familia=$familia' class='v2'>Familia</a>";
+echo "  <a href='articulos.php?icmd=orden&dir=$dir&param=fam&begin=$begin&familia=$familia' class='v1'><img src='img/$gifdir1' border=0></a>";
+echo "  </th>";
+echo "<input type='hidden' name='orden' value='$orden'>";
+echo "<input type='hidden' name='dir' value='$dir'>";
+echo "<input type='hidden' name='begin' value='$begin'>";
+echo "<input type='hidden' name='icmd' value='show'>";
+echo "<input type='hidden' name='begin' value='0'>";
+
+echo "	<th class='thLista'><a href='articulos.php?icmd=orden&param=art&dir=$dir&begin=$begin&familia=$familia' class='v2'>Articulo</a>";
+echo "  <a href='articulos.php?cmd=orden&dir=$dir&param=art&begin=$begin&familia=$familia' class='v1'><img src='img/$gifdir2' border=0></a>";
+echo " Con nombre parecido a ";
+echo "<input type='text' name='buscar' value='$buscar'>";
+echo "	</th>";
+echo "</tr>";
+
+$j = $begin;
+
+for($i=0;$i<=$cantidadPagina;$i++) {
+
+  if(!empty($lista[$j]->articulo)) {
+    echo "<tr>";
+    echo "	<td class='tdLista'>".$lista[$j]->familia."</td>";
+    echo "	<td class='tdLista'>";
+    echo "	  <a href='articulo.php?id=".$lista[$j]->articulo."&orden=$orden&begin=$begin&dir=$dir&familia=$familia'>";
+    echo 	    $lista[$j]->nombre;
+    echo "	  </a>";
+    echo "	</td>";
+    echo "</tr>";
+  }
+$j++;
+
+}
+
+echo "</table>";
+echo "</form>";
+?>

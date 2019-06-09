@@ -1,0 +1,34 @@
+<?php
+
+   echo "<form action='reportar.php' method='post'>";
+   echo "<table border='0' width=400 height=300 bgcolor='#cccccc'>";
+
+   echo "<tr bgcolor='#fcfcfc' height='18px'><th colspan=2 align='center'>Agente de control de calidad de Apolonia R2/5</th></tr>";
+   echo "<tr>";
+   echo "   <td rowspan=1 valign='middle' align='middle'>";
+   echo "   <img src='../img/bug-buddy.png'>";
+   echo "   </td>";
+   echo "   <td>";
+   echo "   Reportar un bug Finalizado:$hoy/$ahora</td>";   
+   echo "</tr>";   
+   echo "<tr valign=top>";
+   echo "<td colspan=2>";
+   echo "	<table border=0 bgcolor='#fcfcfc' width='100%'>";
+   echo "	  <tr>";
+   echo "	    <td>Su nombre</td><td>$usuario</td>";
+   echo "	  </tr>";
+   echo "	  <tr>";
+   echo "	    <td>Problema</td><td>$resumen</td>";
+   echo "	  </tr>";
+   echo "	  <tr>";
+   echo "	    <td colspan=2>Descripción del problema</td>";
+   echo "	  </tr>";
+   echo "	  <tr>";
+   echo "	    <td colspan=2>".nl2br($descripcion)."</td>";
+   echo "	</table>";
+   echo "</td>";
+   echo "</tr>";
+   echo "<tr width='20px' valign='bottom'><td colspan=2 align='right'>Gracias por usar esta herammienta, pronto solucionaremos este bug</td>";
+   echo "</table>";
+   echo "</form>";
+?>

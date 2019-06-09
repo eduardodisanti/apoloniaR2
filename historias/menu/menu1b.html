@@ -1,0 +1,83 @@
+    <script type="text/javscript">
+    /* preload images */
+    var arrow1 = new Image(4, 7);
+    arrow1.src = "menu/images/arrow1.gif";
+    var arrow2 = new Image(4, 7);
+    arrow2.src = "menu/images/arrow2.gif";
+    </script>
+
+    <div id="bar">
+        
+        <table cellspacing="0" cellpadding="0" id="menu1" class="XulMenu">
+        <tr>
+            <td>
+                <a class="button" href="javascript:void(0)">Sistema</a>
+                <div class="section">
+                    <a class="item" href="index.php">Inicio</a>
+                    <a class="item" href="desconectar.php">Cerrar</a>
+                </div>
+            </td>
+            <td>
+                <a class="button" href="javascript:void(0)">Citas</a>
+                <div class="section">
+                        <a class="item" href="index.php?contenido=revision.php">Anotar Revision</a>
+                        <a class="item" href="index.php?contenido=anotar.php">Anotar Consulta</a>
+                        <a class="item" href="index.php?contenido=borrar.php">Anular</a>
+                        <a class="item" href="index.php?contenido=confirmar.php">Confirmar</a>
+                        <a class="item" href="index.php?contenido=listapac.php">Consutar</a>
+                        <a class="item" href="index.php?contenido=consbor.php">Historia de borrados</a>
+                        <a class="item" href="index.php?contenido=borrfal.php">Borrar faltas</a>
+                </div>
+            </td>
+            <td>
+                <a class="button" href="javascript:void(0)">Pacientes</a>
+                <div class="section">
+                            <a class="item" href="index.php?contenido=padron.php">Consultar el padron</a>
+                            <a class="item" href="index.php?contenido=autorizar.php">Autorizaciones</a>
+                            <a class="item" href="index.php?contenido=emergencia.php">Emergencias</a>
+                </div>
+            </td>
+            <td>
+                <a class="button" href="javascript:void(0)">Ortodoncia Fija</a>
+                <div class="section">
+                            <a class="item" href="caportodoncia.php">Capacidad ortodoncia</a>
+                            <a class="item" href="planortod.php">Plan de asistencia</a>
+                </div>
+            </td>
+            <td>
+                <a class="button" href="javascript:void(0)">Ayuda</a>
+                <div class="section">
+                    <a class="item" href="../manuales/calidad.php">Manual de Calidad</a>
+                    <a class="item" href="../manuales/sistema.php">Manual del sistema</a>
+		    <a class="item" href="http://hermes.kcreativa.com/script/reportar.php?Husuario=$coiusuario&Hcliente=111&quien=C">Solicitud de servicio tecnico</a>
+                    <a class="item" href="index.php?contenido=../bugdb/reportar.php">Reportar errores</a>
+                </div>
+            </td>
+            <td width=200px>
+                &nbsp;
+            </td>    
+            <td>
+                <a class="button" href="javascript:history.go(-1)"><img src="/apoloniaR3/img/back.png" border=0 align=middle> Atras</a>
+            </td>
+            <td>
+                <a class="button" href="index.php"><img src="/apoloniaR3/img/gohome.png" border=0 align=middle>Inicio</a>
+            </td>	    
+            <td>
+                <a class="button" href="javascript:window.reload()"><img src="/apoloniaR3/img/reload.png" border=0 align=middle>Actualizar</a>
+            </td>	    
+            <td>
+                <a class="button" href="javascript:contenido.print()"><img src="/apoloniaR3/img/fileprint.png" border=0 align=middle>Imprimir</a>
+            </td>
+            <td>
+                <a class="button" href="desconectar.php"><img src="/apoloniaR3/img/exit.png" border=0 align=middle>Salir</a>
+            </td>	                    
+	</tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+    var menu1 = new XulMenu("menu1");
+    menu1.arrow1 = "images/arrow1.gif";
+    menu1.arrow2 = "images/arrow2.gif";
+    menu1.init();
+    </script>

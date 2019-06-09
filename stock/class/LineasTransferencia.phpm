@@ -1,0 +1,109 @@
+<?php
+
+  class LineasTransferencia{
+  
+	var $numero,
+	    $elemento,
+	    $cantidad,
+	    $linea;
+	    
+
+	var $lista,
+	    $conn,
+	    $lineas;
+		
+        function LineasTransferencia() {
+	    $this->lista=NULL;
+	}
+	
+	function init() {
+	   $this->list = NULL;
+	}
+
+	function setConn($unaConeccion) {
+	
+	   $this->conn = $unaConeccion;
+	}
+	
+	function setNumero($unNumero) {
+	
+		$this->numero = $unNumero;
+	}
+	
+	function setCantidad($unaCantidad) {
+	
+		$this->cantidad = $unaCantidad;
+	}
+	
+	function setElemento($unElemento) {
+	
+		$this->elemento = $unElemento;
+	}
+	
+	function setLinea($unaLinea) {
+	
+		$this->linea = $unaLinea;
+	}
+	
+	function cargar() {
+	   $query="select articulos.id as articulo, articulos.nombre as nombre, articulos.codigo as codigo, linea, cantidad from articulos, lineatransferencia 
+	   where 
+	   	transferencia=$this->numero and
+		articulos.id = elemento
+	   order by articulos.nombre, linea desc";
+
+	   $q = $this->conn->query($query);
+	          
+	   if(DB::isError($q))
+	     die(" ".$q->getMessage().$query."<br> en LineasTransferencia.phpm");
+	     
+	   $i=0;
+	   while($reg=$q->fetchRow())
+	     {
+	        $this->lista[$i++] = $reg;
+		$this->lineas=$i;
+	     }
+	}
+
+	function almacenar() {
+	
+	   if($this->linea==0)
+	      {
+		$query="select linea from lineatransferencia where 
+				transferencia=$this->numero
+				order by linea desc";
+		$q   = $this->conn->query($query);
+
+		$reg = $q->fetchRow();
+		if(empty($reg))
+		   $this->linea = 1;
+		else
+		   $this->linea = $reg->linea + 1;
+	      }
+	   $query="insert into lineatransferencia values($this->numero, $this->linea, $this->elemento, $this->cantidad)";
+	   
+	   $q = $this->conn->query($query);
+	          
+	   if(DB::isError($q))
+	     die(" ".$q->getMessage()." ".$query."<br> en LineasTransferencia.phpm");	    	   
+	}
+	
+	function borrar() {
+	      $query="delete from lineatransferencia
+	        where 
+	   	    transferencia  = $this->numero	and
+		    linea	   =$this->linea";
+
+	   $q = $this->conn->query($query);
+	          
+	   if(DB::isError($q))
+	     die(" ".$q->getMessage()." ".$query."<br> en LineasTransferencia.phpm");	    
+	}
+		
+	function getLista() {
+	
+	   return($this->lista);
+	}
+	
+}
+?>

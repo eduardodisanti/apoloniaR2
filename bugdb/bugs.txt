@@ -1,0 +1,17 @@
+<?php
+
+    class Bug
+    	{
+              var $id;
+	      var $fecha;
+	      var $hora;
+	      var $usuario;
+	      var $resumen;
+	      var $descripcion;
+
+	      function Bug()
+	         {
+		 }
+	
+	}
+?>

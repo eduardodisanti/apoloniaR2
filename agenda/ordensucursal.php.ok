@@ -1,0 +1,50 @@
+<?php
+
+   $orden="";
+   sprintf($set," "); // Setear largo de pagina a 36 lineas
+   
+   $anio=strtok($fecha,"-");
+   $mes=strtok("-");
+   $dia=strtok("-");
+   $fechaLinda="&nbsp;&nbsp;$dia  $mes  $anio";
+
+   $hora     = strtok($hora,":");
+   $minutos  = strtok(":");
+   $horalinda= "&nbsp;$hora &nbsp; $minutos";
+      
+   $linea01 = sprintf("<br><br><br>");
+   $linea02 = sprintf("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%s",$ced);
+	   $linea03 = sprintf("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='#135C11'>%s</font><br>",$seguro);
+   $linea05 = sprintf("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%s<br><br>",$nombrePaciente);
+   $linea06 = sprintf("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;%s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='#880000'>%s</font><br><br>",$fechaLinda, $horalinda);
+   $linea07 = sprintf("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color='#880000'>%s</font><br>",$medico);
+  
+   $ff="\n";
+   $orden= $set.
+	$linea01.
+	$linea02.
+	$linea03.
+	$linea04.
+	$linea05.
+	$linea06.
+	$linea07.
+	$ff;
+
+   $ced=Date("U");
+   if(empty($ced))
+      $ced=1;
+
+   //$fp=fopen("tmp/ci$ced.prn","w");
+   //fputs($fp, $orden);
+   //fclose($fp);
+
+	   echo "<font size=1>$orden</font>";
+   //exec("lpr -P lp1 tmp/ci$ced.prn");
+
+   //unlink("tmp/ci$ced.prn");
+?>
+<script>
+window.print();
+//window.close();
+</script>
+

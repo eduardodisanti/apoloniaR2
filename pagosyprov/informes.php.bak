@@ -1,0 +1,32 @@
+<html>
+<head>
+   <title>Informes publicados</title>
+</head>
+<body>
+   <center>
+    <h2>Informes</h2>
+   </center>
+   <li><a href="tiempossd.php" target="_blank">Indicadores de tiempos de espera global</a></li>
+   <li><a href="tiempos.php" target="_blank">Indicadores de tiempos de espera x sucursal</a></li>
+   <li><a href="tarjetas.php">Entradas y salidas de personal</a></li>
+   <li><a href="controlses1.php">Control de Sesiones excedidas</a></li>
+   <li><a href="horas.php">Horas de consulta</a></li>
+   <li><a href="consultasxsuc.php">Consultas entre fechas x sucursal</a></li>
+   <li><a href="conxsucproc.php">Consultas entre fechas x sucursal con desglose de procedimientos</a></li>
+   <li><a href="listafech.php">Listar consultas por fecha</a></li>
+   <li><a href="conseme.php">Indicador de urgencias atendidas</a></li>
+   <li><a href="controlch.html">Control de confirmaciones contra historias</a></li>
+   <li><a href="horarios.html">Resumen de Horarios x especialidad</a></li>
+   <li><a href="concentracion.php">Concentracion</a>
+   <li><a href="venctrab.php">Vencimientos de trabajos de laboratorio</a>   
+   <li><a href="listxlab.php">Lista de Impresiones y Colocaciones en el dia</a>
+   <li><a href="conxsucodo.php">Consultas por x sucursal y odontologo</a></li>
+   <li><a href="migracion.html">Pacientes que migraron de central a sucursales</a></li>
+   <br>
+   <li><a href="factlab.php">Control de facturacion de laboratorio</a></li>
+   <li><a href="indicadorlab.php">Indicador de laboratorio</a></li>
+   <br>
+   <li><a href="audit.php">Auditorias de Historias Clinicas</a></li>
+
+</body>
+</html>

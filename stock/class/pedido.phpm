@@ -1,0 +1,150 @@
+<?php
+
+	class Pedido
+	  {
+		var	$almacen,
+			$articulo,
+			$cantidad,
+			$saldo,
+			$firma;
+			
+		var	$lista,
+			$conn;
+		
+		function setConn($unaConeccion) {
+		
+		$this->conn = $unaConeccion;
+		}
+		
+		function Pedido() {
+		 	$this->almacen=NULL;
+			$this->articulo=NULL;
+		 }
+
+		function getAlmacen() {
+		 	return $this->almacen;
+		 }		 
+		 		 
+		function setAlmacen($unAlmacen) {
+		 	$this->almacen = $unAlmacen;
+			return $this;
+		 }
+
+		function setArticulo($unArticulo) {
+		 	$this->articulo = $unArticulo;
+			return $this;
+		 }
+
+		function getArticulo() {
+		 	return $this->articulo;
+		 }
+
+		 		 
+		function cargar() {
+		 
+		     $q = "select * from articulos where id=$this->codigo";
+		     $res = $this->conn->query($q);
+
+		     if(empty($res))
+		       {
+		        $this->id=NULL;
+			return(false);
+		       }
+		     else
+		       {
+		        $reg = $res->fetchRow();
+		        
+			$this->codigo		= $reg->id;
+			$this->descripcion	= $reg->nombre;
+			$this->familia		= $reg->familia;
+			//$this->proveedores	= $reg->proveed;
+			$this->volumen		= $reg->volumen;
+			$this->peso		= $reg->peso;
+			$this->unidadAlmacen	= $reg->factorAlmacen;
+			$this->unidadExpedicion	= $reg->factorExpedicion;
+			$this->descUnidadCompra	= $reg->unidadCompra;
+			$this->descUnidadAlmacen= $reg->unidadAlmacen;
+			$this->descUnidadExpedicion= $reg->unidadExpedicion;
+			$this->barras		= $reg->codigo;
+			$this->notas		= $reg->comentario;
+		        return(true);
+		      }
+		 }
+		 
+		function cargarPorCodigo() {
+		 
+		     $q = "select * from articulos where codigo='$this->barras'";
+		     $res = $this->conn->query($q);
+
+		     if(empty($res))
+		       {
+		        $this->id=NULL;
+			return(false);
+		       }
+		     else
+		       {
+		        $reg = $res->fetchRow();
+		        
+			$this->codigo		= $reg->id;
+			$this->descripcion	= $reg->nombre;
+			$this->familia		= $reg->familia;
+			//$this->proveedores	= $reg->proveed;
+			$this->volumen		= $reg->volumen;
+			$this->peso		= $reg->peso;
+			$this->unidadAlmacen	= $reg->factorAlmacen;
+			$this->unidadExpedicion	= $reg->factorExpedicion;
+			$this->descUnidadCompra	= $reg->unidadCompra;
+			$this->descUnidadAlmacen= $reg->unidadAlmacen;
+			$this->descUnidadExpedicion= $reg->unidadExpedicion;
+			$this->barras		= $reg->codigo;
+			$this->notas		= $reg->comentario;
+		        return(true);
+		      }
+		 }
+		 
+		 function almacenar() {
+		 
+		     if($this->codigo==0 || empty($this->codigo))
+		      {
+		        $this->codigo = Date("U");
+			$q = "insert into articulos values( $this->codigo,
+							'$this->descripcion',
+							'$this->barras',
+							'$this->descUnidadCompra',
+							'$this->descUnidadAlmacen',
+							'$this->descUnidadExpedicion',
+							 $this->unidadAlmacen,
+							 $this->unidadExpedicion,
+							'$this->notas',
+							 $this->familia,
+							 $this->volumen,
+							 $this->peso
+		                                       )";
+		      } else
+				{
+				  $q = "update articulos set nombre='$this->descripcion',
+						familia=$this->familia,
+						volumen=$this->volumen,
+						peso=$this->peso,
+						unidadAlmacen=$this->unidadAlmacen,
+						unidadExpedicion=$this->unidadExpedicion,
+						unidadCompra='$this->descUnidadCompra',
+						unidadAlmacen='$this->descUnidadAlmacen',
+						unidadExpedicion='$this->descUnidadExpedicion',
+						codigo='$this->barras',
+						comentario ='$this->notas'
+					where id=$this->codigo";
+				}
+		     $res = $this->conn->query($q);
+		    
+		 $x = mysql_error(); 
+		 if(!empty($x))
+			die("$x<br>$q");
+
+		     return(!empty($res));
+		 }
+		function cargarProveedores() {
+		
+		 }
+	  }
+?>

@@ -1,0 +1,38 @@
+    <script type="text/javscript">
+    /* preload images */
+    var arrow1 = new Image(4, 7);
+    arrow1.src = "menu/images/arrow1.gif";
+    var arrow2 = new Image(4, 7);
+    arrow2.src = "menu/images/arrow2.gif";
+    </script>
+
+    <div id="bar">
+        
+        <table cellspacing="0" cellpadding="0" id="menu1" class="XulMenu">
+        <tr>
+            <td>
+                <a class="button" href="index.php?contenido=episodio.html"><img src="menu/images/episodio.png" border="0" align=middle>Ingresar episodios</img>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=revision.html"><img src="menu/images/revision.png" border="0" align=middle>Ingresar Revision</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=listaconf.php"><img src="menu/images/lista.png" border="0" align=middle>Lista de Odontologo</a>
+            </td>
+	    <td>
+	        <a class="button" href="index.php?contenido=listarev.php"><img src="menu/images/lista.png" border="0" align=middle>Lista de <b>Revision</b></a>
+	    </td>
+            <td>
+	     <a class="button" href="http://www.cadi.com.uy/cgi-bin/openwebmail/openwebmail.pl" target="_email"><img src="menu/images/mail.png" border="0" align=middle>Correo Electr&oacute;nico</a>
+	    </td>
+
+	</tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+    var menu1 = new XulMenu("menu1");
+    menu1.arrow1 = "images/arrow1.gif";
+    menu1.arrow2 = "images/arrow2.gif";
+    menu1.init();
+    </script>

@@ -1,0 +1,21 @@
+<html>
+<head>
+   <title>Administración del sistema</title>
+</head>
+<body>
+   <center>
+    <h2>Administraci&oacute;n</h2>
+   </center>
+   <li><a href="especial.php">Especialidades</a></li>
+   <li><a href="proced.php">Procedimientos</a></li>
+   <li><a href="usuarios.php">Usuarios</a></li>
+   <li><a href="lab.php">Laboratorios</a></li>
+   <li>&nbsp;&nbsp<a href="metatrab.php">Meta Trabajos de Laboratorio</a></li>
+   <li>&nbsp;&nbsp;&nbsp;<a href="trab.php">Trabajos de laboratorio</a></li>
+   <li><a href="molde.php">Molde de horarios</a></li>
+   <li><a href="seguros.php">Seguros</a></li>
+   <li><a href="manph.php">Mantener el Para Hacer</a></li>
+   <li><a href="ordenes.php">Mantenimiento de Ordenes</a></li><br>
+   <li><a href="gargosup.php">Mantenimiento de Suplentes</a></li>
+</body>
+</html>

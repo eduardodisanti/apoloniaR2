@@ -1,0 +1,109 @@
+<?php
+echo "<form action='remito.php'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr valign='middle' width='16'>";
+echo "	<td class='tdLista' colspan=4>";
+echo "	<a href='remito.php' class='v1'><img src='img/nuevo16.png' align='bottom'>Remito nuevo</a>";
+echo "&nbsp;&nbsp;<a href='remitos.php' class='v1'><img src='img/lista16.png' align='bottom'>Consultar</a>";
+echo "	</td>";
+echo "</tr>";
+echo "<tr>";
+echo "	<td class='tdLista'>Serie";
+echo "  </td>";
+echo "	<td class='tdLista'><input type='text' name='serie' value='$serie' size=2></td>";
+echo "	<td class='tdLista'>Numero</td>";
+echo "	<td class='tdLista'><input type='text' name='numero' value='$numero' size=12>";
+echo "	</td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "  <td class='tdLista'>";
+echo "  Proveedor : ";
+echo "  </td>";
+echo "  <td class='tdLista'>";
+echo "     <select name=proveedor>";
+$i=0;
+while(!empty($proveedores[$i]))
+  {
+     if($proveedores[$i]->id==$proveedor)
+       $sel="selected";
+     else
+       $sel="";
+     echo "<option value=".$proveedores[$i]->id." $sel>".$proveedores[$i]->nombre."</option>";
+     $i++;
+  }
+echo "     </select>";
+echo "  </td>";
+echo "  <td class='tdLista'>Fecha </td>";
+echo "  <td class='tdLista'><input type='text' name='fecha' value='$fecha' size=10></td>";
+echo "</tr>";
+echo "<tr>";
+echo "	<td class='tdLista' colspan=4 align='center'><input type='submit' name='cmd' value='Actualizar'></td>";
+echo "</tr>";
+echo "</table>";
+echo "</form>";
+
+echo "<form action='remito.php' name='elremito'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr>";
+echo "<form action='remito.php'>";
+echo "<th class='thLista'>Cantidad</th>";
+echo "<th class='thLista'>Codigo</th>";
+echo "<th class='thLista'>Articulo</th>";
+echo "<th class='thLista'>&nbsp;</th>";
+echo "</tr>";
+if(empty($cantidad))
+   $cantidad=1;   
+   
+echo "<input type='hidden' name='param' value='Agregar'>";   
+echo "<input type='hidden' name='numero' value='$numero'>";   
+echo "<input type='hidden' name='serie' value='$serie'>";   
+echo "<input type='hidden' name='proveedor' value='$proveedor'>";   
+echo "<tr>";
+echo "    <td class='tdLista' align='center'>";
+echo "       <input type='text' name='cantidad' size=6 value='$cantidad' align='right'>";
+echo "    </td>";
+
+echo "    <td class='tdLista' align='center'>";
+echo "       <input type='text' name='elemento' size=15 value=''>";
+echo "    </td>";
+
+echo "    <td class='tdLista' align='center'>";
+echo "       <input type='submit' name='xcmd' value='Agregar'>";
+echo "    </td>";
+
+echo "    <td class='tdLista' align='center'>";
+echo "       <input type='text' name='nombre' size=50 value='$nombre' readonly>";
+echo "    </td>";
+echo "</tr>";
+$i=0;
+while(!empty($lineas[$i]->nombre))
+{
+
+    $linea=$lineas[$i]->linea;
+    
+    echo "<input type='hidden' name='linea' value='$linea'>";
+    echo "<tr>";
+    echo "	<td class='tdLista' align='right'>".$lineas[$i]->cantidad."</td>";
+    echo "	<td class='tdLista' align='center'>".$lineas[$i]->codigo."</td>";
+    echo "      <td class='tdLista' align='center'>";
+    echo "      <a href='remito.php?xcmd=linea&param=dl&linea=$linea&serie=$serie&proveedor=$proveedor&numero=$numero'><img src='img/borrar16.png'></a>";
+    echo "&nbsp;&nbsp;";
+    echo "      <a href='remito.php?xcmd=linea&param=ed&linea=$linea&serie=$serie&proveedor=$proveedor&numero=$numero'><img src='img/editar16.png'></a>";
+    
+    echo "      </td>";
+    echo "	<td class='tdLista'>".$lineas[$i]->nombre."</td>";
+    echo "</tr>";
+    $i++;
+}
+echo "</table>";
+echo "</form>";
+
+?>
+<script language="javascript">
+<!--
+//--------------------------------------------------------------------------
+  document.elremito.codigo.focus()
+//--------------------------------------------------------------------------
+// -->
+</script>

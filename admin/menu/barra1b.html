@@ -1,0 +1,47 @@
+    <script type="text/javscript">
+    /* preload images */
+    var arrow1 = new Image(4, 7);
+    arrow1.src = "menu/images/arrow1.gif";
+    var arrow2 = new Image(4, 7);
+    arrow2.src = "menu/images/arrow2.gif";
+    </script>
+
+    <div id="bar">
+        
+        <table cellspacing="0" cellpadding="0" id="menu1" class="XulMenu">
+        <tr>
+            <td>
+                <a class="button" href="index.php?contenido=usuarios.php"><img src="menu/images/personal.png" border="0" align=middle>Usuarios</img>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=especial.php"><img src="menu/images/especial.png" border="0" align=middle>Especialidades</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=proced.php"><img src="menu/images/procedimientos.png" border="0" align=middle>Procedimientos</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=medicos.php"><img src="menu/images/medicos.png" border="0" align=middle>Medicos</a>
+            </td>
+            <td>
+                <a class="button" href="index.php?contenido=molde.php"><img src="menu/images/molde.png" border="0" align=middle>Molde de horarios</a>
+            </td>
+
+            <td>
+                <a class="button" href="index.php?contenido=cargosup.php"><img src="menu/images/suplentes.png" border="0" align=middle>Suplentes</a>
+            </td>
+	    <td>
+	        <a class="button" href="index.php?contenido=seguros.php"><img src="menu/images/seguros.png" border="0" align=middle>Seguros</a>
+            </td>
+	    <td>
+	                    <a class="button" href="index.php?contenido=planpaclab.php"><img src="menu/images/seguros.png" border="0" align=middle>Plan emergencia Lab</a>
+	    </td>
+	</tr>
+        </table>
+    </div>
+
+    <script type="text/javascript">
+    var menu1 = new XulMenu("menu1");
+    menu1.arrow1 = "images/arrow1.gif";
+    menu1.arrow2 = "images/arrow2.gif";
+    menu1.init();
+    </script>

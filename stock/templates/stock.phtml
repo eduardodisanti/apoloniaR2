@@ -1,0 +1,34 @@
+<?php
+echo "<html>\n";
+
+echo "<head>\n";
+echo "  <meta http-equiv=\"CONTENT-TYPE\" content=\"text/html; charset=iso-8859-1\">";
+
+echo "<LINK href=\"/css/$tema.css\" rel=\"stylesheet\" type=\"text/css\">\n";
+echo "<title>Sistema de stock Mateo en $empresa</title>";
+
+include("menu/menu1h.html");
+echo "</head>\n";
+
+echo "<body>";
+include("menu/menu1b.php");
+include("menu/barra1b.html");
+
+   echo "<table border=0 width=100% height=80% class='trabajo'>";
+   echo "<tr valign='top' height='32px'><td><img src=\"logos/$logo\" height=32></td><td align='center' valign='middle'>$cmd</td><td align=right>$empresa</td></tr>";
+   echo "<tr valign='top'>";
+   echo "    <td colspan=3 bgcolor='#43538B'>";
+   if(!empty($cmd))
+     echo "<iframe name='contenido' src='$cmd.php' width='100%' height='100%'></iframe>";
+   else
+    echo "&nbsp;";
+    echo "    </td>";
+   echo "</tr>";
+   echo "<tr height='16px'>";
+   echo "    <td colspan=3 align=\"right\"><font size=1>Sistema de Stock San Mateo, Copywrite (C) Ingenieria kCreativa <a href=\"http://www.kcreativa.com\" class=\"v1\">www.kcreativa.com</a></font></td>";
+   echo "</tr>";
+   echo "</table>";
+   
+   echo "</body>";
+   echo "</html>\n";
+?>

@@ -1,0 +1,124 @@
+<?php
+echo "<form action='transferencia.php'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr valign='middle' width='16'>";
+echo "	<td class='tdLista' colspan=4>";
+echo "	<a href='transferencia.php' class='v1'><img src='img/nuevo16.png' align='bottom'>Transferencia nueva</a>";
+echo "&nbsp;&nbsp;<a href='transferencias.php' class='v1'><img src='img/lista16.png' align='bottom'>Consultar</a>";
+echo "	</td>";
+echo "</tr>";
+echo "<tr>";
+echo "	<td class='tdLista'>Almacen";
+echo "  </td>";
+echo "  <td class='tdLista'>";
+echo "     <select name='almacen'>";
+$i=0;
+if(empty($almacen))
+  $almacen=1;
+while(!empty($almacenes[$i]))
+  {
+     if($almacenes[$i]->id==$almacen)
+       $sel="selected";
+     else
+       $sel="";
+     echo "<option value=".$almacenes[$i]->id." $sel>".$almacenes[$i]->nombre."</option>";
+     $i++;
+  }
+echo "     </select>";
+echo "  </td>";
+
+echo "	<td class='tdLista'>Numero</td>";
+echo "	<td class='tdLista'><input type='text' name='numero' value='$numero' size=12>";
+echo "	</td>";
+echo "</tr>";
+
+echo "<tr>";
+echo "  <td class='tdLista'>";
+echo "  Destino : ";
+echo "  </td>";
+echo "  <td class='tdLista'>";
+echo "     <select name='destino'>";
+$i=0;
+while(!empty($almacenes[$i]))
+  {
+     if($almacenes[$i]->id==$destino)
+       $sel="selected";
+     else
+       $sel="";
+     echo "<option value=".$almacenes[$i]->id." $sel>".$almacenes[$i]->nombre."</option>";       
+
+     $i++;
+  }
+echo "     </select>";
+echo "  </td>";
+echo "  <td class='tdLista'>Fecha </td>";
+echo "  <td class='tdLista'><input type='text' name='fecha' value='$fecha' size=10></td>";
+echo "</tr>";
+echo "<tr>";
+echo "	<td class='tdLista' colspan=4 align='center'><input  type='submit' name='cmd' value='Actualizar'></td>";
+echo "</tr>";
+echo "</table>";
+echo "</form>";
+
+echo "<form action='transferencia.php' name='elremito'>";
+echo "<table border=0 class=\"tablaLista\">";
+echo "<tr>";
+echo "<form action='transferencia.php'>";
+echo "<th class='thLista'>Cantidad</th>";
+echo "<th class='thLista'>Codigo</th>";
+echo "<th class='thLista'>Articulo</th>";
+echo "<th class='thLista'>&nbsp;</th>";
+echo "</tr>";
+if(empty($cantidad))
+   $cantidad=1;   
+   
+echo "<input type='hidden' name='param' value='Agregar'>";   
+echo "<input type='hidden' name='numero' value='$numero'>";   
+echo "<tr>";
+echo "    <td class='tdLista' align='center'>";
+echo "       <input type='text' name='cantidad' size=6 value='$cantidad' align='right'>";
+echo "    </td>";
+
+echo "    <td class='tdLista' align='center'>";
+echo "       <input type='text' name='codigo' size=15 value='$codigo'>";
+echo "    </td>";
+
+echo "    <td class='tdLista' align='center'>";
+echo "       <input type='submit' name='xcmd' value='Agregar'>";
+echo "    </td>";
+
+echo "    <td class='tdLista' align='center'>";
+echo "       <input type='text' name='nombre' size=50 value='$nombre' readonly>";
+echo "    </td>";
+echo "</tr>";
+$i=0;
+while(!empty($lineas[$i]->nombre))
+{
+
+    $linea=$lineas[$i]->linea;
+    
+    echo "<input type='hidden' name='linea' value='$linea'>";
+    echo "<tr>";
+    echo "	<td class='tdLista' align='right'>".$lineas[$i]->cantidad."</td>";
+    echo "	<td class='tdLista' align='center'>".$lineas[$i]->codigo."</td>";
+    echo "      <td class='tdLista' align='center'>";
+    echo "      <a href='transferencia.php?xcmd=linea&param=dl&linea=$linea&numero=$numero'><img src='img/borrar16.png'  border=0></a>";
+    echo "&nbsp;&nbsp;";
+    echo "      <a href='transferencia.php?xcmd=linea&param=ed&linea=$linea&numero=$numero'><img src='img/editar16.png' border=0></a>";
+    
+    echo "      </td>";
+    echo "	<td class='tdLista'>".$lineas[$i]->nombre."</td>";
+    echo "</tr>";
+    $i++;
+}
+echo "</table>";
+echo "</form>";
+
+?>
+<script language="javascript">
+<!--
+//--------------------------------------------------------------------------
+  document.elremito.codigo.focus()
+//--------------------------------------------------------------------------
+// -->
+</script>

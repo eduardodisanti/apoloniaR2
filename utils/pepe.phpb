@@ -1,0 +1,6 @@
+<?php
+
+$vhora = Date("H:i");
+echo $vhora;
+
+?>

@@ -1,0 +1,79 @@
+<?php
+
+session_start();
+$coisucursal_ses=$_SESSION['coisucursal_ses'];
+
+function date_diff($date2, $date1)
+  {
+      $s = strtotime($date2) - strtotime($date1);
+      $d = intval($s/86400);
+      return($d);
+  }
+if(empty($cmd))
+  $cmd=bajar;
+
+require("../../functions/db.php");
+$link=conectar();
+
+
+echo "<center><h4>Cantidad de trabajos en una misma pieza</h4></center>";
+if(empty($comando))
+ {
+
+     echo "<form action='../informes/laboratorios/repepieza.php' method=post>\n";
+     echo "<center><table border = 0 width='60%'>\n";
+     $hoy=Date("Y-m-d");
+     echo "<tr>";
+     echo "   <td><input type='submit' name='comando' value='Ejecutar'></td>";
+     echo "   <td>&nbsp;&nbsp</td>";
+     echo "</tr>";
+     echo "<tr>";
+     echo "  <td>Fecha desde<input type='text' name='desde' value='$hoy'></td>";
+     echo "  <td>Fecha hasta<input type='text' name='hasta' value='$hoy'></td>";
+     echo "</tr>";
+     echo "</table></center>\n";
+     echo "<input type='hidden' name='comando' value='$cmd'>";
+
+     echo "</form>\n";
+ }
+else
+ {
+
+if(!empty($sucursal))
+  $limit = "and TrabSoc.Sucursal = '$sucursal'";
+else
+  $limit="";
+
+if(!empty($codLabo))
+  {
+    $limit = $limit." and TrabSoc.Laboratorio = $codLabo";
+  }
+
+$limit = $limit." and Fecha>='$desde' and Fecha<='$hasta'";
+$estado1 = $estado+1;
+
+$query = "select Pieza, count(*) as cuenta from HistTrabSoc group by Paciente,Pieza";
+
+echo "<table border=0 width=99% bgcolor='#000000' cellspacing='1'>\n";
+echo "<tr bgcolor='#cccccc'>";
+echo "	<th colspan=2>Paciente</th>";
+echo "  <th>Pieza</th>";
+echo "  <th>Cantidad</th>";
+echo "</tr>\n";
+
+$q = query($query);
+echo mysql_error();
+while($reg = fetch($q))
+ {
+	$pieza = $reg->Pieza;
+	$rep    = $reg->cuenta;
+
+		echo "<tr bgcolor='$color'>";
+		echo "  <td>$pieza</td>";
+		echo "  <td align='right'>$rep</td>";
+		echo "</tr>\n";
+ }
+ echo "</table>";
+  echo " <center><a href='javascript:window.print()'>Imprimir</a></center>";
+}
+?>

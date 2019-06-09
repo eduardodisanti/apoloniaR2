@@ -1,0 +1,9 @@
+﻿select elmedico, Nombre, count(*) as cantidad from
+  (select Distinct actosmedicos.medico as elmedico, Nombre, Paciente, Fecha from actosmedicos, Medicos, Usuarios where
+Fecha >='2008-12-26' and
+Fecha <='2009-01-25' and
+actosmedicos.medico = Usuarios.funcionario and
+Medicos.Numero = Usuarios.medico and
+Medicos.Externo = 'S'
+group by actosmedicos.medico, Paciente, Fecha order by Nombre, Paciente, Fecha)
+as mini group by Nombre

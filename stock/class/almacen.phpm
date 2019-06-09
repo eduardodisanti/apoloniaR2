@@ -1,0 +1,149 @@
+<?php
+
+	class Almacen
+	  {
+		var	$codigo,
+			$descripcion,
+			$mail,
+			$interno,
+			$sucursal,
+			$telefono,
+			$controlado;
+			
+		var	$lista,
+			$conn;
+		
+		function setConn($unaConeccion) {
+		
+		$this->conn = $unaConeccion;
+		}
+		
+		function Almacen() {
+		 	$this->codigo=NULL;
+		 }
+
+		function setSucursal($unaSucursal) {
+		 	$this->sucursal = $unaSucursal;
+			return $this;
+		 }
+
+		function getSucursal() {
+		 	return $this->sucursal;
+		 }
+		function setTelefono($unTelefono) {
+		 	$this->telefono = $unTelefono;
+			return $this;
+		 }
+
+		function getTelefono() {
+		 	return $this->telefono;
+		 }
+
+
+		function setMail($unMail) {
+		 	$this->mail = $unMail;
+			return $this;
+		 }
+
+		function getMail() {
+		 	return $this->mail;
+		 }
+
+		 
+		function setDescripcion($unaDescripcion) {
+		 	$this->descripcion = $unaDescripcion;
+			return $this;
+		 }
+
+		function getDescripcion() {
+		 	return $this->descripcion;
+		 }
+
+		function setInterno($unInterno) {
+		 	$this->interno = $unInterno;
+			return $this;
+		 }
+
+		function getInterno() {
+		 	return $this->Interno;
+		 }		
+		
+		function setCodigo($unCodigo) {
+		 	$this->codigo = $unCodigo;
+			return $this;
+		 }
+
+		 function setControlado($unaCondicion) {
+
+                       $this->controlado = $unaCondicion;
+		       return $this;
+		 }
+
+                function getControlado() {
+                       return $this->controlado;
+                 }
+
+
+		function getCodigo() {
+		 	return $this->codigo;
+		 }
+		 
+		function cargar() {
+		 
+		     $q = "select * from almacenes where id=$this->codigo";
+		     $res = $this->conn->query($q);
+
+		     if(empty($res))
+		       {
+		        $this->id=NULL;
+			return(false);
+		       }
+		     else
+		       {
+		        $reg = $res->fetchRow();
+		        
+			$this->codigo		= $reg->id;
+			$this->descripcion	= $reg->nombre;
+			$this->mail		= $reg->mail;
+			$this->interno		= $reg->interno;
+			$this->telefono		= $reg->telefono;
+			$this->sucursal		= $reg->sucursal;
+			$this->controlado	= $reg->controlado;
+		        return(true);
+		      }
+		 }
+		 
+		 function almacenar() {
+		 
+		     if($this->codigo==0 || empty($this->codigo))
+		      {
+		        $this->codigo = Date("U");
+			$q = "insert into almacenes values( $this->codigo,
+							'$this->descripcion',
+							'$this->mail',
+							'$this->interno',
+							'$this->sucursal',
+							'$this->telefono',
+							'$this->controlado'
+		                                       )";
+		      } else
+				{
+				  $q = "update almacenes set
+						nombre='$this->descripcion',
+						mail='$this->mail',
+						interno='$this->interno',
+						sucursal='$this->sucursal',
+						telefono='$this->telefono',
+						controlado='$this->controlado'
+					where id=$this->codigo";
+				}
+		     $res = $this->conn->query($q);
+		    
+		 $x = mysql_error(); 
+		 if(!empty($x))
+			die("$x<br>$q");
+
+		     return(!empty($res));
+		 }
+	  }
+?>
